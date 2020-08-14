@@ -1,5 +1,4 @@
 ﻿using Cinemachine;
-using Cinemachine.Editor;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
