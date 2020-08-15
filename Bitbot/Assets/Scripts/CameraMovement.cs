@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [Header ("Lerp Value")]
-    public float lerpValue = 5f;
+    [Header("Damping Time")]
+    
+    public float dampingTIme = 1f;
+
+    private float maxSpeed;
 
     private PlayerMovement move;
     private CinemachineVirtualCamera vcam;
@@ -13,23 +16,24 @@ public class CameraMovement : MonoBehaviour
         move = FindObjectOfType<PlayerMovement>();
         vcam = GetComponent<CinemachineVirtualCamera>();
     }
-
-    void Update()
+    void LateUpdate()
     {
         flipScreenX(move.facingRight);
     }
 
     private void flipScreenX(bool facingRight)
     {
-        float lerpLeft = Mathf.Lerp(0.15f, 0.75f, lerpValue);
-        float lerpRight = Mathf.Lerp(0.75f, 0.15f, lerpValue);
-        if (move.facingRight)
-        {
-            vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenX = Mathf.Lerp(0.75f, 0.15f, lerpValue);
-        }
+        float flipLeft = Mathf.SmoothDamp(0.88f, 0.18f,ref maxSpeed, dampingTIme);
+        float flipRight = Mathf.SmoothDamp(0.18f, 0.88f, ref maxSpeed, dampingTIme);
+
         if (!move.facingRight)
         {
-            vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenX = Mathf.Lerp(0.15f, 0.75f, lerpValue);
+            vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenX = flipLeft;
+        }
+        else
+        {
+
+            vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenX = flipRight;
         }
     }
 }
