@@ -13,12 +13,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private PlayerCollision coll;
+    private AnimationScript anim;
     private SpriteRenderer sr;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<PlayerCollision>();
+        anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -26,17 +28,17 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
+        anim.setHorizontal(x);
 
         Vector2 dir = new Vector2(x, y);
         run(dir);
 
         flip(dir);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && coll.onGround)
         {
             jump(Vector2.up);
         }
-
     }
 
     private void run(Vector2 dir)
@@ -57,13 +59,14 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = true;
         }
     }
-
     private void jump(Vector2 dir)
     {
         if(!coll.onGround)
         {
             return;
         }
+
+        anim.triggerJump();
 
         rb.velocity = Vector2.zero;
         rb.velocity += dir * jumpForce;
