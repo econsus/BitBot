@@ -38,4 +38,8 @@ public class AnimationScript : MonoBehaviour
     {
         anim.SetTrigger("Jump");
     }
+    public void setSpeed(string name, float speed)
+    {
+        anim.SetFloat(name, speed);
+    }
 }
