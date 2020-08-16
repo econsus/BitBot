@@ -48,14 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void flip(Vector2 dir)
     {
-        if (!facingRight && dir.x > 0)
+        if (!facingRight /*&& dir.x > 0*/)
         {
-            facingRight = true;
+            //facingRight = true;
             sr.flipX = false;
         }
-        if (facingRight && dir.x < 0)
+        if (facingRight /*&& dir.x < 0*/)
         {
-            facingRight = false;
+            //facingRight = false;
             sr.flipX = true;
         }
     }
