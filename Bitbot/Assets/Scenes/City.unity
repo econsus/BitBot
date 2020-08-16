@@ -4510,7 +4510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c62e5e6e557fb43bbb650dbe61741b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  z: 16
 --- !u!1 &1011652307
 GameObject:
   m_ObjectHideFlags: 0
@@ -14063,7 +14062,6 @@ GameObject:
   - component: {fileID: 2082809580}
   - component: {fileID: 2082809579}
   - component: {fileID: 2082809581}
-  - component: {fileID: 2082809582}
   - component: {fileID: 2082809583}
   m_Layer: 0
   m_Name: CM vcam1
@@ -14134,19 +14132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2082809582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082809578}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb4e25ca6e9c73439abd6967a24f5aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dampingTIme: 10
 --- !u!114 &2082809583
 MonoBehaviour:
   m_ObjectHideFlags: 0
