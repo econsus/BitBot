@@ -1,24 +1,25 @@
-﻿using Cinemachine;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [Header("Damping Time")]
-    
-    public float dampingTIme = 1f;
-
-    private CinemachineVirtualCamera vcam;
+    private CinemachineCameraOffset offset;
     void Start()
     {
-        vcam = GetComponent<CinemachineVirtualCamera>();
+        offset = GetComponent<CinemachineCameraOffset>();
     }
+
     void Update()
     {
-
+        panCamera();
     }
 
-    private void flipScreenX(bool facingRight)
+    private void panCamera()
     {
-        
+        Vector3 mPos = MouseWorldPosition.getMouseWorldPos(0f);
+        float tmp1 = mPos.x;
+        if(mPos.x < Screen.width && mPos.y < Screen.height)
+        {
+            offset.m_Offset = mPos.normalized * 10f;
+        }
     }
 }

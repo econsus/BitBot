@@ -9,7 +9,7 @@ public class MouseWorldPosition
         return foo;
     }
 
-    public static Vector3 calcWorldPos(Vector3 screenPos, Camera worldCam)
+    private static Vector3 calcWorldPos(Vector3 screenPos, Camera worldCam)
     {
         Vector3 worldPos = worldCam.ScreenToWorldPoint(screenPos);
         return worldPos;

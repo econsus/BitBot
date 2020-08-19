@@ -42,4 +42,8 @@ public class AnimationScript : MonoBehaviour
     {
         anim.SetFloat(name, speed);
     }
+    public void setLookingUp(bool lookUp)
+    {
+        anim.SetBool("isLookingUp", lookUp);
+    }
 }
