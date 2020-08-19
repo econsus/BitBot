@@ -4503,7 +4503,6 @@ GameObject:
   - component: {fileID: 1011652308}
   - component: {fileID: 1011652310}
   - component: {fileID: 1011652309}
-  - component: {fileID: 1011652311}
   m_Layer: 0
   m_Name: Background (3)
   m_TagString: Untagged
@@ -5411,19 +5410,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1011652311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011652307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eccc7a5a4094c9c4ba01d51968e5d01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0.1
 --- !u!1 &1016830858
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,7 +7089,6 @@ GameObject:
   - component: {fileID: 1065785419}
   - component: {fileID: 1065785421}
   - component: {fileID: 1065785420}
-  - component: {fileID: 1065785422}
   m_Layer: 0
   m_Name: Background (7)
   m_TagString: Untagged
@@ -9080,19 +9065,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1065785422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065785418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eccc7a5a4094c9c4ba01d51968e5d01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0.6
 --- !u!1 &1092082204
 GameObject:
   m_ObjectHideFlags: 0
@@ -12053,7 +12025,6 @@ GameObject:
   - component: {fileID: 1537171247}
   - component: {fileID: 1537171249}
   - component: {fileID: 1537171248}
-  - component: {fileID: 1537171250}
   m_Layer: 0
   m_Name: Background (4)
   m_TagString: Untagged
@@ -13000,19 +12971,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1537171250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537171246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eccc7a5a4094c9c4ba01d51968e5d01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0.4
 --- !u!1 &1631732029
 GameObject:
   m_ObjectHideFlags: 0
@@ -13501,7 +13459,6 @@ GameObject:
   - component: {fileID: 1957923109}
   - component: {fileID: 1957923111}
   - component: {fileID: 1957923110}
-  - component: {fileID: 1957923112}
   m_Layer: 0
   m_Name: Background (5)
   m_TagString: Untagged
@@ -14398,19 +14355,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1957923112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957923108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eccc7a5a4094c9c4ba01d51968e5d01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0.4
 --- !u!1 &2004674303
 GameObject:
   m_ObjectHideFlags: 0
@@ -14677,7 +14621,6 @@ GameObject:
   - component: {fileID: 2104107073}
   - component: {fileID: 2104107075}
   - component: {fileID: 2104107074}
-  - component: {fileID: 2104107076}
   m_Layer: 0
   m_Name: Background (6)
   m_TagString: Untagged
@@ -15878,19 +15821,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &2104107076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104107072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eccc7a5a4094c9c4ba01d51968e5d01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxMultiplier: 0.5
 --- !u!1 &2140072320
 GameObject:
   m_ObjectHideFlags: 0
