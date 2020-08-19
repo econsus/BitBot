@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MouseWorldPosition
+public class MousePosition
 {
     public static Vector3 getMouseWorldPos(float z)
     {

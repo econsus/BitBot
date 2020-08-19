@@ -3,7 +3,7 @@
 public class CameraTarget : MonoBehaviour
 {
     [Header("Constraint")]
-    [SerializeField] private float y = 6f;
+    [SerializeField] private float y = 7f;
     [SerializeField] private float x = 3f;
 
     private Transform player;
@@ -26,7 +26,7 @@ public class CameraTarget : MonoBehaviour
     }
     private Vector3 calcTargetPos(float x, float y)
     {
-        Vector3 mPos = MouseWorldPosition.getMouseWorldPos(6f);
+        Vector3 mPos = MousePosition.getMouseWorldPos(6f);
         Vector3 tPos = (player.position + mPos) / 2f;
 
         tPos.x = Mathf.Clamp(tPos.x, -x + player.position.x, x + player.position.x);
@@ -44,7 +44,5 @@ public class CameraTarget : MonoBehaviour
         {
             anim.setLookingUp(false);
         }
-        Debug.Log("POS: "+ this.transform.position);
-        Debug.Log("LOPOS: " + this.transform.localPosition);
     }
 }
