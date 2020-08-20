@@ -3,10 +3,9 @@
 public class DoorEnter : MonoBehaviour
 {
     private bool inFrontofDoor = false;
-    private GameObject symbol;
+    [SerializeField] private GameObject symbol;
     void Start()
     {
-        symbol = GameObject.Find("Door Enter");
         symbol.SetActive(false);
     }
     void Update()
