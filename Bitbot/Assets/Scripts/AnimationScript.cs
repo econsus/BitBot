@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AnimationScript : MonoBehaviour
 {
@@ -8,18 +6,21 @@ public class AnimationScript : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerMovement move;
     private PlayerCollision coll;
+    private Transform camTarget;
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
         move = GetComponentInParent<PlayerMovement>();
         coll = GetComponentInParent<PlayerCollision>();
+        camTarget = GameObject.Find("Cam Target").transform;
     }
 
     void Update()
     {
         groundCheck(coll.onGround);
         setYVelocity(rb.velocity.y);
+        setLookingUp();
     }
 
     private void setYVelocity(float y)
@@ -42,8 +43,17 @@ public class AnimationScript : MonoBehaviour
     {
         anim.SetFloat(name, speed);
     }
-    public void setLookingUp(bool lookUp)
+    private void setLookingUp()
     {
-        anim.SetBool("isLookingUp", lookUp);
+        bool temp;
+        if (camTarget.position.y > -2.1f)
+        {
+            temp = true;
+        }
+        else
+        {
+            temp = false;
+        }
+        anim.SetBool("isLookingUp", temp);
     }
 }

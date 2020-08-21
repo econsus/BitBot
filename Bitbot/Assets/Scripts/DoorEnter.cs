@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class DoorEnter : MonoBehaviour
 {
     private bool inFrontofDoor = false;
-    [SerializeField] private GameObject symbol;
+    public GameObject symbol;
     [SerializeField] private string sceneToLoad = "Scene";
     void Start()
     {

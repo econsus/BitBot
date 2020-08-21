@@ -7,17 +7,16 @@ public class CameraTarget : MonoBehaviour
     [SerializeField] private float x = 3f;
 
     private Transform player;
-    private AnimationScript anim;
+    private Camera cam;
 
     private void Start()
     {
         player = GameObject.Find("Player").transform;
-        anim = GameObject.Find("Player").GetComponentInChildren<AnimationScript>();
+        cam = Camera.main;
     }
     void Update()
     {
         moveTarget();
-        handleAnimation();
     }
 
     private void moveTarget()
@@ -26,23 +25,12 @@ public class CameraTarget : MonoBehaviour
     }
     private Vector3 calcTargetPos(float x, float y)
     {
-        Vector3 mPos = MousePosition.getMouseWorldPos(6f);
+        Vector3 mPos = MousePosition.getMouseWorldPos(6f, cam);
         Vector3 tPos = (player.position + mPos) / 2f;
 
         tPos.x = Mathf.Clamp(tPos.x, -x + player.position.x, x + player.position.x);
         tPos.y = Mathf.Clamp(tPos.y, -y + player.position.y, y + player.position.y);
 
         return tPos;
-    }
-    private void handleAnimation()
-    {
-        if(this.transform.position.y > -2.1f)
-        {
-            anim.setLookingUp(true);
-        }
-        else
-        {
-            anim.setLookingUp(false);
-        }
     }
 }

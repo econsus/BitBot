@@ -2,9 +2,9 @@
 
 public class MousePosition
 {
-    public static Vector3 getMouseWorldPos(float z)
+    public static Vector3 getMouseWorldPos(float z, Camera cam)
     {
-        Vector3 foo = calcWorldPos(Input.mousePosition, Camera.main);
+        Vector3 foo = calcWorldPos(Input.mousePosition, cam);
         foo.z = z;
         return foo;
     }
