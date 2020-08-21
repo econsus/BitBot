@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<PlayerCollision>();
         anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        DontDestroyOnLoad(this);
     }
 
     void Update()

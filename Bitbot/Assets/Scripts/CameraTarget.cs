@@ -36,7 +36,7 @@ public class CameraTarget : MonoBehaviour
     }
     private void handleAnimation()
     {
-        if(this.transform.localPosition.y > -2.1f)
+        if(this.transform.position.y > -2.1f)
         {
             anim.setLookingUp(true);
         }

@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorEnter : MonoBehaviour
 {
     private bool inFrontofDoor = false;
     [SerializeField] private GameObject symbol;
+    [SerializeField] private string sceneToLoad = "Scene";
     void Start()
     {
         symbol.SetActive(false);
@@ -14,7 +16,7 @@ public class DoorEnter : MonoBehaviour
 
         if(Input.GetKey(KeyCode.E) && inFrontofDoor)
         {
-            Debug.Log("ENTERED DOOR");
+            loadScene(sceneToLoad);
         }
     }
 
@@ -22,6 +24,11 @@ public class DoorEnter : MonoBehaviour
     {
         symbol.SetActive(inFrontofDoor);
     }
+    private void loadScene(string sceneToLoad)
+    {
+        SceneManager.LoadSceneAsync(sceneToLoad);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)

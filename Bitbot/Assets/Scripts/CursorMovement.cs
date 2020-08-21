@@ -5,6 +5,7 @@ public class CursorMovement : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
+        DontDestroyOnLoad(this);
     }
     void FixedUpdate()
     {

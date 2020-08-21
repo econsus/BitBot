@@ -12801,6 +12801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   symbol: {fileID: 1216877779}
+  sceneToLoad: Gun_Store
 --- !u!1 &1673607792
 GameObject:
   m_ObjectHideFlags: 0
@@ -15293,12 +15294,12 @@ PrefabInstance:
     - target: {fileID: 1178320207514524420, guid: f8ed39c83dbabd44796fcf7e876466a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.96
       objectReference: {fileID: 0}
     - target: {fileID: 1178320207514524420, guid: f8ed39c83dbabd44796fcf7e876466a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6052797
+      value: -4.4447203
       objectReference: {fileID: 0}
     - target: {fileID: 1178320207514524420, guid: f8ed39c83dbabd44796fcf7e876466a0,
         type: 3}
@@ -15362,12 +15363,12 @@ PrefabInstance:
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.96
       objectReference: {fileID: 0}
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8.05
       objectReference: {fileID: 0}
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
@@ -15377,17 +15378,17 @@ PrefabInstance:
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4756955600571340648, guid: bd68ab6b29e0c4542a92d287cda89abe,
         type: 3}
