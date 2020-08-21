@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DoorEnter : MonoBehaviour
 {
     private bool inFrontofDoor = false;
     public GameObject symbol;
+    public Animator transition;
+
     [SerializeField] private string sceneToLoad = "Scene";
     void Start()
     {
@@ -16,7 +19,7 @@ public class DoorEnter : MonoBehaviour
 
         if(Input.GetKey(KeyCode.E) && inFrontofDoor)
         {
-            loadScene(sceneToLoad);
+            StartCoroutine(sceneTransition(1f));
         }
     }
 
@@ -27,6 +30,13 @@ public class DoorEnter : MonoBehaviour
     private void loadScene(string sceneToLoad)
     {
         SceneManager.LoadSceneAsync(sceneToLoad);
+    }
+
+    IEnumerator sceneTransition(float waitTime)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(waitTime);
+        loadScene(sceneToLoad);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
