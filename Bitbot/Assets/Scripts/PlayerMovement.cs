@@ -85,4 +85,10 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.velocity += dir * jumpForce;
     }
+
+    public void halt()
+    {
+        rb.velocity = Vector2.zero;
+        anim.setHorizontal(0);
+    }
 }
