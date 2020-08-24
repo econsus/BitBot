@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject conversation;
 
     public float waitTime = 0.3f;
+
+    public float typingWaitTime = 0.02f;
 
     private PlayerMovement move;
 
@@ -21,6 +25,8 @@ public class DialogueManager : MonoBehaviour
 
     private bool canTalk;
 
+    private bool canSkip = true;
+
     void Start()
     {
         move = FindObjectOfType<PlayerMovement>();
@@ -33,6 +39,8 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.Speaker = dialogue.character;
 
         chatBubble.SetActive(false);
+
+        dialogueUI.hideNextSymbol();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -64,11 +72,19 @@ public class DialogueManager : MonoBehaviour
     }
     void Update()
     {
-        if(canTalk && Input.GetKeyDown(KeyCode.E))
+        if(canTalk && canSkip && Input.GetKeyDown(KeyCode.E))
         {
             move.halt();
             move.enabled = false;
             next();
+        }
+        if(canSkip)
+        {
+            dialogueUI.showNextSymbol();
+        }
+        else
+        {
+            dialogueUI.hideNextSymbol();
         }
     }
 
@@ -91,11 +107,28 @@ public class DialogueManager : MonoBehaviour
     {
         Sentence line = dialogue.sentences[activeIndex];
 
-        setDialogue(dialogueUI, line.sentence);
+        StartCoroutine(setDialogue(dialogueUI, line.sentence, typingWaitTime));
     }
-    private void setDialogue(DialogueUI activeDUI, string text)
+    IEnumerator setDialogue(DialogueUI activeDUI, string text, float t)
     {
-        activeDUI.Dialogue = text;
+        activeDUI.Dialogue = "";
         activeDUI.Show();
+        int i = 0;
+        foreach(char letter in text.ToCharArray())
+        {
+            canSkip = false;
+            activeDUI.Dialogue += letter;
+            if (i > 0 && Input.GetKeyDown(KeyCode.E))
+            {
+                activeDUI.Dialogue = "";
+                activeDUI.Dialogue = text;
+            }
+            else
+            {
+                yield return new WaitForSecondsRealtime(t);
+            }
+            i++;
+        }
+        canSkip = true;
     }
 }

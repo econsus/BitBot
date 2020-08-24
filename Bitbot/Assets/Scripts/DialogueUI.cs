@@ -25,6 +25,10 @@ public class DialogueUI : MonoBehaviour
 
     public string Dialogue
     {
+        get
+        {
+            return sentenceDisplay.text;
+        }
         set 
         { 
             sentenceDisplay.text = value;
@@ -39,17 +43,12 @@ public class DialogueUI : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-
-    //[SerializeField] private float typingSpeed = 0.02f;
-
-    //IEnumerator typeText(float typingSpeed)
-    //{
-    //    foreach (char letter in sentences[index].ToCharArray())
-    //    {
-    //        sentenceDisplay.text += letter;
-    //        yield return new WaitForSecondsRealtime(typingSpeed);
-
-    //    }
-    //}
+    public void showNextSymbol()
+    {
+        nextDisplay.enabled = true;
+    }
+    public void hideNextSymbol()
+    {
+        nextDisplay.enabled = false;
+    }
 }

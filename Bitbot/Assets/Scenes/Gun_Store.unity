@@ -1777,6 +1777,7 @@ MonoBehaviour:
   dialogue: {fileID: 11400000, guid: ecb0a8a4462b4d04d8c0f9ad1baeb0fb, type: 2}
   conversation: {fileID: 790774775}
   waitTime: 0.3
+  typingWaitTime: 0.02
 --- !u!1 &332700282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2434,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 873981626}
     m_Modifications:
+    - target: {fileID: 1652163798, guid: e32c622404639834ab9db32fadbde819, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5215796501742661551, guid: e32c622404639834ab9db32fadbde819,
         type: 3}
       propertyPath: m_LocalPosition.x
