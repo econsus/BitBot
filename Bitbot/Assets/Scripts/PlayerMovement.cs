@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Space]
 
     [Header("Booleans")]
-    public bool facingRight = true;
+    public bool facingLeft = true;
 
     private Rigidbody2D rb;
     private PlayerCollision coll;
@@ -28,67 +28,67 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-        anim.setHorizontal(x);
+        anim.SetHorizontal(x);
 
         Vector2 dir = new Vector2(x, y);
-        run(dir);
+        Run(dir);
 
-        flip(dir);
+        Flip(dir);
 
         if (Input.GetButtonDown("Jump") && coll.onGround)
         {
-            jump(Vector2.up);
+            Jump(Vector2.up);
         }
     }
 
-    private void run(Vector2 dir)
+    private void Run(Vector2 dir)
     {
         rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
     }
 
-    private void flip(Vector2 dir)
+    private void Flip(Vector2 dir)
     {
-        if (!facingRight)
+        if (!facingLeft)
         {
             if(dir.x < 0)
             {
-                anim.setSpeed("playbackSpeed", -1f);
+                anim.SetSpeed("playbackSpeed", -1f);
             }
             else
             {
-                anim.setSpeed("playbackSpeed", 1f);
+                anim.SetSpeed("playbackSpeed", 1f);
             }
             sr.flipX = false;
         }
-        if (facingRight)
+        if (facingLeft)
         {
             if (dir.x > 0)
             {
-                anim.setSpeed("playbackSpeed", -1f);
+                anim.SetSpeed("playbackSpeed", -1f);
             }
             else
             {
-                anim.setSpeed("playbackSpeed", 1f);
+                anim.SetSpeed("playbackSpeed", 1f);
             }
             sr.flipX = true;
         }
     }
-    private void jump(Vector2 dir)
+    private void Jump(Vector2 dir)
     {
         if(!coll.onGround)
         {
             return;
         }
 
-        anim.triggerJump();
+        anim.TriggerJump();
 
         rb.velocity = Vector2.zero;
         rb.velocity += dir * jumpForce;
     }
 
-    public void halt()
+    public void Halt()
     {
         rb.velocity = Vector2.zero;
-        anim.setHorizontal(0);
+        anim.SetHorizontal(0);
     }
 }

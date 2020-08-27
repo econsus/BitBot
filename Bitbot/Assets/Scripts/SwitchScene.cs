@@ -11,19 +11,19 @@ public class SwitchScene : MonoBehaviour
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)
         {
-            StartCoroutine(sceneTransition(1f));
+            StartCoroutine(SceneTransition(1f));
         }
     }
 
-    private void loadScene(string sceneToLoad)
+    private void LoadScene(string sceneToLoad)
     {
         SceneManager.LoadSceneAsync(sceneToLoad);
     }
 
-    IEnumerator sceneTransition(float waitTime)
+    IEnumerator SceneTransition(float waitTime)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(waitTime);
-        loadScene(sceneToLoad);
+        LoadScene(sceneToLoad);
     }
 }

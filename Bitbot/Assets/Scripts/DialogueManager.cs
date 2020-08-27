@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
         chatBubble.SetActive(false);
 
-        dialogueUI.hideNextSymbol();
+        dialogueUI.HideNextSymbol();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -61,11 +61,11 @@ public class DialogueManager : MonoBehaviour
             canTalk = false;
             anim.SetBool("canTalk", false);
 
-            StartCoroutine(hideChatBubble(waitTime));
+            StartCoroutine(HideChatBubble(waitTime));
         }
     }
 
-    IEnumerator hideChatBubble(float waitTime)
+    IEnumerator HideChatBubble(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         chatBubble.SetActive(false);
@@ -74,25 +74,25 @@ public class DialogueManager : MonoBehaviour
     {
         if(canTalk && canSkip && Input.GetKeyDown(KeyCode.E))
         {
-            move.halt();
+            move.Halt();
             move.enabled = false;
-            next();
+            Next();
         }
         if(canSkip)
         {
-            dialogueUI.showNextSymbol();
+            dialogueUI.ShowNextSymbol();
         }
         else
         {
-            dialogueUI.hideNextSymbol();
+            dialogueUI.HideNextSymbol();
         }
     }
 
-    private void next()
+    private void Next()
     {
         if(activeIndex < dialogue.sentences.Length)
         {
-            displaySentence();
+            DisplaySentence();
             activeIndex += 1;
         }
         else
@@ -103,13 +103,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void displaySentence()
+    private void DisplaySentence()
     {
         Sentence line = dialogue.sentences[activeIndex];
 
-        StartCoroutine(setDialogue(dialogueUI, line.sentence, typingWaitTime));
+        StartCoroutine(SetDialogue(dialogueUI, line.sentence, typingWaitTime));
     }
-    IEnumerator setDialogue(DialogueUI activeDUI, string text, float t)
+    IEnumerator SetDialogue(DialogueUI activeDUI, string text, float t)
     {
         activeDUI.Dialogue = "";
         activeDUI.Show();

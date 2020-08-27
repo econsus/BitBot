@@ -16,16 +16,16 @@ public class CameraTarget : MonoBehaviour
     }
     void Update()
     {
-        moveTarget();
+        MoveTarget();
     }
 
-    private void moveTarget()
+    private void MoveTarget()
     {
         this.transform.position = calcTargetPos(x, y);
     }
     private Vector3 calcTargetPos(float x, float y)
     {
-        Vector3 mPos = MousePosition.getMouseWorldPos(6f, cam);
+        Vector3 mPos = MousePosition.GetMouseWorldPos(6f, cam);
         Vector3 tPos = (player.position + mPos) / 2f;
 
         tPos.x = Mathf.Clamp(tPos.x, -x + player.position.x, x + player.position.x);
