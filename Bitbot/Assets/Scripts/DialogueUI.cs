@@ -43,11 +43,11 @@ public class DialogueUI : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-    public void showNextSymbol()
+    public void ShowNextSymbol()
     {
         nextDisplay.enabled = true;
     }
-    public void hideNextSymbol()
+    public void HideNextSymbol()
     {
         nextDisplay.enabled = false;
     }

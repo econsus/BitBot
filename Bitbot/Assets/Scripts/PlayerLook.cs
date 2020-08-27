@@ -12,12 +12,12 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        flipSpriteX();
+        FlipSpriteX();
     }
 
-    private void flipSpriteX()
+    private void FlipSpriteX()
     {
-        Vector3 mPos = MousePosition.getMouseWorldPos(0f, cam);
+        Vector3 mPos = MousePosition.GetMouseWorldPos(0f, cam);
         Vector3 dir = (mPos - transform.position).normalized;
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

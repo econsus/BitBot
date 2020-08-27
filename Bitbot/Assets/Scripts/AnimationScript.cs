@@ -18,32 +18,32 @@ public class AnimationScript : MonoBehaviour
 
     void Update()
     {
-        groundCheck(coll.onGround);
-        setYVelocity(rb.velocity.y);
-        setLookingUp();
+        GroundCheck(coll.onGround);
+        SetYVelocity(rb.velocity.y);
+        SetLookingUp();
     }
 
-    private void setYVelocity(float y)
+    private void SetYVelocity(float y)
     {
         anim.SetFloat("Y Velocity", y);
     }
-    private void groundCheck(bool onGround)
+    private void GroundCheck(bool onGround)
     {
         anim.SetBool("onGround", onGround);
     }
-    public void setHorizontal(float x)
+    public void SetHorizontal(float x)
     {
         anim.SetFloat("Horizontal", x);
     }
-    public void triggerJump()
+    public void TriggerJump()
     {
         anim.SetTrigger("Jump");
     }
-    public void setSpeed(string name, float speed)
+    public void SetSpeed(string name, float speed)
     {
         anim.SetFloat(name, speed);
     }
-    private void setLookingUp()
+    private void SetLookingUp()
     {
         bool temp;
         if (camTarget.position.y > -2.1f)

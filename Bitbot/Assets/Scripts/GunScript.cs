@@ -15,12 +15,12 @@ public class GunScript : MonoBehaviour
 
     void Update()
     {
-        rotateObj();
+        HandleAiming();
     }
 
-    private void rotateObj()
+    private void HandleAiming()
     {
-        Vector3 mPos = MousePosition.getMouseWorldPos(0f, cam);
+        Vector3 mPos = MousePosition.GetMouseWorldPos(0f, cam);
         Vector3 dir = (mPos - player.position).normalized;
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -29,6 +29,5 @@ public class GunScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(rot);
 
         transform.position = player.position + (offset * dir);
-        Debug.Log(player.position);
     }
 }

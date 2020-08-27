@@ -10,12 +10,12 @@ public class CursorMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        moveToCursor();
+        MoveToCursor();
     }
 
-    private void moveToCursor()
+    private void MoveToCursor()
     {
-        Vector3 worldMPos = MousePosition.getMouseWorldPos(0f, cam);
+        Vector3 worldMPos = MousePosition.GetMouseWorldPos(0f, cam);
         this.transform.position = new Vector3(worldMPos.x, worldMPos.y, this.transform.position.z);
         //this.transform.position = Vector3.Lerp(this.transform.position, worldMPos, 6f);
     }

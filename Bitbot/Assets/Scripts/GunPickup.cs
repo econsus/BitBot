@@ -30,11 +30,11 @@ public class GunPickup : MonoBehaviour
         {
             if(!isEquipped)
             {
-                itemPickup();
+                PickupItem();
             }
         }
     }
-    private void itemPickup()
+    private void PickupItem()
     {
         transform.SetParent(player);
     }
