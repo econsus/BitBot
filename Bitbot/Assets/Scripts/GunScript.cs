@@ -12,6 +12,7 @@ public class GunScript : MonoBehaviour
     private Camera cam;
     private SpriteRenderer sr;
     private PlayerMovement move;
+    private Animator anim;
 
     private bool canShoot = true;
     void Start()
@@ -20,6 +21,8 @@ public class GunScript : MonoBehaviour
         cam = Camera.main;
         sr = GetComponentInChildren<SpriteRenderer>();
         move = GetComponentInParent<PlayerMovement>();
+        anim = GetComponentInChildren<Animator>();
+        
     }
 
     void Update()
@@ -80,10 +83,10 @@ public class GunScript : MonoBehaviour
     IEnumerator SemiAutoShooting(float t, float angle)
     {
         canShoot = false;
-
+        anim.SetTrigger("Shoot");
         Vector3 insPos = gunEndpoint.transform.position;
         GameObject temp = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Destroy(temp);
         yield return new WaitForSeconds(t - 0.2f);
         canShoot = true;
