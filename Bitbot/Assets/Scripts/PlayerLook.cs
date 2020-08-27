@@ -22,6 +22,6 @@ public class PlayerLook : MonoBehaviour
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        move.facingRight = angle > 90 || angle < -90;
+        move.facingLeft = angle > 90 || angle < -90;
     }
 }
