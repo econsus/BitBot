@@ -15,30 +15,13 @@ public class DoorEnter : MonoBehaviour
     }
     void Update()
     {
-        showSymbol();
+        ShowSymbol();
 
         if(Input.GetKey(KeyCode.E) && inFrontofDoor)
         {
             StartCoroutine(sceneTransition(1f));
         }
     }
-
-    private void showSymbol()
-    {
-        symbol.SetActive(inFrontofDoor);
-    }
-    private void loadScene(string sceneToLoad)
-    {
-        SceneManager.LoadSceneAsync(sceneToLoad);
-    }
-
-    IEnumerator sceneTransition(float waitTime)
-    {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(waitTime);
-        loadScene(sceneToLoad);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)
@@ -53,5 +36,21 @@ public class DoorEnter : MonoBehaviour
             inFrontofDoor = false;
         }
     }
+
+    private void ShowSymbol()
+    {
+        symbol.SetActive(inFrontofDoor);
+    }
+    IEnumerator sceneTransition(float waitTime)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(waitTime);
+        LoadScene(sceneToLoad);
+    }
+    private void LoadScene(string sceneToLoad)
+    {
+        SceneManager.LoadSceneAsync(sceneToLoad);
+    }
+
 
 }
