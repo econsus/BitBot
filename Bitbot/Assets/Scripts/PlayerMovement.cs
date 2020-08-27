@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Space]
 
     [Header("Booleans")]
-    public bool facingRight = true;
+    public bool facingLeft = true;
 
     private Rigidbody2D rb;
     private PlayerCollision coll;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip(Vector2 dir)
     {
-        if (!facingRight)
+        if (!facingLeft)
         {
             if(dir.x < 0)
             {
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             }
             sr.flipX = false;
         }
-        if (facingRight)
+        if (facingLeft)
         {
             if (dir.x > 0)
             {
