@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         anim.TriggerJump();
 
-        rb.velocity = Vector2.zero;
+        //rb.velocity = Vector2.zero;
         rb.velocity += dir * jumpForce;
     }
 
