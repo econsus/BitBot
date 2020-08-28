@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1578541493
   m_SortingLayer: 8
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6160460395429335758, guid: 8c40b768896f01d40b59c49c73626e2a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpForce: 7
-  facingRight: 1
+  jumpForce: 10
+  facingLeft: 1
 --- !u!114 &359571415823656180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4821d791918c12c47a9ecee1ff82d011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  fallMultiplier: 6
+  lowJumpMultiplier: 5.5
 --- !u!114 &359571415823656181
 MonoBehaviour:
   m_ObjectHideFlags: 0

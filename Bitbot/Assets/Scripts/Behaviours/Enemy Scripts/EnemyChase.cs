@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyChase : MonoBehaviour
+public class EnemyChase : MonoBehaviour
 {
-    public GameObject target;
+    private GameObject target;
     public float speed = 4;
     public float stopdistance = 10;
     public float retreatdistance = 6;
-
-    public
-    // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        target = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Vector2.Distance(transform.position, target.transform.position) > stopdistance)
