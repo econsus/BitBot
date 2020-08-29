@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Booleans")]
     public bool facingLeft = true;
+    private bool jumpRequest = false;
 
     private Rigidbody2D rb;
     private PlayerCollision coll;
@@ -37,10 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && coll.onGround)
         {
-            Jump(Vector2.up);
+            jumpRequest = true;
         }
     }
-
+    private void FixedUpdate()
+    {
+        if(jumpRequest)
+        {
+            Jump(Vector2.up);
+            jumpRequest = false;
+        }
+    }
     private void Run(Vector2 dir)
     {
         rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);

@@ -6,7 +6,7 @@ public class GunScript : MonoBehaviour
 {
     [SerializeField] private float offset = 2f;
     [SerializeField] private float rateOfFire = 0.1f;
-    public GameObject muzzlePrefab, gunEndpoint;
+    public GameObject muzzlePrefab, bulletPrefab, gunEndpoint;
 
     private Transform player;
     private Camera cam;
@@ -44,7 +44,7 @@ public class GunScript : MonoBehaviour
 
         transform.position = player.position + (offset * dir);
 
-        HandleShooting(angle);
+        HandleShooting(angle, mPos);
     }
 
     private void FlipGun()
@@ -72,22 +72,23 @@ public class GunScript : MonoBehaviour
         
     }
 
-    private void HandleShooting(float angle)
+    private void HandleShooting(float angle, Vector3 mPos)
     {
         if(Input.GetMouseButtonDown(0) && canShoot)
         {
-            StartCoroutine(SemiAutoShooting(rateOfFire, angle));
+            StartCoroutine(SemiAutoShooting(rateOfFire, angle, mPos));
         }
     }
 
-    IEnumerator SemiAutoShooting(float t, float angle)
+    IEnumerator SemiAutoShooting(float t, float angle, Vector3 mPos)
     {
         canShoot = false;
         anim.SetTrigger("Shoot");
         Vector3 insPos = gunEndpoint.transform.position;
-        GameObject temp = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
+        GameObject muzzleIns = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
+        Instantiate(bulletPrefab, insPos, Quaternion.Euler(0, 0, angle));
         yield return new WaitForSeconds(0.1f);
-        Destroy(temp);
+        Destroy(muzzleIns);
         yield return new WaitForSeconds(t - 0.2f);
         canShoot = true;
     }

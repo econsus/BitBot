@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8499490055473098487}
   - component: {fileID: 7286100979874373550}
+  - component: {fileID: 540756183583753236}
   - component: {fileID: 622438215399217271}
   - component: {fileID: 6709642898762784840}
   m_Layer: 0
-  m_Name: Basic_Projectile
+  m_Name: Player Small Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,6 +84,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &540756183583753236
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973469668349137906}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!61 &622438215399217271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25, y: 0.25}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980c7738257285c4dbc91fc952d81c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 359571415823656178, guid: dfa30c89bae54614e94f00e693f30c88, type: 3}
-  speed: 7
+  speed: 50
+  comparedTag: Enemy

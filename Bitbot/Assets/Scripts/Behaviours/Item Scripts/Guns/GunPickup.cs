@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GunPickup : MonoBehaviour
 {
+    public GameObject hud;
     private Transform currentParent, player;
     private GunScript gunScript;
     private BoxCollider2D coll;
@@ -21,7 +22,9 @@ public class GunPickup : MonoBehaviour
         currentParent = transform.parent;
         isEquipped = currentParent != null;
 
+
         gunScript.enabled = isEquipped;
+        hud.SetActive(isEquipped);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
