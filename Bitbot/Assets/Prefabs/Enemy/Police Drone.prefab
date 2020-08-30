@@ -49,7 +49,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.9375
+  m_Radius: 15
 --- !u!114 &7139740364867662990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +66,7 @@ MonoBehaviour:
   player: {fileID: 0}
   bulletspawn: {fileID: 7139740364867662976}
   timeBtwShots: 4
+  inRange: 0
   startTimeBtwShots: 3
 --- !u!114 &7139740364867662977
 MonoBehaviour:
@@ -80,8 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stopdistance: 10
-  retreatdistance: 6
+  stopdistance: 8
+  retreatdistance: 5
+  range: {fileID: 7139740364867662991}
+  inRange: 0
 --- !u!1 &7139740365480104380
 GameObject:
   m_ObjectHideFlags: 0

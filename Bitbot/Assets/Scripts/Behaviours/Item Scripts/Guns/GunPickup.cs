@@ -9,6 +9,7 @@ public class GunPickup : MonoBehaviour
     private GunScript gunScript;
     private BoxCollider2D coll;
     public bool isEquipped;
+    public bool collide;
     void Start()
     {
         currentParent = transform.parent;
@@ -25,17 +26,28 @@ public class GunPickup : MonoBehaviour
 
         gunScript.enabled = isEquipped;
         hud.SetActive(isEquipped);
+
+        if (Input.GetKeyDown(KeyCode.E)) 
+        {
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && !collision.isTrigger)
-        {
-            if(!isEquipped)
+        
+        
+        
+            if (collision.CompareTag("Player") && !collision.isTrigger)
             {
-                PickupItem();
+                collide = true;
+                if (!isEquipped)
+                {                 
+                        PickupItem();      
+                }
             }
-        }
+        
+
     }
     private void PickupItem()
     {
