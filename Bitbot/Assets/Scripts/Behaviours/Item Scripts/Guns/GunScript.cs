@@ -13,6 +13,7 @@ public class GunScript : MonoBehaviour
     private SpriteRenderer sr;
     private PlayerMovement move;
     private Animator anim;
+    private AudioManager am;
 
     private bool canShoot = true;
     void Start()
@@ -22,7 +23,7 @@ public class GunScript : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
         move = GetComponentInParent<PlayerMovement>();
         anim = GetComponentInChildren<Animator>();
-        
+        am = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -84,6 +85,7 @@ public class GunScript : MonoBehaviour
     {
         canShoot = false;
         anim.SetTrigger("Shoot");
+        am.PlaySound("gunshot_small");
         Vector3 insPos = gunEndpoint.transform.position;
         GameObject muzzleIns = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
         Instantiate(bulletPrefab, insPos, Quaternion.Euler(0, 0, angle));

@@ -474,6 +474,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daae3eeb4340cca4e9e1ad6e89644d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - clipName: gunshot_small
+    clip: {fileID: 8300000, guid: fcc80df1c88e49f48a97a5eda125871d, type: 3}
+    volume: 0.55
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &388995795
 Transform:
   m_ObjectHideFlags: 0
