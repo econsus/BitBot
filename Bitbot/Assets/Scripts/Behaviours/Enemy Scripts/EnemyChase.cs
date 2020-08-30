@@ -8,24 +8,47 @@ public class EnemyChase : MonoBehaviour
     public float speed = 4;
     public float stopdistance = 10;
     public float retreatdistance = 6;
+    [SerializeField] private CircleCollider2D range;
+    [SerializeField] private bool inRange;
     void Start()
     {
         target = GameObject.Find("Player");
+        range = GetComponent<CircleCollider2D>();
     }
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, target.transform.position) > stopdistance)
+        if (inRange == true)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, target.transform.position) > stopdistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+            }
+            else if (Vector2.Distance(transform.position, target.transform.position) > retreatdistance && Vector2.Distance(transform.position, target.transform.position) < stopdistance)
+            {
+                transform.position = this.transform.position;
+            }
+            else if (Vector2.Distance(transform.position, target.transform.position) < retreatdistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime * -1);
+            }
         }
-        else if (Vector2.Distance(transform.position, target.transform.position) > retreatdistance && Vector2.Distance(transform.position, target.transform.position) < stopdistance)
+
+
+
+    }
+    void OnTriggerEnter2D(Collider2D player)
+    {
+        if (player.tag == "Player")
         {
-            transform.position = this.transform.position;
+            inRange = true;
         }
-        else if (Vector2.Distance(transform.position, target.transform.position) < retreatdistance)
+    }
+    private void OnTriggerExit2D(Collider2D player)
+    {
+        if (player.tag == "Player")
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime * -1);
+            inRange = false;
         }
     }
 }

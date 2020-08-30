@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8fe9a4ee5ce814d9e1bd973e5cb0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hud: {fileID: 0}
   isEquipped: 0
 --- !u!61 &457792854
 BoxCollider2D:
@@ -15746,20 +15747,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police Drone
       objectReference: {fileID: 0}
-    - target: {fileID: 7139740364867662977, guid: 87d696e92dbc8344fab474c908078cee,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1797083439}
     - target: {fileID: 7139740364867662988, guid: 87d696e92dbc8344fab474c908078cee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 7139740364867662988, guid: 87d696e92dbc8344fab474c908078cee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.62
       objectReference: {fileID: 0}
     - target: {fileID: 7139740364867662988, guid: 87d696e92dbc8344fab474c908078cee,
         type: 3}
