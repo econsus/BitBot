@@ -1,0 +1,1478 @@
+fileFormatVersion: 2
+guid: c47bf8d98a731b3408e1c0713541f500
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -534701061004400443
+    second: LED_Gambit_0
+  - first:
+      213: -169121698497969935
+    second: LED_Gambit_1
+  - first:
+      213: 6368288693778124570
+    second: LED_Gambit_2
+  - first:
+      213: -273966178301344491
+    second: LED_Gambit_3
+  - first:
+      213: 1524875594116487930
+    second: LED_Gambit_4
+  - first:
+      213: 8026087822780550668
+    second: LED_Gambit_5
+  - first:
+      213: -4563216857996616610
+    second: LED_Gambit_6
+  - first:
+      213: -4992616710791531814
+    second: LED_Gambit_7
+  - first:
+      213: -8594239499701244276
+    second: LED_Gambit_8
+  - first:
+      213: 4162519107795613291
+    second: LED_Gambit_9
+  - first:
+      213: 2694944992856847115
+    second: LED_Gambit_10
+  - first:
+      213: 6982743115172904404
+    second: LED_Gambit_11
+  - first:
+      213: 8982777471138148223
+    second: LED_Gambit_12
+  - first:
+      213: 484792537389842615
+    second: LED_Gambit_13
+  - first:
+      213: 4383928483471823245
+    second: LED_Gambit_14
+  - first:
+      213: -12413522661268591
+    second: LED_Gambit_15
+  - first:
+      213: -7589856889665532492
+    second: LED_Gambit_16
+  - first:
+      213: 8012504060000194778
+    second: LED_Gambit_17
+  - first:
+      213: -6714358461822206997
+    second: LED_Gambit_18
+  - first:
+      213: 4573938961876387750
+    second: LED_Gambit_19
+  - first:
+      213: -8843377809608484134
+    second: LED_Gambit_20
+  - first:
+      213: -8748242706280435169
+    second: LED_Gambit_21
+  - first:
+      213: -8009202414037494877
+    second: LED_Gambit_22
+  - first:
+      213: 4513727978146307443
+    second: LED_Gambit_23
+  - first:
+      213: -579781188068413461
+    second: LED_Gambit_24
+  - first:
+      213: 3945837744599933714
+    second: LED_Gambit_25
+  - first:
+      213: -835023050259686760
+    second: LED_Gambit_26
+  - first:
+      213: -8721369642900862962
+    second: LED_Gambit_27
+  - first:
+      213: 41584155216128057
+    second: LED_Gambit_28
+  - first:
+      213: 1085977851199508043
+    second: LED_Gambit_29
+  - first:
+      213: -7149775278256104759
+    second: LED_Gambit_30
+  - first:
+      213: -5379298306367103196
+    second: LED_Gambit_31
+  - first:
+      213: -2078857423191481508
+    second: LED_Gambit_32
+  - first:
+      213: -4146307727229949075
+    second: LED_Gambit_33
+  - first:
+      213: -3884234655456654250
+    second: LED_Gambit_34
+  - first:
+      213: 2380416581879346779
+    second: LED_Gambit_35
+  - first:
+      213: 8615555205494478870
+    second: LED_Gambit_36
+  - first:
+      213: 329793230863544141
+    second: LED_Gambit_37
+  - first:
+      213: -7401479733767228599
+    second: LED_Gambit_38
+  - first:
+      213: 6069358176631359214
+    second: LED_Gambit_39
+  - first:
+      213: -7591118119764173932
+    second: LED_Gambit_40
+  - first:
+      213: 7525941919382113812
+    second: LED_Gambit_41
+  - first:
+      213: -4476204087426603806
+    second: LED_Gambit_42
+  - first:
+      213: -1252120614492130364
+    second: LED_Gambit_43
+  - first:
+      213: -3786405738701480998
+    second: LED_Gambit_44
+  - first:
+      213: 8743646520830797864
+    second: LED_Gambit_45
+  - first:
+      213: 1825376005441683333
+    second: LED_Gambit_46
+  - first:
+      213: 8755597930997208082
+    second: LED_Gambit_47
+  - first:
+      213: 666757174590179088
+    second: LED_Gambit_48
+  - first:
+      213: -7419651165644488237
+    second: LED_Gambit_49
+  - first:
+      213: 1381988316793902881
+    second: LED_Gambit_50
+  - first:
+      213: 8933802742047189893
+    second: LED_Gambit_51
+  - first:
+      213: 6524237436593472407
+    second: LED_Gambit_52
+  - first:
+      213: 6596434819665941828
+    second: LED_Gambit_53
+  - first:
+      213: -6590587030658608726
+    second: LED_Gambit_54
+  - first:
+      213: -5922904324632405599
+    second: LED_Gambit_55
+  - first:
+      213: -9043034688818963299
+    second: LED_Gambit_56
+  - first:
+      213: -5640277963193252304
+    second: LED_Gambit_57
+  - first:
+      213: 52970511605351917
+    second: LED_Gambit_58
+  - first:
+      213: 1755929928825413467
+    second: LED_Gambit_59
+  - first:
+      213: -1905934892743937829
+    second: LED_Gambit_60
+  - first:
+      213: -5715723526725057194
+    second: LED_Gambit_61
+  - first:
+      213: 7354439934197162202
+    second: LED_Gambit_62
+  - first:
+      213: -7406803015236635099
+    second: LED_Gambit_63
+  - first:
+      213: 115071528765171330
+    second: LED_Gambit_64
+  - first:
+      213: -2328993367321504137
+    second: LED_Gambit_65
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LED_Gambit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1320
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8eecdc73c5498f0800000000000000
+      internalID: -534701061004400443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1296
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0c73516b827adf0800000000000000
+      internalID: -169121698497969935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1272
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f08cb83d4b06850800000000000000
+      internalID: 6368288693778124570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51580ed563da23cf0800000000000000
+      internalID: -273966178301344491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1224
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afad9f11642792510800000000000000
+      internalID: 1524875594116487930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e4cecc954626f60800000000000000
+      internalID: 8026087822780550668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c9902d1723ca0c0800000000000000
+      internalID: -4563216857996616610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad27795bd89a6bab0800000000000000
+      internalID: -4992616710791531814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1128
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e2da195b02bb880800000000000000
+      internalID: -8594239499701244276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66fee6131d34c930800000000000000
+      internalID: 4162519107795613291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03337c413e566520800000000000000
+      internalID: 2694944992856847115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd7fa9fddfa7e060800000000000000
+      internalID: 6982743115172904404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1032
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f2297648c39ac70800000000000000
+      internalID: 8982777471138148223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1008
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0c1e48e345ab600800000000000000
+      internalID: 484792537389842615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 984
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d811e0a8ab7d6dc30800000000000000
+      internalID: 4383928483471823245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1932d5787f5e3dff0800000000000000
+      internalID: -12413522661268591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd4f632f596ba690800000000000000
+      internalID: -7589856889665532492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0dfa19df1223f60800000000000000
+      internalID: 8012504060000194778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 888
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebf27c9d8ec1d2a0800000000000000
+      internalID: -6714358461822206997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a706f68045e97f30800000000000000
+      internalID: 4573938961876387750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adad6b38cb2064580800000000000000
+      internalID: -8843377809608484134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12b04bdb9ff79680800000000000000
+      internalID: -8748242706280435169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a31819c6d899d090800000000000000
+      internalID: -8009202414037494877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d172e6eabf3ae30800000000000000
+      internalID: 4513727978146307443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef6abdc41434f7f0800000000000000
+      internalID: -579781188068413461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2132534d58e62c630800000000000000
+      internalID: 3945837744599933714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a120eb5f66964f0800000000000000
+      internalID: -835023050259686760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08c400848877f680800000000000000
+      internalID: -8721369642900862962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93821ff919cb39000800000000000000
+      internalID: 41584155216128057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e40b61a1b221f00800000000000000
+      internalID: 1085977851199508043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cadcabf345e6cc90800000000000000
+      internalID: -7149775278256104759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fd02ce0b4e855b0800000000000000
+      internalID: -5379298306367103196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53ecf7103a6623e0800000000000000
+      internalID: -2078857423191481508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b6005171b5576c0800000000000000
+      internalID: -4146307727229949075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c8e31192d681ac0800000000000000
+      internalID: -3884234655456654250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b563e5ce440f80120800000000000000
+      internalID: 2380416581879346779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618144eefc9909770800000000000000
+      internalID: 8615555205494478870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f23f63239a39400800000000000000
+      internalID: 329793230863544141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9433d889569a84990800000000000000
+      internalID: -7401479733767228599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee689b4da11ba3450800000000000000
+      internalID: 6069358176631359214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49bdc6f1a4ee6a690800000000000000
+      internalID: -7591118119764173932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e0ef03d44817860800000000000000
+      internalID: 7525941919382113812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e429c2391451e1c0800000000000000
+      internalID: -4476204087426603806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3b0456fe29f9ee0800000000000000
+      internalID: -1252120614492130364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb9239ba0cf37bc0800000000000000
+      internalID: -3786405738701480998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82823b35f2ca75970800000000000000
+      internalID: 8743646520830797864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f7fd14ec9055910800000000000000
+      internalID: 1825376005441683333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214db39dde1228970800000000000000
+      internalID: 8755597930997208082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01704ee1e1cc04900800000000000000
+      internalID: 666757174590179088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1827a639a180990800000000000000
+      internalID: -7419651165644488237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1279d325d0fcd2310800000000000000
+      internalID: 1381988316793902881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b2225b24e3bfb70800000000000000
+      internalID: 8933802742047189893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7938576b16fba8a50800000000000000
+      internalID: 6524237436593472407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445d432e48e3b8b50800000000000000
+      internalID: 6596434819665941828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa11c4893088984a0800000000000000
+      internalID: -6590587030658608726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LED_Gambit_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a919abc5ed9dcda0800000000000000
+      internalID: -5922904324632405599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
