@@ -116,6 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 0}
+  pickup: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1, type: 3}
+  symbolOffset: 4
   isEquipped: 0
   collide: 0
 --- !u!1 &6036550776422565460
