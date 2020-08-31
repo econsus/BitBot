@@ -27,27 +27,18 @@ public class GunPickup : MonoBehaviour
         gunScript.enabled = isEquipped;
         hud.SetActive(isEquipped);
 
-        if (Input.GetKeyDown(KeyCode.E)) 
+        if (Input.GetKeyDown(KeyCode.E) && collide && !isEquipped) 
         {
-
+            PickupItem();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        
-        
-            if (collision.CompareTag("Player") && !collision.isTrigger)
-            {
-                collide = true;
-                if (!isEquipped)
-                {                 
-                        PickupItem();      
-                }
-            }
-        
-
+        if (collision.CompareTag("Player") && !collision.isTrigger)
+        {
+            collide = true;
+        }
     }
     private void PickupItem()
     {
