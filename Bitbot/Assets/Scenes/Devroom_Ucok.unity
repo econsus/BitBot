@@ -273,6 +273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 570851802}
+  pickup: {fileID: 0}
+  symbolOffset: 0
   isEquipped: 0
   collide: 0
 --- !u!61 &200893752
@@ -2245,6 +2247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 570851802}
+  pickup: {fileID: 0}
+  symbolOffset: 0
   isEquipped: 0
   collide: 0
 --- !u!61 &881083937
@@ -2590,6 +2594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 570851802}
+  pickup: {fileID: 0}
+  symbolOffset: 0
   isEquipped: 0
   collide: 0
 --- !u!61 &1386450382
@@ -6471,6 +6477,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6036550776336034568, guid: b6081a27cfc295543a7c7ac4420a803d,
+        type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 570851802}
     - target: {fileID: 6036550776336034569, guid: b6081a27cfc295543a7c7ac4420a803d,
         type: 3}
       propertyPath: m_Name
@@ -6714,6 +6725,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 570851802}
+  pickup: {fileID: 0}
+  symbolOffset: 0
   isEquipped: 0
   collide: 0
 --- !u!61 &2142229334
