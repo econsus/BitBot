@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Solid
   - Enemy
+  - Hitbox
   layers:
   - Default
   - TransparentFX
@@ -18,13 +19,13 @@ TagManager:
   - Player
   - Ground
   - Ignore Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player Projectile
+  - Player Hitbox
+  - Wall
+  - Enemy Hitbox
+  - Friendly Hitbox
+  - Enemy Projectile
+  - Friendly Projectile
   - 
   - 
   - 
