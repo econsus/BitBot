@@ -28,7 +28,7 @@ public class StraightShot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Solid"))
+        if (other.CompareTag("Hitbox"))
         {
             DestroyBullet();
         }

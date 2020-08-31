@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2607141205516033373}
   - component: {fileID: 622438215399217271}
   - component: {fileID: 6709642898762784840}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Enemy Small Bullet
-  m_TagString: Untagged
+  m_TagString: Solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
