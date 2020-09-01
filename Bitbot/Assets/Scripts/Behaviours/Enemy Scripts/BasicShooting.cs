@@ -5,14 +5,16 @@ using UnityEngine;
 public class BasicShooting : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject player;
-    public GameObject bulletspawn;
+    private GameObject player;
+    private GameObject bulletspawn;
     [SerializeField] private float timeBtwShots;
     [SerializeField] private bool inRange;
     public float startTimeBtwShots;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
+        bulletspawn = this.gameObject;
         timeBtwShots = startTimeBtwShots;
     }
 

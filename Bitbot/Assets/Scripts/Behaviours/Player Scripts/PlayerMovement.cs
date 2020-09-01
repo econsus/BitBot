@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        anim.TriggerJump();
+        anim.TriggerAnim("Jump");
 
         //rb.velocity = Vector2.zero;
         rb.velocity += dir * jumpForce;
@@ -98,5 +98,21 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         anim.SetHorizontal(0);
+    }
+
+    public void Knockback(float x, float y)
+    {
+        Vector2 dir;
+        if(!facingLeft)
+        {
+            dir = Vector2.left * x + Vector2.up * y;
+        }
+        else
+        {
+            dir = Vector2.right * x + Vector2.up * y;
+        }
+
+        rb.AddForce(dir, ForceMode2D.Impulse);
+        Debug.Log("HIT");
     }
 }

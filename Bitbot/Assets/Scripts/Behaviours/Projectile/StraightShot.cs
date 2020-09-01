@@ -35,7 +35,6 @@ public class StraightShot : MonoBehaviour
         else if(other.CompareTag(comparedTag))
         {
             DestroyBullet();
-            //Hit effect
         }
     }
     void DestroyBullet()

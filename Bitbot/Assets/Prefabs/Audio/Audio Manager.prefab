@@ -44,8 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - clipName: gunshot_small
+  - clipName: Gunshot Small
     clip: {fileID: 8300000, guid: fcc80df1c88e49f48a97a5eda125871d, type: 3}
     volume: 0.55
+    pitch: 1
+    source: {fileID: 0}
+  - clipName: Player Hit
+    clip: {fileID: 8300000, guid: 1fd97b8411128cc489b2099f884fc4e4, type: 3}
+    volume: 0.57
     pitch: 1
     source: {fileID: 0}
