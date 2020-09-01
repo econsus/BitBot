@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
     private PlayerMovement move;
+    private PlayerCollision coll;
     private AudioManager am;
     private AnimationScript anim;
     public bool contact = false;
@@ -13,6 +14,7 @@ public class PlayerHurt : MonoBehaviour
     void Start()
     {
         move = GetComponentInParent<PlayerMovement>();
+        coll = GetComponentInParent<PlayerCollision>();
         anim = FindObjectOfType<AnimationScript>();
         am = FindObjectOfType<AudioManager>();
     }
@@ -30,7 +32,6 @@ public class PlayerHurt : MonoBehaviour
         if(collision.CompareTag("Enemy Projectile"))
         {
             contact = true;
-            Debug.Log("CONTACT");
         }
     }
 
@@ -45,6 +46,7 @@ public class PlayerHurt : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.15f);
         Time.timeScale = 1f;
         yield return new WaitForSeconds(0.25f);
-        move.enabled = true;
+        move.enabled = false;
+        
     }
 }

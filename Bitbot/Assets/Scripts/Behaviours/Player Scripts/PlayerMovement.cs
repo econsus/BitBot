@@ -113,6 +113,5 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.AddForce(dir, ForceMode2D.Impulse);
-        Debug.Log("HIT");
     }
 }
