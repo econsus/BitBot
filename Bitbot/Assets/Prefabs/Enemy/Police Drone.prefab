@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448753977274928596}
   - component: {fileID: 4173623569473640485}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: Hitbox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
