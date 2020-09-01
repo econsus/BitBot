@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
     private PlayerMovement move;
-    private PlayerCollision coll;
     private AudioManager am;
     private AnimationScript anim;
     public bool contact = false;
@@ -14,7 +13,6 @@ public class PlayerHurt : MonoBehaviour
     void Start()
     {
         move = GetComponentInParent<PlayerMovement>();
-        coll = GetComponentInParent<PlayerCollision>();
         anim = FindObjectOfType<AnimationScript>();
         am = FindObjectOfType<AudioManager>();
     }
@@ -23,6 +21,7 @@ public class PlayerHurt : MonoBehaviour
     {
         if(contact)
         {
+            move.canMove = false;
             StartCoroutine(Pause());
         }
     }
@@ -40,13 +39,12 @@ public class PlayerHurt : MonoBehaviour
         contact = false;
         am.PlaySound("Player Hit");
         anim.TriggerAnim("Hurt");
+        
         move.Knockback(x, y);
-        move.enabled = false;
         Time.timeScale = 0.01f;
         yield return new WaitForSecondsRealtime(0.15f);
         Time.timeScale = 1f;
-        yield return new WaitForSeconds(0.25f);
-        move.enabled = false;
-        
+        yield return new WaitForSeconds(0.35f);
+        move.canMove = true;
     }
 }
