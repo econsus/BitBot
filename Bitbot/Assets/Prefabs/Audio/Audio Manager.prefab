@@ -54,3 +54,8 @@ MonoBehaviour:
     volume: 0.57
     pitch: 1
     source: {fileID: 0}
+  - clipName: Laser 1
+    clip: {fileID: 8300000, guid: f561e34d9b9472d44b5090c9b4ccdfa5, type: 3}
+    volume: 0.57
+    pitch: 1
+    source: {fileID: 0}

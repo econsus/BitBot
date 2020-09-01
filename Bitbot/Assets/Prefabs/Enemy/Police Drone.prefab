@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8973469668349137906, guid: 60455cc0832e1744e8cee23df27b5d00, type: 3}
-  timeBtwShots: 1
+  timeBtwShots: 0.25
   inRange: 0
   startTimeBtwShots: 3
 --- !u!114 &7139740364867662977
