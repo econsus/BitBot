@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 416811244}
   - component: {fileID: 416811245}
   m_Layer: 12
-  m_Name: GameObject
+  m_Name: Hitbox
   m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058582306, y: -0.0167377}
+  m_Offset: {x: 0.058174133, y: 0.012927055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5523434, y: 1.8034091}
+  m_Size: {x: 1.6035233, y: 1.9957256}
   m_EdgeRadius: 0
 --- !u!1 &359571415736254707
 GameObject:
@@ -244,7 +244,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.058174133, y: 0.012927055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -255,7 +255,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.6035233, y: 1.9957256}
   m_EdgeRadius: 0
 --- !u!114 &359571415823656183
 MonoBehaviour:
