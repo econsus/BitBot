@@ -35,9 +35,9 @@ public class AnimationScript : MonoBehaviour
     {
         anim.SetFloat("Horizontal", x);
     }
-    public void TriggerJump()
+    public void TriggerAnim(string str)
     {
-        anim.SetTrigger("Jump");
+        anim.SetTrigger(str);
     }
     public void SetSpeed(string name, float speed)
     {

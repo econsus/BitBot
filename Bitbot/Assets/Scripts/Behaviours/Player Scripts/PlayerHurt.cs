@@ -5,17 +5,23 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
     private PlayerMovement move;
+    private AudioManager am;
+    private AnimationScript anim;
     public bool contact = false;
+    public float x = 3;
+    public float y = 1;
     void Start()
     {
         move = GetComponentInParent<PlayerMovement>();
+        anim = FindObjectOfType<AnimationScript>();
+        am = FindObjectOfType<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(contact)
         {
+            move.canMove = false;
             StartCoroutine(Pause());
         }
     }
@@ -25,15 +31,20 @@ public class PlayerHurt : MonoBehaviour
         if(collision.CompareTag("Enemy Projectile"))
         {
             contact = true;
-            Debug.Log("CONTACT");
         }
     }
 
     IEnumerator Pause()
     {
         contact = false;
+        am.PlaySound("Player Hit");
+        anim.TriggerAnim("Hurt");
+        
+        move.Knockback(x, y);
         Time.timeScale = 0.01f;
         yield return new WaitForSecondsRealtime(0.15f);
         Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.35f);
+        move.canMove = true;
     }
 }
