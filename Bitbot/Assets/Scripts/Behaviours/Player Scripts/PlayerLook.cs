@@ -7,7 +7,7 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         move = GetComponent<PlayerMovement>();
-        cam = Camera.main;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     void Update()
