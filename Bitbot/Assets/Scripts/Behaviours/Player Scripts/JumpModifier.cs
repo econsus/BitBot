@@ -5,6 +5,7 @@ public class JumpModifier : MonoBehaviour
     [Header("Multiplers")]
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    public float maxHeight = 5.5f;
 
     private PlayerMovement move;
     private Rigidbody2D rb;
@@ -16,7 +17,7 @@ public class JumpModifier : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb.velocity.y < 4 && rb.velocity.y != 0)
+        if (rb.velocity.y < maxHeight && rb.velocity.y != 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }

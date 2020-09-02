@@ -177,8 +177,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 90, y: 16}
-      - {x: -22, y: 16}
+    - - {x: 90, y: 13}
+      - {x: -22, y: 13}
       - {x: -22, y: -12}
       - {x: 90, y: -12}
 --- !u!1 &154696570
