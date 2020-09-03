@@ -6,20 +6,21 @@ public class PlayerCollision : MonoBehaviour
     public bool onGround;
 
     [Header("Collision")]
-    public float colliderRadius = 0.25f;
+    public Vector2 colliderSize;
     public Vector2 bottomOffset;
-    public Color ColliderColor = Color.blue;
+    public Color colliderColor = Color.blue;
     public LayerMask groundLayer;
+    private static float colliderAngle = 0f;
 
     void Update()
     {
-        onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, colliderRadius, groundLayer);
+        onGround = Physics2D.OverlapBox((Vector2)transform.position + bottomOffset, colliderSize, colliderAngle, groundLayer);
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = ColliderColor;
+        Gizmos.color = colliderColor;
 
-        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, colliderRadius);
+        Gizmos.DrawWireCube((Vector2)transform.position + bottomOffset, colliderSize);
     }
 }

@@ -46,7 +46,7 @@ public class AnimationScript : MonoBehaviour
     private void SetLookingUp()
     {
         bool temp;
-        if (camTarget.position.y > -2.1f)
+        if (camTarget.position.y > transform.position.y + 2.1f)
         {
             temp = true;
         }
