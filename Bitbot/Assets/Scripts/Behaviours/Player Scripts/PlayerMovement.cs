@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Booleans")]
     public bool facingLeft = true;
+    public bool isWallSliding = false;
     private bool jumpRequest = false;
 
     private Rigidbody2D rb;
@@ -42,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpRequest = true;
         }
+
+        WallSlide(x);
     }
     private void FixedUpdate()
     {
@@ -75,6 +78,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetSpeed("playbackSpeed", 1f);
             }
+            if(coll.bottomOffset.x < 0)
+            {
+                coll.FlipBottomOffsetX();
+            }
             sr.flipX = false;
         }
         if (facingLeft)
@@ -86,6 +93,10 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 anim.SetSpeed("playbackSpeed", 1f);
+            }
+            if (coll.bottomOffset.x > 0)
+            {
+                coll.FlipBottomOffsetX();
             }
             sr.flipX = true;
         }
@@ -106,6 +117,35 @@ public class PlayerMovement : MonoBehaviour
 
             rb.velocity = Vector2.zero;
             rb.velocity += dir * jumpForce;
+        }
+    }
+
+    private void WallSlide(float _x)
+    {
+        if(!canMove)
+        {
+            return;
+        }
+        if(!coll.onWall)
+        {
+            return;
+        }
+        if (coll.onLeftWall && _x < 0 || coll.onRightWall && _x > 0)
+        {
+            SlideDown();
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+    }
+
+    private void SlideDown()
+    {
+        if(rb.velocity.y < 0)
+        {
+            rb.velocity = Vector2.down * 2f;
+            isWallSliding = true;
         }
     }
 
