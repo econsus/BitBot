@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 416811244}
   - component: {fileID: 416811245}
   - component: {fileID: 2055191600}
+  - component: {fileID: 1266048512}
   m_Layer: 12
   m_Name: Hitbox
   m_TagString: Hitbox
@@ -45,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058174133, y: 0.012927055}
+  m_Offset: {x: 0.075, y: 0.012}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6035233, y: 1.9957256}
+  m_Size: {x: 1.615, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &2055191600
 MonoBehaviour:
@@ -73,6 +74,18 @@ MonoBehaviour:
   contact: 0
   x: 3
   y: 1
+--- !u!114 &1266048512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416811243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676248908b3f3da4aa2dcaf527ddc7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &359571415736254707
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +217,7 @@ GameObject:
   - component: {fileID: 359571415823656181}
   - component: {fileID: 359571415823656171}
   - component: {fileID: 1096296353}
+  - component: {fileID: 122152924}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -261,7 +275,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.058174133, y: 0.012927055}
+  m_Offset: {x: 0.125, y: 0.012927055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -272,7 +286,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6035233, y: 1.9957256}
+  m_Size: {x: 1.25, y: 1.9957256}
   m_EdgeRadius: 0
 --- !u!114 &359571415823656183
 MonoBehaviour:
@@ -287,9 +301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
-  jumpForce: 12
+  jumpForce: 16.5
   canMove: 1
   facingLeft: 1
+  isWallSliding: 0
 --- !u!114 &359571415823656180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 6
   lowJumpMultiplier: 5.5
-  maxHeight: 5
+  maxHeight: 10
 --- !u!114 &359571415823656181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,9 +333,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onGround: 0
+  onWall: 0
+  onLeftWall: 0
+  onRightWall: 0
+  colliderSize: {x: 1.25, y: 0.25}
   colliderRadius: 0.25
-  bottomOffset: {x: 0, y: -1}
-  ColliderColor: {r: 0, g: 0.8233428, b: 1, a: 1}
+  bottomOffset: {x: 0.125, y: -0.9}
+  leftOffset: {x: -0.75, y: 0}
+  rightOffset: {x: 0.85, y: 0}
+  colliderColor: {r: 0, g: 0, b: 1, a: 1}
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -351,3 +372,15 @@ MonoBehaviour:
   contact: 0
   x: 3
   y: 1
+--- !u!114 &122152924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359571415823656178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676248908b3f3da4aa2dcaf527ddc7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

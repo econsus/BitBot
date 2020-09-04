@@ -10,7 +10,7 @@ public class PlayerLook : MonoBehaviour
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         FlipSpriteX();
     }
@@ -23,5 +23,6 @@ public class PlayerLook : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         move.facingLeft = angle > 90 || angle < -90;
+        Debug.Log(angle);
     }
 }
