@@ -35,9 +35,9 @@ public class AnimationScript : MonoBehaviour
     {
         anim.SetFloat("Horizontal", x);
     }
-    public void TriggerJump()
+    public void TriggerAnim(string str)
     {
-        anim.SetTrigger("Jump");
+        anim.SetTrigger(str);
     }
     public void SetSpeed(string name, float speed)
     {
@@ -46,7 +46,7 @@ public class AnimationScript : MonoBehaviour
     private void SetLookingUp()
     {
         bool temp;
-        if (camTarget.position.y > -2.1f)
+        if (camTarget.position.y > transform.position.y + 2.1f)
         {
             temp = true;
         }

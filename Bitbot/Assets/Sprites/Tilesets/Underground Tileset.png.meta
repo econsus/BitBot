@@ -1,0 +1,3080 @@
+fileFormatVersion: 2
+guid: 87429c5811aba044abdb2edfd449af4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4036537967875555290
+    second: Underground Tileset_0
+  - first:
+      213: -1909080252533249804
+    second: Underground Tileset_1
+  - first:
+      213: 6026945944098866121
+    second: Underground Tileset_2
+  - first:
+      213: -3881279707731690233
+    second: Underground Tileset_3
+  - first:
+      213: 3996100649447751664
+    second: Underground Tileset_4
+  - first:
+      213: 6956798740351435901
+    second: Underground Tileset_5
+  - first:
+      213: -7187475840493753966
+    second: Underground Tileset_6
+  - first:
+      213: 1386034404382457298
+    second: Underground Tileset_7
+  - first:
+      213: 6299573973489911982
+    second: Underground Tileset_8
+  - first:
+      213: 4904121721804618495
+    second: Underground Tileset_9
+  - first:
+      213: -4351731044148063035
+    second: Underground Tileset_10
+  - first:
+      213: 8350633542225584337
+    second: Underground Tileset_11
+  - first:
+      213: -4346876802476056402
+    second: Underground Tileset_12
+  - first:
+      213: 3126661246094580422
+    second: Underground Tileset_13
+  - first:
+      213: 6345520342675849244
+    second: Underground Tileset_14
+  - first:
+      213: -3628078570122540203
+    second: Underground Tileset_15
+  - first:
+      213: -4247750489552643355
+    second: Underground Tileset_16
+  - first:
+      213: -8526648579909459894
+    second: Underground Tileset_17
+  - first:
+      213: 2191888413623780027
+    second: Underground Tileset_18
+  - first:
+      213: -8494143431032934863
+    second: Underground Tileset_19
+  - first:
+      213: 3792069729652582701
+    second: Underground Tileset_20
+  - first:
+      213: -7040202267694576793
+    second: Underground Tileset_21
+  - first:
+      213: -2628587193676480027
+    second: Underground Tileset_22
+  - first:
+      213: -4412320986707157751
+    second: Underground Tileset_23
+  - first:
+      213: 1594804585778678159
+    second: Underground Tileset_24
+  - first:
+      213: 3145175625707757027
+    second: Underground Tileset_25
+  - first:
+      213: 6555932486073790831
+    second: Underground Tileset_26
+  - first:
+      213: 4799961994688525813
+    second: Underground Tileset_27
+  - first:
+      213: 5627342539045651886
+    second: Underground Tileset_28
+  - first:
+      213: -7139439420331170194
+    second: Underground Tileset_29
+  - first:
+      213: 1577418597048939816
+    second: Underground Tileset_30
+  - first:
+      213: -4345926931886452049
+    second: Underground Tileset_31
+  - first:
+      213: -707776607878319092
+    second: Underground Tileset_32
+  - first:
+      213: -56400320202424555
+    second: Underground Tileset_33
+  - first:
+      213: 1662017116294469515
+    second: Underground Tileset_34
+  - first:
+      213: 8902831315220414054
+    second: Underground Tileset_35
+  - first:
+      213: 1877221190980717274
+    second: Underground Tileset_36
+  - first:
+      213: -1306268015852584931
+    second: Underground Tileset_37
+  - first:
+      213: -3100661315123868605
+    second: Underground Tileset_38
+  - first:
+      213: -3221517069540028852
+    second: Underground Tileset_39
+  - first:
+      213: 2213965041245862492
+    second: Underground Tileset_40
+  - first:
+      213: 1298697932156164869
+    second: Underground Tileset_41
+  - first:
+      213: -5421212036990734538
+    second: Underground Tileset_42
+  - first:
+      213: 941778646087975669
+    second: Underground Tileset_43
+  - first:
+      213: -1336351697090287057
+    second: Underground Tileset_44
+  - first:
+      213: -3337156639997884974
+    second: Underground Tileset_45
+  - first:
+      213: -6023220633494432212
+    second: Underground Tileset_46
+  - first:
+      213: 138570930452160437
+    second: Underground Tileset_47
+  - first:
+      213: 6770094994297622428
+    second: Underground Tileset_48
+  - first:
+      213: -901501399834674863
+    second: Underground Tileset_49
+  - first:
+      213: 8957827249809974225
+    second: Underground Tileset_50
+  - first:
+      213: -1817149857007880677
+    second: Underground Tileset_51
+  - first:
+      213: 8607408294880198321
+    second: Underground Tileset_52
+  - first:
+      213: -4878309368907265100
+    second: Underground Tileset_53
+  - first:
+      213: -6148228835645812869
+    second: Underground Tileset_54
+  - first:
+      213: -1526767692913023315
+    second: Underground Tileset_55
+  - first:
+      213: -8514314972289950313
+    second: Underground Tileset_56
+  - first:
+      213: -653545903063202260
+    second: Underground Tileset_57
+  - first:
+      213: 699423661086503073
+    second: Underground Tileset_58
+  - first:
+      213: 4461901791874424812
+    second: Underground Tileset_59
+  - first:
+      213: -6291362018671859451
+    second: Underground Tileset_60
+  - first:
+      213: 5819372491121042036
+    second: Underground Tileset_61
+  - first:
+      213: 3774504211738234125
+    second: Underground Tileset_62
+  - first:
+      213: 4511082367739264663
+    second: Underground Tileset_63
+  - first:
+      213: -2450560043129174802
+    second: Underground Tileset_64
+  - first:
+      213: 3600996015245613686
+    second: Underground Tileset_65
+  - first:
+      213: 7316004934426191949
+    second: Underground Tileset_66
+  - first:
+      213: 5727699193656764587
+    second: Underground Tileset_67
+  - first:
+      213: 5632978429880639271
+    second: Underground Tileset_68
+  - first:
+      213: -2591997633514040283
+    second: Underground Tileset_69
+  - first:
+      213: 453023801997099102
+    second: Underground Tileset_70
+  - first:
+      213: 2538506300395128695
+    second: Underground Tileset_71
+  - first:
+      213: -1612322543408368060
+    second: Underground Tileset_72
+  - first:
+      213: 4274350303806998344
+    second: Underground Tileset_73
+  - first:
+      213: -4687580723918038507
+    second: Underground Tileset_74
+  - first:
+      213: 8147486807627182515
+    second: Underground Tileset_75
+  - first:
+      213: 9048184086827228353
+    second: Underground Tileset_76
+  - first:
+      213: 6212663589330035826
+    second: Underground Tileset_77
+  - first:
+      213: 3629618795379638887
+    second: Underground Tileset_78
+  - first:
+      213: 9001858070525305619
+    second: Underground Tileset_79
+  - first:
+      213: 1244689643399682820
+    second: Underground Tileset_80
+  - first:
+      213: -2268833262940414100
+    second: Underground Tileset_81
+  - first:
+      213: 5346888011753400709
+    second: Underground Tileset_82
+  - first:
+      213: -1767362617277353978
+    second: Underground Tileset_83
+  - first:
+      213: -5646941494712121225
+    second: Underground Tileset_84
+  - first:
+      213: -3974366529619213975
+    second: Underground Tileset_85
+  - first:
+      213: -3232305154231503025
+    second: Underground Tileset_86
+  - first:
+      213: -7583399960275158919
+    second: Underground Tileset_87
+  - first:
+      213: -1784023632106937984
+    second: Underground Tileset_88
+  - first:
+      213: -8342744012233419568
+    second: Underground Tileset_89
+  - first:
+      213: 4180457042800155596
+    second: Underground Tileset_90
+  - first:
+      213: 5389148046272304904
+    second: Underground Tileset_91
+  - first:
+      213: 4616759068766847541
+    second: Underground Tileset_92
+  - first:
+      213: 1318356394406084098
+    second: Underground Tileset_93
+  - first:
+      213: -1356475658469196756
+    second: Underground Tileset_94
+  - first:
+      213: -446100101730592645
+    second: Underground Tileset_95
+  - first:
+      213: -1033111083063845022
+    second: Underground Tileset_96
+  - first:
+      213: 4821824336941062269
+    second: Underground Tileset_97
+  - first:
+      213: 7837208402688849082
+    second: Underground Tileset_98
+  - first:
+      213: -4747452966071091746
+    second: Underground Tileset_99
+  - first:
+      213: -6420723131802129588
+    second: Underground Tileset_100
+  - first:
+      213: -4974483842247416189
+    second: Underground Tileset_101
+  - first:
+      213: -3318171583011341922
+    second: Underground Tileset_102
+  - first:
+      213: 4556963766453470050
+    second: Underground Tileset_103
+  - first:
+      213: -3833493987711801262
+    second: Underground Tileset_104
+  - first:
+      213: 1377270801529251061
+    second: Underground Tileset_105
+  - first:
+      213: 7754004574710259495
+    second: Underground Tileset_106
+  - first:
+      213: -7769581777438664562
+    second: Underground Tileset_107
+  - first:
+      213: -43127888955464805
+    second: Underground Tileset_108
+  - first:
+      213: 4236304155384080129
+    second: Underground Tileset_109
+  - first:
+      213: 2677374439434903960
+    second: Underground Tileset_110
+  - first:
+      213: -7158026678868998106
+    second: Underground Tileset_111
+  - first:
+      213: 7794955370436345057
+    second: Underground Tileset_112
+  - first:
+      213: -4394380765818722131
+    second: Underground Tileset_113
+  - first:
+      213: 2637661512389047154
+    second: Underground Tileset_114
+  - first:
+      213: 6670563106306031691
+    second: Underground Tileset_115
+  - first:
+      213: 9006244058087902418
+    second: Underground Tileset_116
+  - first:
+      213: -4071015962823815304
+    second: Underground Tileset_117
+  - first:
+      213: -2189293535417870952
+    second: Underground Tileset_118
+  - first:
+      213: -4438022367378639596
+    second: Underground Tileset_119
+  - first:
+      213: 9130617543545847503
+    second: Underground Tileset_120
+  - first:
+      213: -7653045611567277495
+    second: Underground Tileset_121
+  - first:
+      213: 6379963948062472544
+    second: Underground Tileset_122
+  - first:
+      213: 3098601358896425193
+    second: Underground Tileset_123
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Underground Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf799135e9a40830800000000000000
+      internalID: 4036537967875555290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8ea0400a59185e0800000000000000
+      internalID: -1909080252533249804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c38e7e676304a350800000000000000
+      internalID: 6026945944098866121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d78b27bace22ac0800000000000000
+      internalID: -3881279707731690233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff7a015e50057730800000000000000
+      internalID: 3996100649447751664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74488c78938b8060800000000000000
+      internalID: 6956798740351435901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299eaafcdc4f04c90800000000000000
+      internalID: -7187475840493753966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddbfaf72fe2c3310800000000000000
+      internalID: 1386034404382457298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8892ef6259c6750800000000000000
+      internalID: 6299573973489911982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffaf07b09b0fe0440800000000000000
+      internalID: 4904121721804618495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4d38bfbab8b93c0800000000000000
+      internalID: -4351731044148063035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d061dd86f863e370800000000000000
+      internalID: 8350633542225584337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea06702349acca3c0800000000000000
+      internalID: -4346876802476056402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca927a66d1246b20800000000000000
+      internalID: 3126661246094580422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c108534b121df0850800000000000000
+      internalID: 6345520342675849244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b83aa43c976adc0800000000000000
+      internalID: -3628078570122540203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea19bf6f65fc05c0800000000000000
+      internalID: -4247750489552643355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4068edea424ba980800000000000000
+      internalID: -8526648579909459894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2075926e62b6e10800000000000000
+      internalID: 2191888413623780027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e601aad8dbe1a80800000000000000
+      internalID: -8494143431032934863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29247fe35320a430800000000000000
+      internalID: 3792069729652582701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b4a2f865d2c4e90800000000000000
+      internalID: -7040202267694576793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1c5cbcfd1658bd0800000000000000
+      internalID: -2628587193676480027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d9158a07944c2c0800000000000000
+      internalID: -4412320986707157751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8980853252e12610800000000000000
+      internalID: 1594804585778678159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed17865198e5ab20800000000000000
+      internalID: 3145175625707757027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f613fdb7cd95bfa50800000000000000
+      internalID: 6555932486073790831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 472
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5f8ccb004ec9240800000000000000
+      internalID: 4799961994688525813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5c24d6936581e40800000000000000
+      internalID: 5627342539045651886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e666dbf6cad9bec90800000000000000
+      internalID: -7139439420331170194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82572334bdd14e510800000000000000
+      internalID: 1577418597048939816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2da1d2b7a20b3c0800000000000000
+      internalID: -4345926931886452049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04f413dce87d26f0800000000000000
+      internalID: -707776607878319092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fbd152530a73ff0800000000000000
+      internalID: -56400320202424555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87d953f2cba01710800000000000000
+      internalID: 1662017116294469515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ebfe679e53d8b70800000000000000
+      internalID: 8902831315220414054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adacd3d2aba3d0a10800000000000000
+      internalID: 1877221190980717274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_37
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1007a519243fdde0800000000000000
+      internalID: -1306268015852584931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c0f3f36fc38f4d0800000000000000
+      internalID: -3100661315123868605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_39
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e85382b4fda43d0800000000000000
+      internalID: -3221517069540028852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_40
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ab794997599be10800000000000000
+      internalID: 2213965041245862492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_41
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bd3b473e6e50210800000000000000
+      internalID: 1298697932156164869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f681b006cf3c4b0800000000000000
+      internalID: -5421212036990734538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_43
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f24f1950bed11d00800000000000000
+      internalID: 941778646087975669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_44
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a61f73633547de0800000000000000
+      internalID: -1336351697090287057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_45
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5071987b900b1d0800000000000000
+      internalID: -3337156639997884974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26d2c80fb8396ca0800000000000000
+      internalID: -6023220633494432212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_47
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfdbcde68d4ce100800000000000000
+      internalID: 138570930452160437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_48
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f82ce178534fd50800000000000000
+      internalID: 6770094994297622428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_49
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 464
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1593652d0493d73f0800000000000000
+      internalID: -901501399834674863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3ec305c68905c70800000000000000
+      internalID: 8957827249809974225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_51
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16b46d25df28c6e0800000000000000
+      internalID: -1817149857007880677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_52
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1beb51d7d38a37770800000000000000
+      internalID: 8607408294880198321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_53
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb82d1b973cc4cb0800000000000000
+      internalID: -4878309368907265100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f848dd27a1daaa0800000000000000
+      internalID: -6148228835645812869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_55
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da660695fd4dfcae0800000000000000
+      internalID: -1526767692913023315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_56
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d1edab4a317d980800000000000000
+      internalID: -8514314972289950313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_57
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26818bb6732ee6f0800000000000000
+      internalID: -653545903063202260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_58
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a070923d1ad4b900800000000000000
+      internalID: 699423661086503073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_59
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef9a5f1a0cdbed30800000000000000
+      internalID: 4461901791874424812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509edabb39790b8a0800000000000000
+      internalID: -6291362018671859451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47223f4c27092c050800000000000000
+      internalID: 5819372491121042036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_62
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d8fd7159bb16430800000000000000
+      internalID: 3774504211738234125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_63
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e70a143859a9e30800000000000000
+      internalID: 4511082367739264663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_64
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee40588df9cddfdd0800000000000000
+      internalID: -2450560043129174802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_65
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67adf460cce49f130800000000000000
+      internalID: 3600996015245613686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_66
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d486a7bd9bba78560800000000000000
+      internalID: 7316004934426191949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_67
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8e33ae110ec7f40800000000000000
+      internalID: 5727699193656764587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_68
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f1974890c5c2e40800000000000000
+      internalID: 5632978429880639271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_69
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5241eb3a2ef570cd0800000000000000
+      internalID: -2591997633514040283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_70
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5085d86fb6794600800000000000000
+      internalID: 453023801997099102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_71
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7778427d7069a3320800000000000000
+      internalID: 2538506300395128695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4463ac07031ef99e0800000000000000
+      internalID: -1612322543408368060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_73
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847cfff64fa815b30800000000000000
+      internalID: 4274350303806998344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_74
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a95eeda2e52feb0800000000000000
+      internalID: -4687580723918038507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_75
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1bcc49510b11170800000000000000
+      internalID: 8147486807627182515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_76
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccdda5dc7b919d70800000000000000
+      internalID: 9048184086827228353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_77
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274250f4e90d73650800000000000000
+      internalID: 6212663589330035826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_78
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7624fa8501ffe5230800000000000000
+      internalID: 3629618795379638887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_79
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313e424a8360dec70800000000000000
+      internalID: 9001858070525305619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_80
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b1272d2a6064110800000000000000
+      internalID: 1244689643399682820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_81
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f98db0b2c7380e0800000000000000
+      internalID: -2268833262940414100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_82
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5892b525156f33a40800000000000000
+      internalID: 5346888011753400709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_83
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600f0ef30111977e0800000000000000
+      internalID: -1767362617277353978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778454c11a802a1b0800000000000000
+      internalID: -5646941494712121225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_85
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96148dac2b638d8c0800000000000000
+      internalID: -3974366529619213975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_86
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47fd54769b8423d0800000000000000
+      internalID: -3232305154231503025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_87
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978761a2ae952c690800000000000000
+      internalID: -7583399960275158919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_88
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0812d5175ffdd37e0800000000000000
+      internalID: -1784023632106937984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_89
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d45fcac58e983c80800000000000000
+      internalID: -8342744012233419568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_90
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb12ea0887f30a30800000000000000
+      internalID: 4180457042800155596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_91
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8071d0c58991aca40800000000000000
+      internalID: 5389148046272304904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532496399e5021040800000000000000
+      internalID: 4616759068766847541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_93
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e70ffd72ebb4210800000000000000
+      internalID: 1318356394406084098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cba765394dc2de0800000000000000
+      internalID: -1356475658469196756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_95
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78151e22522fc9f0800000000000000
+      internalID: -446100101730592645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_96
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fd57091f6a9a1f0800000000000000
+      internalID: -1033111083063845022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_97
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7894b4ffaf8ae240800000000000000
+      internalID: 4821824336941062269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_98
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4b9f8d48b53cc60800000000000000
+      internalID: 7837208402688849082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_99
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd35713ea8ad1eb0800000000000000
+      internalID: -4747452966071091746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_100
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4beccf745205e6a0800000000000000
+      internalID: -6420723131802129588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_101
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3862ce92d4517fab0800000000000000
+      internalID: -4974483842247416189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_102
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9930d2968c73f1d0800000000000000
+      internalID: -3318171583011341922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_103
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26309c9d6669d3f30800000000000000
+      internalID: 4556963766453470050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_104
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258a7d56781bccac0800000000000000
+      internalID: -3833493987711801262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_105
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 432
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f42ba43f7c0d1310800000000000000
+      internalID: 1377270801529251061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_106
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 408
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fdb560412cb9b60800000000000000
+      internalID: 7754004574710259495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_107
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 408
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e889b66d986ec2490800000000000000
+      internalID: -7769581777438664562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_108
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93a5ead967c66ff0800000000000000
+      internalID: -43127888955464805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_109
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107ed263f206aca30800000000000000
+      internalID: 4236304155384080129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_110
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 408
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8916a390ed1f72520800000000000000
+      internalID: 2677374439434903960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_111
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 408
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6288e3119a499ac90800000000000000
+      internalID: -7158026678868998106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_112
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecb1e62c9e3d2c60800000000000000
+      internalID: 7794955370436345057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_113
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 400
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8e095d9f50403c0800000000000000
+      internalID: -4394380765818722131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_114
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2733babab2bda9420800000000000000
+      internalID: 2637661512389047154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_115
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 376
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4082339dc9929c50800000000000000
+      internalID: 6670563106306031691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_116
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc4dc2f04b9cfc70800000000000000
+      internalID: 9006244058087902418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_117
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 368
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f01fc0d88d087c0800000000000000
+      internalID: -4071015962823815304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_118
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 344
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895db5001211e91e0800000000000000
+      internalID: -2189293535417870952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_119
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 344
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4157827ab2af862c0800000000000000
+      internalID: -4438022367378639596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_120
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 336
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcefffe974876be70800000000000000
+      internalID: 9130617543545847503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_121
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 336
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a9ba8509beac590800000000000000
+      internalID: -7653045611567277495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_122
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 336
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069ff04886f2a8850800000000000000
+      internalID: 6379963948062472544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Underground Tileset_123
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 336
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e86091d481700b20800000000000000
+      internalID: 3098601358896425193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,7 +12,7 @@ public class CameraTarget : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player").transform;
-        cam = Camera.main;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
     void Update()
     {

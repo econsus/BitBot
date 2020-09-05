@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448753977274928596}
   - component: {fileID: 4173623569473640485}
+  - component: {fileID: 1666598863}
   m_Layer: 14
   m_Name: Hitbox
   m_TagString: Hitbox
@@ -47,6 +48,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.7661984
+--- !u!114 &1666598863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5491391587363341763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156e1c5008894c24badf2ad89106a6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &7139740364867662976
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +111,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 20
 --- !u!114 &7139740364867662990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,9 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8973469668349137906, guid: 60455cc0832e1744e8cee23df27b5d00, type: 3}
-  player: {fileID: 0}
-  bulletspawn: {fileID: 7139740364867662976}
-  timeBtwShots: 4
+  timeBtwShots: 0.25
   inRange: 0
   startTimeBtwShots: 3
 --- !u!114 &7139740364867662977
@@ -202,7 +214,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1578541493
   m_SortingLayer: 8
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4467197723253341602, guid: 34bde863e39dfbd4bbe741458c6f0732,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

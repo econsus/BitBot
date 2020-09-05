@@ -1835,7 +1835,7 @@ PrefabInstance:
     - target: {fileID: 5387015470286794034, guid: 6da2b6b88f9178c49afae78e6b3e98e6,
         type: 3}
       propertyPath: m_Name
-      value: Main Camera (PP, CM)
+      value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 5387015470286794190, guid: 6da2b6b88f9178c49afae78e6b3e98e6,
         type: 3}

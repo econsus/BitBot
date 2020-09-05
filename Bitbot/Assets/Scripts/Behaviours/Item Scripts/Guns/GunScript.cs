@@ -85,7 +85,7 @@ public class GunScript : MonoBehaviour
     {
         canShoot = false;
         anim.SetTrigger("Shoot");
-        am.PlaySound("gunshot_small");
+        am.PlaySound("Gunshot Small");
         Vector3 insPos = gunEndpoint.transform.position;
         GameObject muzzleIns = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
         Instantiate(bulletPrefab, insPos, Quaternion.Euler(0, 0, angle));

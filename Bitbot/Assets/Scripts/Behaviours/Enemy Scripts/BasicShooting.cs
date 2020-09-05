@@ -5,28 +5,32 @@ using UnityEngine;
 public class BasicShooting : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject player;
-    public GameObject bulletspawn;
+    private GameObject player;
+    private GameObject bulletspawn;
     [SerializeField] private float timeBtwShots;
     [SerializeField] private bool inRange;
     public float startTimeBtwShots;
+
+    private AudioManager am;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
+        bulletspawn = this.gameObject;
         timeBtwShots = startTimeBtwShots;
+        am = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if(inRange == true)
         {
             if (timeBtwShots <= 0)
             {
+                am.PlaySound("Laser 1");
                 Instantiate(bullet, bulletspawn.transform.position, Quaternion.Euler(0, 0, findAngle()));
                 timeBtwShots = startTimeBtwShots;
-
             }
             else
             {
