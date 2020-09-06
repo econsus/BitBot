@@ -5,8 +5,16 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     [SerializeField] private float offset = 2f;
-    [SerializeField] private float rateOfFire = 0.1f;
+
+    [Header("Stats")]
+    [SerializeField] private FiringMode firingMode;
+    [SerializeField] private float rateOfFire;
+    [SerializeField] private int magSize;
+    [SerializeField] private int currentBulletCount;
+    [SerializeField] private float reloadTime;
+
     public GameObject muzzlePrefab, bulletPrefab, gunEndpoint;
+    public RangedWeapon scriptableObject;
 
     private Transform player;
     private Camera cam;
@@ -16,10 +24,20 @@ public class GunScript : MonoBehaviour
     private AudioManager am;
 
     private bool canShoot = true;
+
+    private void Awake()
+    {
+        firingMode = scriptableObject.firingMode;
+        rateOfFire = scriptableObject.rateOfFire;
+        reloadTime = scriptableObject.reloadTime;
+        magSize = scriptableObject.magazineSize;
+        currentBulletCount = magSize;
+
+    }
     void Start()
     {
         player = GameObject.Find("Player").transform;
-        cam = Camera.main;
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         sr = GetComponentInChildren<SpriteRenderer>();
         move = GetComponentInParent<PlayerMovement>();
         anim = GetComponentInChildren<Animator>();
@@ -29,6 +47,10 @@ public class GunScript : MonoBehaviour
     void Update()
     {
         HandleAiming();
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            HandleReload();
+        }
     }
 
     private void HandleAiming()
@@ -45,7 +67,14 @@ public class GunScript : MonoBehaviour
 
         transform.position = player.position + (offset * dir);
 
-        HandleShooting(angle, mPos);
+        if (firingMode == FiringMode.Semi)
+        {
+            HandleSemiAutoShooting(angle, mPos);
+        }
+        if (firingMode == FiringMode.Automatic)
+        {
+            HandleAutoShooting(angle, mPos);
+        }
     }
 
     private void FlipGun()
@@ -58,7 +87,6 @@ public class GunScript : MonoBehaviour
             sr.flipY = true;
             if(temp.y > 0)
             {
-                
                 gunTrans.localPosition = new Vector3(temp.x, -temp.y, temp.z);
             }
         }
@@ -70,15 +98,41 @@ public class GunScript : MonoBehaviour
                 gunTrans.localPosition = new Vector3(temp.x, -temp.y, temp.z);
             }
         }
-        
     }
 
-    private void HandleShooting(float angle, Vector3 mPos)
+    private void HandleSemiAutoShooting(float angle, Vector3 mPos)
     {
         if(Input.GetMouseButtonDown(0) && canShoot)
         {
-            StartCoroutine(SemiAutoShooting(rateOfFire, angle, mPos));
+            if(currentBulletCount > 0)
+            {
+                StartCoroutine(SemiAutoShooting(rateOfFire, angle, mPos));
+            }
+            else
+            {
+                HandleReload();
+            }
         }
+    }
+
+    private void HandleAutoShooting(float angle, Vector3 mPos)
+    {
+        if (Input.GetMouseButton(0) && canShoot)
+        {
+            if (currentBulletCount > 0)
+            {
+                StartCoroutine(AutoShooting(rateOfFire, angle, mPos));
+            }
+            else
+            {
+                HandleReload();
+            }
+        }
+    }
+
+    private void HandleReload()
+    {
+        StartCoroutine(ReloadGun(reloadTime));
     }
 
     IEnumerator SemiAutoShooting(float t, float angle, Vector3 mPos)
@@ -86,6 +140,7 @@ public class GunScript : MonoBehaviour
         canShoot = false;
         anim.SetTrigger("Shoot");
         am.PlaySound("Gunshot Small");
+        currentBulletCount--;
         Vector3 insPos = gunEndpoint.transform.position;
         GameObject muzzleIns = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
         Instantiate(bulletPrefab, insPos, Quaternion.Euler(0, 0, angle));
@@ -93,5 +148,29 @@ public class GunScript : MonoBehaviour
         Destroy(muzzleIns);
         yield return new WaitForSeconds(t - 0.2f);
         canShoot = true;
+    }
+
+    IEnumerator AutoShooting(float t, float angle, Vector3 mPos)
+    {
+        am.PlaySound("Gunshot Small");
+        canShoot = false;
+        currentBulletCount--;
+        Vector3 insPos = gunEndpoint.transform.position;
+        GameObject muzzleIns = Instantiate(muzzlePrefab, insPos, Quaternion.Euler(0, 0, angle));
+        Instantiate(bulletPrefab, insPos, Quaternion.Euler(0, 0, angle));
+        yield return new WaitForSeconds(t - 0.2f);
+        Destroy(muzzleIns);
+        canShoot = true;
+
+    }
+
+    IEnumerator ReloadGun(float t)
+    {
+        canShoot = false;
+        am.PlaySound("Reload 1");
+        yield return new WaitForSeconds(t);
+        currentBulletCount = magSize;
+        canShoot = true;
+
     }
 }

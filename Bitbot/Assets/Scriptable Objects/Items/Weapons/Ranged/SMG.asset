@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
-  m_Name: Pistol
+  m_Name: SMG
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6036550776336034569, guid: b6081a27cfc295543a7c7ac4420a803d, type: 3}
+  prefab: {fileID: 0}
   type: 0
-  description: Civillian Semi-Automatic Pistol modeled after the "Walther PP"
+  description: MP5
   weaponType: 0
-  magazineSize: 7
+  magazineSize: 15
   reloadTime: 1
-  firingMode: 0
+  firingMode: 1
   rateOfFire: 0.25

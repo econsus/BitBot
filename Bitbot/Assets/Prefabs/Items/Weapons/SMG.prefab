@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6036550776336034570}
   - component: {fileID: 6036550776336034568}
   m_Layer: 8
-  m_Name: Pistol
+  m_Name: SMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.073338985, y: -0.12573957}
+  m_Offset: {x: 0.0025000572, y: -0.064}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.125, w: 0.5}
     pivot: {x: 0.5, y: 0.5}
@@ -82,7 +82,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6290035, y: 1.2484255}
+  m_Size: {x: 2.5, y: 1.37}
   m_EdgeRadius: 0
 --- !u!114 &6036550776336034570
 MonoBehaviour:
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 1.75
+  firingMode: 0
   rateOfFire: 0.25
   magSize: 0
   currentBulletCount: 0
@@ -106,7 +107,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8973469668349137906, guid: cdfd514cfe806304fb27b9cee32aa73c,
     type: 3}
   gunEndpoint: {fileID: 6036550776709550235}
-  scriptableObject: {fileID: 11400000, guid: 9ecfcac56f41a924aa5e1f85304aa708, type: 2}
+  scriptableObject: {fileID: 11400000, guid: 271c4e2c1b30b7a4f9b5b733b0d4c22f, type: 2}
 --- !u!114 &6036550776336034568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.073338985, y: -0.12573957}
+  m_Offset: {x: 0.0025000572, y: -0.064}
   m_SpriteTilingProperty:
     border: {x: 0.25, y: 0.25, z: 0.125, w: 0.5}
     pivot: {x: 0.5, y: 0.5}
@@ -179,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6290035, y: 1.2484255}
+  m_Size: {x: 2.5, y: 1.37}
   m_EdgeRadius: 0
 --- !u!1 &6036550776709550235
 GameObject:
@@ -221,7 +222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6036550777266481401}
   - component: {fileID: 6036550777266481403}
-  - component: {fileID: 6036550777266481400}
   m_Layer: 10
   m_Name: Visual
   m_TagString: Untagged
@@ -282,8 +282,7 @@ SpriteRenderer:
   m_SortingLayerID: -1578541493
   m_SortingLayer: 8
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4854829337826818713, guid: bf19f09b58f41e24e8cb9c0309616b74,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba198b19141bdf04abd3e22653170257, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -294,22 +293,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6036550777266481400
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6036550777266481382}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2628052649ba92340bda2aef63317d32, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
