@@ -59,3 +59,13 @@ MonoBehaviour:
     volume: 0.57
     pitch: 1
     source: {fileID: 0}
+  - clipName: Equip 1
+    clip: {fileID: 8300000, guid: 523e37610ec0c994c81ac4a07291456c, type: 3}
+    volume: 0.57
+    pitch: 1
+    source: {fileID: 0}
+  - clipName: Reload 1
+    clip: {fileID: 8300000, guid: d5d1cfe2a63d27f479dbe96ffadb76f0, type: 3}
+    volume: 0.57
+    pitch: 1
+    source: {fileID: 0}

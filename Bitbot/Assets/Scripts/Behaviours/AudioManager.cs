@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
         if(s == null)
         {
-            Debug.Log("Audio Clip Name Not Found");
+            Debug.Log(soundName + " clip not found");
         }
         else
         {
