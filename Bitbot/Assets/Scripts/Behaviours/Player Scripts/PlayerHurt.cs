@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
     private PlayerMovement move;
+    private PlayerState ps;
     private AudioManager am;
     private AnimationScript anim;
     public bool contact = false;
@@ -13,6 +14,7 @@ public class PlayerHurt : MonoBehaviour
     void Start()
     {
         move = GetComponentInParent<PlayerMovement>();
+        ps = GetComponentInParent<PlayerState>();
         anim = FindObjectOfType<AnimationScript>();
         am = FindObjectOfType<AudioManager>();
     }
@@ -23,6 +25,7 @@ public class PlayerHurt : MonoBehaviour
         {
             move.canMove = false;
             StartCoroutine(Pause());
+            ps.DecreaseCurrentHealth(1);
         }
     }
 
