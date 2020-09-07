@@ -10,10 +10,13 @@ public class EnemyChase : MonoBehaviour
     public float retreatdistance = 6;
     private CircleCollider2D range;
     [SerializeField] private bool inRange;
+    private Transform player;
+    public float height_offset = 2;
     void Start()
     {
         target = GameObject.Find("Player");
         range = GetComponent<CircleCollider2D>();
+        player = GameObject.Find("Player").transform;
     }
 
     void Update()
@@ -33,7 +36,10 @@ public class EnemyChase : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime * -1);
             }
         }
-
+        if(this.transform.position.y <= player.position.y - height_offset)
+        {
+            transform.Translate(0, speed * Time.deltaTime, 0);
+        }
 
 
     }
