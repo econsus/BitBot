@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 6036550776336034569, guid: b6081a27cfc295543a7c7ac4420a803d, type: 3}
   type: 0
   description: Civillian Semi-Automatic Pistol modeled after the "Walther PP"
   weaponType: 0
   magazineSize: 7
+  reloadTime: 1
   firingMode: 0
-  rateOfFire: 1
+  rateOfFire: 0.25

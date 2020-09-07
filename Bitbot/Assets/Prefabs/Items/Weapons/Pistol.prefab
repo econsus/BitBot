@@ -98,11 +98,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 1.75
   rateOfFire: 0.25
+  magSize: 0
+  currentBulletCount: 0
+  reloadTime: 0
   muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
     type: 3}
   bulletPrefab: {fileID: 8973469668349137906, guid: cdfd514cfe806304fb27b9cee32aa73c,
     type: 3}
   gunEndpoint: {fileID: 6036550776709550235}
+  scriptableObject: {fileID: 11400000, guid: 9ecfcac56f41a924aa5e1f85304aa708, type: 2}
 --- !u!114 &6036550776336034568
 MonoBehaviour:
   m_ObjectHideFlags: 0

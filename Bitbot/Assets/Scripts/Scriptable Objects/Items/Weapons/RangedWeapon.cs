@@ -18,6 +18,7 @@ public class RangedWeapon : WeaponObject
     }
 
     public int magazineSize;
+    public float reloadTime;
     public FiringMode firingMode;
     public float rateOfFire;
 }

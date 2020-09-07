@@ -8,7 +8,7 @@ public class EnemyChase : MonoBehaviour
     public float speed = 4;
     public float stopdistance = 10;
     public float retreatdistance = 6;
-    [SerializeField] private CircleCollider2D range;
+    private CircleCollider2D range;
     [SerializeField] private bool inRange;
     private Transform player;
     public float height_offset = 2;

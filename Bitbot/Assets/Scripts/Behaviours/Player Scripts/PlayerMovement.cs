@@ -2,10 +2,16 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Stats")]
-    public float speed = 10f;
-    public float jumpForce = 7f;
+    [Header("Player Scriptable Object")]
+    public Player player;
 
+    [Space]
+
+    [Header("Stats")]
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+
+    [HideInInspector]
     public bool canMove = true;
 
     [Space]
@@ -20,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     private AnimationScript anim;
     private SpriteRenderer sr;
 
+    private void Awake()
+    {
+        speed = player.moveSpeed;
+        jumpForce = player.jumpForce;
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
