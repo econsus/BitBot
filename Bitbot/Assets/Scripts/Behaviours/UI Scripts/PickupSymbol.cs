@@ -5,48 +5,32 @@ using UnityEngine;
 public class PickupSymbol : MonoBehaviour
 {
     public float symbolOffset;
-    public GameObject pickup;
+    public GameObject pickupSymbolPrefab;
 
-    private PlayerInventory playerInv;
-    private ItemObject item;
+    private EventManagerPickup eventManagerPickup;
     private GameObject ins;
 
-    private void Start()
+    private void Awake()
     {
-        playerInv = GameObject.Find("Player").GetComponent<PlayerInventory>();
-        item = playerInv.touchedItem;
-        playerInv.OnItemTouch += PlayerInv_OnItemTouch;
-        playerInv.OnItemLeave += PlayerInv_OnItemLeave;
+        eventManagerPickup = FindObjectOfType<EventManagerPickup>();
     }
 
-    private void PlayerInv_OnItemTouch(object sender, PlayerInventory.OnitemTouchEventArgs e)
+    private void OnEnable()
     {
-        Debug.Log("Cok");
-        if(e.item == item)
-        {
-            Debug.Log("Touch");
-            ShowPickupSymbol();
-        }
+        eventManagerPickup.OnItemTouchEvent += ShowPickupSymbol;
+        eventManagerPickup.OnItemUntouchEvent += DestroyPickupSymbol;
     }
-    private void PlayerInv_OnItemLeave(object sender, PlayerInventory.OnItemLeaveEventArgs e)
+    private void OnDisable()
     {
-        if (e.item == item)
-        {
-            DestroyPickupSymbol();
-        }
-    }
-
-    private void OnDestroy()
-    {
-        playerInv.OnItemTouch -= PlayerInv_OnItemTouch;
-        playerInv.OnItemLeave -= PlayerInv_OnItemLeave;
+        eventManagerPickup.OnItemTouchEvent -= ShowPickupSymbol;
+        eventManagerPickup.OnItemUntouchEvent -= DestroyPickupSymbol;
     }
     private void ShowPickupSymbol()
     {
         Vector3 pos = transform.position;
         pos += Vector3.up * symbolOffset;
 
-        ins = Instantiate(pickup, pos, Quaternion.Euler(0, 0, 0));
+        ins = Instantiate(pickupSymbolPrefab, pos, Quaternion.Euler(0, 0, 0));
     }
 
     private void DestroyPickupSymbol()

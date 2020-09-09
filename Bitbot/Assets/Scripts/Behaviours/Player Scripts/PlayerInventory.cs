@@ -6,23 +6,16 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public InventoryObject inventory;
-    public event EventHandler<OnitemTouchEventArgs> OnItemTouch;
-    public class OnitemTouchEventArgs : EventArgs
-    {
-        public ItemObject item;
-    }
-    public event EventHandler<OnItemLeaveEventArgs> OnItemLeave;
-    public class OnItemLeaveEventArgs : EventArgs
-    {
-        public ItemObject item;
-    }
+
     public ItemObject touchedItem;
     private bool canPickup = false;
     private ItemScript item;
+    private EventManagerPickup eventManagerPickup;
     private Camera cam;
 
     private void Start()
     {
+        eventManagerPickup = FindObjectOfType<EventManagerPickup>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
     private void Update()
@@ -62,7 +55,7 @@ public class PlayerInventory : MonoBehaviour
         item = collision.GetComponent<ItemScript>();
         if(item)
         {
-            OnItemTouch?.Invoke(this, new OnitemTouchEventArgs { item = touchedItem});
+            eventManagerPickup.OnItemTouchEventMethod();
             canPickup = true;
         }
     }
@@ -71,7 +64,7 @@ public class PlayerInventory : MonoBehaviour
         item = collision.GetComponent<ItemScript>();
         if (item)
         {
-            OnItemLeave?.Invoke(this, new OnItemLeaveEventArgs { item = touchedItem });
+            eventManagerPickup.OnItemUntouchEventMethod();
             canPickup = false;
         }
     }
