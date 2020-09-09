@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
-public class Dialogue : ScriptableObject
+[CreateAssetMenu(fileName = "New Dialogue", menuName = "Scriptable Objects/Dialog System/Dialog")]
+public class Dialog : ScriptableObject
 {
     public Character character;
     public Sentence[] sentences;

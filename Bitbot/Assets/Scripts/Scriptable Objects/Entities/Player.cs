@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Player", menuName = "Entity/Player")]
+[CreateAssetMenu(fileName = "New Player", menuName = "Scriptable Objects/Entity/Player")]
 public class Player : Entity
 {
     public float jumpForce;
