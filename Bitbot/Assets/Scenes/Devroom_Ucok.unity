@@ -1858,27 +1858,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1019039314}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1228649792 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8840447599258781509, guid: c76c55123c6509e4985800070f094cfb,
-    type: 3}
-  m_PrefabInstance: {fileID: 8840447598340019618}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1228649793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228649792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  symbolOffset: 4
-  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
-    type: 3}
 --- !u!1 &1477592831
 GameObject:
   m_ObjectHideFlags: 0
@@ -9076,7 +9055,7 @@ GameObject:
   - component: {fileID: 1838143828}
   - component: {fileID: 1838143827}
   m_Layer: 0
-  m_Name: EventManagerPickup
+  m_Name: Item Pickup Event Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9108,48 +9087,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1939394628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6889928514584780588, guid: 519da313ef8d00c439c778e692b5b951,
-    type: 3}
-  m_PrefabInstance: {fileID: 6889928513635286678}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1939394629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939394628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  symbolOffset: 4
-  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
-    type: 3}
---- !u!1 &2014235577 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-    type: 3}
-  m_PrefabInstance: {fileID: 8968769030999575646}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2014235578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014235577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  symbolOffset: 4
-  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
-    type: 3}
 --- !u!1001 &2045504511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9334,7 +9271,7 @@ PrefabInstance:
     - target: {fileID: 6889928514584780588, guid: 519da313ef8d00c439c778e692b5b951,
         type: 3}
       propertyPath: m_Name
-      value: SMG (1)
+      value: SMG (World)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 519da313ef8d00c439c778e692b5b951, type: 3}
@@ -9348,7 +9285,7 @@ PrefabInstance:
     - target: {fileID: 8840447599258781509, guid: c76c55123c6509e4985800070f094cfb,
         type: 3}
       propertyPath: m_Name
-      value: Pistol (1)
+      value: Pistol (World)
       objectReference: {fileID: 0}
     - target: {fileID: 8840447599258781514, guid: c76c55123c6509e4985800070f094cfb,
         type: 3}
@@ -9469,55 +9406,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8968769030063574557, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.014
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030063574557, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030063574557, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030063574557, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.53
-      objectReference: {fileID: 0}
     - target: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
         type: 3}
       propertyPath: m_Name
-      value: Revolver
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030658842654, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030658842654, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.014
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030658842654, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030658842654, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968769030658842654, guid: 531fb5e58a3277a4a8e052ab1d10b081,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.53
+      value: Revolver (World)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 531fb5e58a3277a4a8e052ab1d10b081, type: 3}

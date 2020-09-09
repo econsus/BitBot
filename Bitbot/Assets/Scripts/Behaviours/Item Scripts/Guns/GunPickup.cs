@@ -64,7 +64,7 @@ public class GunPickup : MonoBehaviour
     private void PickupItem()
     {
         transform.SetParent(player);
-        inv.AddItem(item);
+        //inv.AddItem(item);
         am.PlaySound("Equip 1");
         HidePickupSymbol();
         coll.enabled = false;

@@ -12,23 +12,18 @@ public class InventoryObject : ScriptableObject
     {
         itemList = new List<ItemObject>();
     }
-    public void AddItemToInv(ItemObject _item)
+    public void InsertItemToInv(ItemObject _item, int _index)
     {
-        itemList.Add(_item);
+        itemList.Insert(_index, _item);
     }
     public void RemoveItemFromInv()
     {
         itemList.RemoveAt(0);
     }
-    public void ReplaceItemInInv(ItemObject _item)
+    public void ReplaceItemInInv(ItemObject _item, int _index)
     {
-        itemList.RemoveAt(0);
-        itemList.Add(_item);
-        itemList.Reverse();
-    }
-    public void ReverseInv()
-    {
-        itemList.Reverse();
+        itemList.RemoveAt(_index);
+        InsertItemToInv(_item, _index);
     }
     public void ClearInventory()
     {

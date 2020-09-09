@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 6889928514584780587}
   - component: {fileID: 6889928514584780586}
   - component: {fileID: 6889928514584780589}
+  - component: {fileID: 1939394629}
   m_Layer: 0
   m_Name: SMG (1)
   m_TagString: Untagged
@@ -152,6 +153,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 271c4e2c1b30b7a4f9b5b733b0d4c22f, type: 2}
+--- !u!114 &1939394629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6889928514584780588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symbolOffset: 4
+  item: {fileID: 11400000, guid: 271c4e2c1b30b7a4f9b5b733b0d4c22f, type: 2}
+  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
+    type: 3}
 --- !u!1 &6889928514924277542
 GameObject:
   m_ObjectHideFlags: 0

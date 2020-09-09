@@ -6,66 +6,50 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public InventoryObject inventory;
-
     public ItemObject touchedItem;
-    private bool canPickup = false;
-    private ItemScript item;
-    private EventManagerPickup eventManagerPickup;
-    private Camera cam;
+    private EventManagerItem emItemPickup;
 
-    private void Start()
+    private void Awake()
     {
-        eventManagerPickup = FindObjectOfType<EventManagerPickup>();
-        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        emItemPickup = FindObjectOfType<EventManagerItem>();
     }
-    private void Update()
+    //Subscription(s)
+    private void OnEnable()
     {
-        if(canPickup)
+        emItemPickup.OnItemPickupEvent += AddItemToPlayerInv;
+    }
+    //Unsubscribe from event(s)
+    private void OnDisable()
+    {
+        emItemPickup.OnItemPickupEvent -= AddItemToPlayerInv;
+    }
+    /*private void Update()
+    {
+        if (canPickup)
         {
-            //show symbol
-            touchedItem = item.item;
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 item.DestroySelf();
                 if (inventory.itemList.Count < inventory.defaultCapacity)
                 {
-                    AddItem(touchedItem);
+                    //AddItem(touchedItem);
                 }
                 else
                 {
-                    ReplaceItem(touchedItem, inventory.itemList[0]);
+                    //ReplaceItem(touchedItem, inventory.itemList[0]);
                 }
             }
         }
-        if(inventory.itemList.Count > 1)
+        if (inventory.itemList.Count > 1)
         {
-            if(Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 SwitchEquipped();
             }
         }
-        if(Input.GetKeyDown(KeyCode.G) && inventory.itemList.Count > 0)
+        if (Input.GetKeyDown(KeyCode.G) && inventory.itemList.Count > 0)
         {
             DropItem(inventory.itemList[0]);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        item = collision.GetComponent<ItemScript>();
-        if(item)
-        {
-            eventManagerPickup.OnItemTouchEventMethod();
-            canPickup = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        item = collision.GetComponent<ItemScript>();
-        if (item)
-        {
-            eventManagerPickup.OnItemUntouchEventMethod();
-            canPickup = false;
         }
     }
     public void SwitchEquipped()
@@ -74,31 +58,27 @@ public class PlayerInventory : MonoBehaviour
     }
     public void DropItem(ItemObject _item)
     {
-        InstantiateDropped(_item);
         inventory.RemoveItemFromInv();
-    }
+    }*/
 
-    private Vector3 CalcThrow()
+    //Add/Replace item to player inventory. This method is subscribed to OnItemPickupEvent
+    public void AddItemToPlayerInv(ItemObject _item) 
     {
-        Vector3 mPos = MousePosition.GetMouseWorldPos(0f, cam);
-        Vector3 dir = (mPos - transform.position).normalized;
-
-        return dir;
+        if (inventory.itemList.Count < inventory.defaultCapacity) //If player inventory is not full
+        {
+            //insert picked item to player inventory on the first index
+            inventory.InsertItemToInv(_item, 0);
+        }
+        else //If player inventory is ful
+        {
+            //"Drop" replaced item to the ground by instantiating its prefab
+            Instantiate(inventory.GetItem(0).prefab, transform.position, Quaternion.Euler(0, 0, 0)); 
+            //Replace currently equipped item with picked item.
+            inventory.ReplaceItemInInv(_item, 0);
+        }
     }
-    public void AddItem(ItemObject _item)
-    {
-        inventory.AddItemToInv(_item);
-    }
-    public void ReplaceItem(ItemObject _item, ItemObject replaced)
-    {
-        InstantiateDropped(replaced);
-        inventory.ReplaceItemInInv(_item);
-    }
-    private void InstantiateDropped(ItemObject _item)
-    {
-        Instantiate(_item.prefab, transform.position, Quaternion.Euler(0, 0, 0));
-    }
-    private void OnApplicationQuit()
+    //Clear inventory on application quit.
+    private void OnApplicationQuit() 
     {
         inventory.ClearInventory();
     }
