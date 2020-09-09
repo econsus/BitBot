@@ -10,6 +10,8 @@ public class GunPickup : MonoBehaviour
     public bool collide;
 
     private GameObject ins;
+    public ItemObject item;
+    private PlayerInventory inv;
     private AudioManager am;
     private Transform currentParent, player;
     private GunScript gunScript;
@@ -19,6 +21,7 @@ public class GunPickup : MonoBehaviour
     {
         currentParent = transform.parent;
         player = GameObject.Find("Player").transform;
+        inv = GameObject.Find("Player").GetComponent<PlayerInventory>();
         am = FindObjectOfType<AudioManager>();
         gunScript = GetComponent<GunScript>();
         coll = GameObject.Find(gameObject.name + "/Check").GetComponent<BoxCollider2D>();
@@ -28,7 +31,6 @@ public class GunPickup : MonoBehaviour
     {
         currentParent = transform.parent;
         isEquipped = currentParent != null;
-
 
         gunScript.enabled = isEquipped;
         hud.SetActive(isEquipped);
@@ -62,6 +64,7 @@ public class GunPickup : MonoBehaviour
     private void PickupItem()
     {
         transform.SetParent(player);
+        inv.AddItem(item);
         am.PlaySound("Equip 1");
         HidePickupSymbol();
         coll.enabled = false;

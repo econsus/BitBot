@@ -3,9 +3,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+public class DialogManager : MonoBehaviour
 {
-    public Dialogue dialogue;
+    public Dialog dialog;
 
     public GameObject conversation;
 
@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     private Animator anim;
 
-    private DialogueUI dialogueUI;
+    private DialogUI dialogUI;
 
     private int activeIndex = 0;
 
@@ -34,13 +34,13 @@ public class DialogueManager : MonoBehaviour
 
         anim = chatBubble.GetComponentInChildren<Animator>();
         
-        dialogueUI = conversation.GetComponent<DialogueUI>();
+        dialogUI = conversation.GetComponent<DialogUI>();
 
-        dialogueUI.Speaker = dialogue.character;
+        dialogUI.Speaker = dialog.character;
 
         chatBubble.SetActive(false);
 
-        dialogueUI.HideNextSymbol();
+        dialogUI.HideNextSymbol();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -80,24 +80,24 @@ public class DialogueManager : MonoBehaviour
         }
         if(canSkip)
         {
-            dialogueUI.ShowNextSymbol();
+            dialogUI.ShowNextSymbol();
         }
         else
         {
-            dialogueUI.HideNextSymbol();
+            dialogUI.HideNextSymbol();
         }
     }
 
     private void Next()
     {
-        if(activeIndex < dialogue.sentences.Length)
+        if(activeIndex < dialog.sentences.Length)
         {
             DisplaySentence();
             activeIndex += 1;
         }
         else
         {
-            dialogueUI.Hide();
+            dialogUI.Hide();
             activeIndex = 0;
             move.enabled = true;
         }
@@ -105,23 +105,23 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplaySentence()
     {
-        Sentence line = dialogue.sentences[activeIndex];
+        Sentence line = dialog.sentences[activeIndex];
 
-        StartCoroutine(SetDialogue(dialogueUI, line.sentence, typingWaitTime));
+        StartCoroutine(SetDialog(dialogUI, line.sentence, typingWaitTime));
     }
-    IEnumerator SetDialogue(DialogueUI activeDUI, string text, float t)
+    IEnumerator SetDialog(DialogUI activeDUI, string text, float t)
     {
-        activeDUI.Dialogue = "";
+        activeDUI.Dialog = "";
         activeDUI.Show();
         int i = 0;
         foreach(char letter in text.ToCharArray())
         {
             canSkip = false;
-            activeDUI.Dialogue += letter;
+            activeDUI.Dialog += letter;
             if (i > 0 && Input.GetKeyDown(KeyCode.E))
             {
-                activeDUI.Dialogue = "";
-                activeDUI.Dialogue = text;
+                activeDUI.Dialog = "";
+                activeDUI.Dialog = text;
             }
             else
             {
