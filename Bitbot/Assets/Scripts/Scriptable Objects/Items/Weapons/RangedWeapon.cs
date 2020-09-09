@@ -8,7 +8,7 @@ public enum FiringMode
     Automatic,
     Mixed
 }
-[CreateAssetMenu(fileName = "New Ranged Weapon", menuName = "Inventory System/Items/Weapon/Ranged")]
+[CreateAssetMenu(fileName = "New Ranged Weapon", menuName = "Scriptable Objects/Items/Weapon/Ranged")]
 public class RangedWeapon : WeaponObject
 {
     public void Awake()

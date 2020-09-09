@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine.UI;
 
-public class DialogueUI : MonoBehaviour
+public class DialogUI : MonoBehaviour
 {
     public Image portraitDisplay, nextDisplay;
     public TextMeshProUGUI nameDisplay, sentenceDisplay;
@@ -23,7 +23,7 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public string Dialogue
+    public string Dialog
     {
         get
         {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SwitchScene : MonoBehaviour
+public class ExitRoom : MonoBehaviour
 {
     public Animator transition;
     [SerializeField] private string sceneToLoad = "Scene";

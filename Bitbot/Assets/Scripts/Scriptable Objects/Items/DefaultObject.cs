@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Default Item Object", menuName = "Inventory System/Items/Default")]
+[CreateAssetMenu(fileName = "New Default Item Object", menuName = "Scriptable Objects/Items/Default")]
 public class DefaultObject : ItemObject
 {
     public void Awake()

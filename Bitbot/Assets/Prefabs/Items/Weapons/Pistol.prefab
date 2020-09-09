@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 1.75
+  firingMode: 0
   rateOfFire: 0.25
   magSize: 0
   currentBulletCount: 0
@@ -124,6 +125,7 @@ MonoBehaviour:
   symbolOffset: 4
   isEquipped: 0
   collide: 0
+  item: {fileID: 11400000, guid: 9ecfcac56f41a924aa5e1f85304aa708, type: 2}
 --- !u!1 &6036550776422565460
 GameObject:
   m_ObjectHideFlags: 0
