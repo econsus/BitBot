@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStraightShot : MonoBehaviour
+public class PlayerStraightShot : MonoBehaviour
 {
     [SerializeField] private float speed = 15f;
-    [SerializeField] private float lifetime = 1;
+    [SerializeField] private float lifetime = 0.5f;
 
     void OnEnable()
     {

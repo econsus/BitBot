@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8499490055473098487}
   - component: {fileID: 7286100979874373550}
   - component: {fileID: 121124227364073268}
-  - component: {fileID: 2607141205516033373}
   - component: {fileID: 622438215399217271}
-  - component: {fileID: 6709642898762784840}
+  - component: {fileID: 7705866623009513735}
   m_Layer: 16
   m_Name: Enemy Small Laser
   m_TagString: Enemy Projectile
@@ -105,27 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &2607141205516033373
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973469668349137906}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!61 &622438215399217271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,7 +130,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &6709642898762784840
+--- !u!114 &7705866623009513735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,4 +143,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  comparedTag: Solid
+  lifetime: 1

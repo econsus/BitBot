@@ -12,6 +12,7 @@ public class RangedWeapon : WeaponObject
     }
 
     public int magazineSize;
+    public float projectileVelocity;
     public float reloadTime;
     public float rateOfFire;
     public GameObject muzzlePrefab, bulletPrefab;
