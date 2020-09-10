@@ -21,9 +21,10 @@ MonoBehaviour:
   description: revolver
   weaponType: 0
   magazineSize: 6
+  projectileVelocity: 0
   reloadTime: 2
-  rateOfFire: 0.5
+  rateOfFire: 1
   muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
     type: 3}
-  bulletPrefab: {fileID: 8973469668349137906, guid: cdfd514cfe806304fb27b9cee32aa73c,
+  bulletPrefab: {fileID: 8973469668349137906, guid: 4e5d37f2c386fc4459b6b2c38cea25f2,
     type: 3}

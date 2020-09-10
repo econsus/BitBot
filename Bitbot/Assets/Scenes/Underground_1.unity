@@ -2878,11 +2878,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 359571415736254705, guid: dfa30c89bae54614e94f00e693f30c88,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 359571415823656177, guid: dfa30c89bae54614e94f00e693f30c88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2942,11 +2937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 359571415823656181, guid: dfa30c89bae54614e94f00e693f30c88,
-        type: 3}
-      propertyPath: colliderSize.x
-      value: 1.225
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfa30c89bae54614e94f00e693f30c88, type: 3}
