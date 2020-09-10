@@ -17,11 +17,13 @@ public class PlayerInventory : MonoBehaviour
     private void OnEnable()
     {
         emItemPickup.OnItemPickupEvent += AddItemToPlayerInv;
+        emItemPickup.OnItemPickupEvent += InstantiateEquippedPrefab;
     }
     //Unsubscribe from event(s)
     private void OnDisable()
     {
         emItemPickup.OnItemPickupEvent -= AddItemToPlayerInv;
+        emItemPickup.OnItemPickupEvent -= InstantiateEquippedPrefab;
     }
     /*private void Update()
     {
@@ -69,13 +71,17 @@ public class PlayerInventory : MonoBehaviour
             //insert picked item to player inventory on the first index
             inventory.InsertItemToInv(_item, 0);
         }
-        else //If player inventory is ful
+        else //If player inventory is full
         {
             //"Drop" replaced item to the ground by instantiating its prefab
-            Instantiate(inventory.GetItem(0).prefab, transform.position, Quaternion.Euler(0, 0, 0)); 
+            Instantiate(inventory.GetItem(0).worldPrefab, transform.position, Quaternion.Euler(0, 0, 0)); 
             //Replace currently equipped item with picked item.
             inventory.ReplaceItemInInv(_item, 0);
         }
+    }
+    public void InstantiateEquippedPrefab(ItemObject _item)
+    {
+        Instantiate(_item.equippedPrefab, transform);
     }
     //Clear inventory on application quit.
     private void OnApplicationQuit() 

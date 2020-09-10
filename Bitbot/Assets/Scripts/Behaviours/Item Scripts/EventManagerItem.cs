@@ -28,14 +28,13 @@ public class EventManagerItem : MonoBehaviour //Big brain time
 
     //-------------------------------------------------------------------------------------------------------------------//
 
-    //Item Equipped Event(s)
+    //Item Equipped Events
 
-    //public delegate void ItemEquipped(InventoryObject inv, ItemObject item);
+    public delegate void ItemEquipped();
 
-    //public event ItemEquipped OnItemEquipped; //Rencanane lek event iki fired ngko player njupuk item scriptable object-
-                                                //senjata kanggo menentukan senjata opo iki. Terus instantiate prefab-
-                                                //senjata seng enek script e attack (Duduk seng world item).
-
+    //public event ItemEquipped OnItemEquipEvent; //Rencanane lek event iki fired ngko player njupuk item scriptable object-
+                                           //senjata kanggo menentukan senjata opo iki. Terus instantiate prefab-
+                                           //senjata seng enek script e attack (Duduk seng world item).
     //-------------------------------------------------------------------------------------------------------------------//
     //TODO:
     //Item Switch Events

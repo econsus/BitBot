@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
   m_Name: SMG
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6889928514584780588, guid: 519da313ef8d00c439c778e692b5b951, type: 3}
+  worldPrefab: {fileID: 6889928514584780588, guid: 519da313ef8d00c439c778e692b5b951,
+    type: 3}
+  equippedPrefab: {fileID: 6036550776336034569, guid: 32f40b89dd6a3994db94b1dc2b06c4d1,
+    type: 3}
   hudSprite: {fileID: 21300000, guid: 74af09b5b955ded4695d19761a8ec77d, type: 3}
   type: 0
   description: MP5

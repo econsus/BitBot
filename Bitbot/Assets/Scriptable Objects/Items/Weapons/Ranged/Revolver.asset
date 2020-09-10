@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
   m_Name: Revolver
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081, type: 3}
+  worldPrefab: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
+    type: 3}
+  equippedPrefab: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
+    type: 3}
   hudSprite: {fileID: 21300000, guid: 6c10a794f1fea964ca05ac2ca95d1921, type: 3}
   type: 0
   description: revolver
