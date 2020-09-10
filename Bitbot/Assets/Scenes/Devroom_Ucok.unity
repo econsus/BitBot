@@ -1876,8 +1876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbolOffset: 0
-  pickup: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1, type: 3}
+  symbolOffset: 4
+  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
+    type: 3}
 --- !u!1 &1477592831
 GameObject:
   m_ObjectHideFlags: 0
@@ -9064,6 +9065,49 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1838143826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838143828}
+  - component: {fileID: 1838143827}
+  m_Layer: 0
+  m_Name: EventManagerPickup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1838143827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838143826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c761f2b21265048b7c7d029d919597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1838143828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838143826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939394628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6889928514584780588, guid: 519da313ef8d00c439c778e692b5b951,
@@ -9082,8 +9126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbolOffset: 0
-  pickup: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1, type: 3}
+  symbolOffset: 4
+  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
+    type: 3}
 --- !u!1 &2014235577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
@@ -9102,8 +9147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baa762bebb397d47b25aa9350cbb8b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  symbolOffset: 0
-  pickup: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1, type: 3}
+  symbolOffset: 4
+  pickupSymbolPrefab: {fileID: 368998887963243409, guid: a64b612262d123240b75b83f43c7f7c1,
+    type: 3}
 --- !u!1001 &2045504511
 PrefabInstance:
   m_ObjectHideFlags: 0
