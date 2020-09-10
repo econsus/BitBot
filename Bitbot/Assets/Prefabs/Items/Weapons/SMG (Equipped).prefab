@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036550776336034572}
   - component: {fileID: 4935571792072614342}
-  - component: {fileID: 2631569116622128007}
+  - component: {fileID: 8154869749017589650}
   m_Layer: 8
   m_Name: SMG (Equipped)
   m_TagString: Untagged
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunEndpoint: {fileID: 6036550776709550235}
   offset: 2
---- !u!114 &2631569116622128007
+--- !u!114 &8154869749017589650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6036550776336034569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d818439e14430428c3c472f3e4ae60, type: 3}
+  m_Script: {fileID: 11500000, guid: 26cd9bd2372b6664ab1e1cf03b963617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6036550776709550235

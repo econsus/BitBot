@@ -28,9 +28,18 @@ public class EventManagerItem : MonoBehaviour //Big brain time
 
     //-------------------------------------------------------------------------------------------------------------------//
 
-    //Item Equipped Events
+    //Item Shot Event(s)
 
-    public delegate void ItemEquipped();
+    public delegate void ItemShot();
+
+    public event ItemShot OnItemShot;
+
+    public void OnItemShotEventMethod()
+    {
+        OnItemShot?.Invoke();
+    }
+
+
 
     //public event ItemEquipped OnItemEquipEvent; //Rencanane lek event iki fired ngko player njupuk item scriptable object-
                                            //senjata kanggo menentukan senjata opo iki. Terus instantiate prefab-

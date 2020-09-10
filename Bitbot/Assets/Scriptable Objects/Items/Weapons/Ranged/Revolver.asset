@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldPrefab: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
     type: 3}
-  equippedPrefab: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
+  equippedPrefab: {fileID: 6036550776336034569, guid: ebd824e32e0ca3047945e7e8e9fc6eea,
     type: 3}
   hudSprite: {fileID: 21300000, guid: 6c10a794f1fea964ca05ac2ca95d1921, type: 3}
   type: 0
@@ -22,5 +22,8 @@ MonoBehaviour:
   weaponType: 0
   magazineSize: 6
   reloadTime: 2
-  firingMode: 0
   rateOfFire: 0.25
+  muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
+    type: 3}
+  bulletPrefab: {fileID: 8973469668349137906, guid: cdfd514cfe806304fb27b9cee32aa73c,
+    type: 3}

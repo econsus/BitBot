@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICanShoot
 {
-    void Shoot(float angle, Vector3 mPos);
+    void Shoot(float angle, GameObject gunEndpoint);
 }

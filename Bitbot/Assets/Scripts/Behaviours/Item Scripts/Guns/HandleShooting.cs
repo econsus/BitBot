@@ -8,32 +8,47 @@ public class HandleShooting : MonoBehaviour
     [SerializeField] private float offset = 2f;
 
     private float angle;
-    private Vector3 mPos;
 
+    private EventManagerItem emItemShot;
     private SpriteRenderer sr;
     private Transform player;
     private Camera cam;
 
     private void Awake()
     {
+        emItemShot = FindObjectOfType<EventManagerItem>();
         player = GameObject.Find("Player").transform;
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         sr = GetComponentInChildren<SpriteRenderer>();
     }
 
+    private void OnEnable()
+    {
+        emItemShot.OnItemShot += ShootGun;
+    }
+    private void OnDisable()
+    {
+        emItemShot.OnItemShot -= ShootGun;
+    }
     void Update()
     {
         HandleAiming();
-        if(Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
-            ICanShoot shootable = GetComponent<ICanShoot>();
-            shootable?.Shoot(angle, mPos);
+            emItemShot.OnItemShotEventMethod();
         }
     }
 
+    private void ShootGun()
+    {
+        ICanShoot shootable = GetComponent<ICanShoot>();
+        shootable?.Shoot(angle, gunEndpoint);
+    }
+
+
     private void HandleAiming()
     {
-        mPos = MousePosition.GetMouseWorldPos(0f, cam);
+        Vector3 mPos = MousePosition.GetMouseWorldPos(0f, cam);
         Vector3 dir = (mPos - player.position).normalized;
 
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
