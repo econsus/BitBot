@@ -9196,7 +9196,7 @@ PrefabInstance:
     - target: {fileID: 5279802474494568007, guid: bb7716a415ac1a745bc900499a44df02,
         type: 3}
       propertyPath: m_Name
-      value: Item Event Manager
+      value: Event Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7716a415ac1a745bc900499a44df02, type: 3}

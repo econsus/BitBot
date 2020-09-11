@@ -7,26 +7,26 @@ public class ItemScript : MonoBehaviour
 {
     public ItemObject item;
 
-    private EventManagerItem emItemPickup;
+    private EventManager em;
     private void Awake()
     {
-        emItemPickup = FindObjectOfType<EventManagerItem>();
+        em = FindObjectOfType<EventManager>();
     }
     private void OnEnable()
     {
-        emItemPickup.OnItemPickupEvent += DestroySelf;
+        em.OnItemPickupEvent += DestroySelf;
     }
 
     private void OnDisable()
     {
-        emItemPickup.OnItemPickupEvent -= DestroySelf;
+        em.OnItemPickupEvent -= DestroySelf;
     }
     //Fire OnItemTouch event
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            emItemPickup.OnItemTouchEventMethod(item);
+            em.OnItemTouchEventMethod(item);
         }
     }
     //Fire OnItemPickup event
@@ -34,7 +34,7 @@ public class ItemScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && collision.CompareTag("Player"))
         {
-            emItemPickup.OnItemPickupEventMethod(item);
+            em.OnItemPickupEventMethod(item);
         }
     }
     //Fire OnItemUntouch event
@@ -42,7 +42,7 @@ public class ItemScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            emItemPickup.OnItemUntouchEventMethod(item);
+            em.OnItemUntouchEventMethod(item);
         }
     }
     //Destroy item's world object;

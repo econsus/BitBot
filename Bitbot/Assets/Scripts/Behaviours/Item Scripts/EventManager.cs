@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class EventManagerItem : MonoBehaviour //Big brain time
+public class EventManager : MonoBehaviour //Big brain time
 {
     //Item Pickup Events
 

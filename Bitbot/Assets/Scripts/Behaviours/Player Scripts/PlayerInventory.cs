@@ -7,23 +7,29 @@ public class PlayerInventory : MonoBehaviour
 {
     public InventoryObject inventory;
     public ItemObject touchedItem;
-    private EventManagerItem emItemPickup;
+    private EventManager em;
+    private List<GameObject> instantiatedItems;
 
     private void Awake()
     {
-        emItemPickup = FindObjectOfType<EventManagerItem>();
+        em = FindObjectOfType<EventManager>();
+        instantiatedItems = new List<GameObject>();
     }
     //Subscription(s)
     private void OnEnable()
     {
-        emItemPickup.OnItemPickupEvent += AddItemToPlayerInv;
-        emItemPickup.OnItemPickupEvent += InstantiateEquippedPrefab;
+        em.OnItemPickupEvent += AddItemToPlayerInv;
+        em.OnItemPickupEvent += InstantiateEquippedPrefab;
     }
     //Unsubscribe from event(s)
     private void OnDisable()
     {
-        emItemPickup.OnItemPickupEvent -= AddItemToPlayerInv;
-        emItemPickup.OnItemPickupEvent -= InstantiateEquippedPrefab;
+        em.OnItemPickupEvent -= AddItemToPlayerInv;
+        em.OnItemPickupEvent -= InstantiateEquippedPrefab;
+    }
+    private void Update()
+    {
+        SetInstantiatedActiveStates();
     }
     /*private void Update()
     {
@@ -74,14 +80,32 @@ public class PlayerInventory : MonoBehaviour
         else //If player inventory is full
         {
             //"Drop" replaced item to the ground by instantiating its prefab
-            Instantiate(inventory.GetItem(0).worldPrefab, transform.position, Quaternion.Euler(0, 0, 0)); 
+            Instantiate(inventory.GetItem(0).worldPrefab, transform.position, Quaternion.Euler(0, 0, 0));
             //Replace currently equipped item with picked item.
+            Destroy(instantiatedItems[0]);
+            instantiatedItems.RemoveAt(0);
             inventory.ReplaceItemInInv(_item, 0);
         }
     }
     public void InstantiateEquippedPrefab(ItemObject _item)
     {
-        Instantiate(_item.equippedPrefab, transform);
+        GameObject ins = Instantiate(_item.equippedPrefab, transform);
+        ins.SetActive(false);
+        instantiatedItems.Insert(0, ins);
+    }
+    private void SetInstantiatedActiveStates()
+    {
+        for(int i = 0; i < instantiatedItems.Count; i++)
+        {
+            if(i == 0)
+            {
+                instantiatedItems[i].SetActive(true);
+            }
+            else
+            {
+                instantiatedItems[i].SetActive(false);
+            }
+        }
     }
     //Clear inventory on application quit.
     private void OnApplicationQuit() 

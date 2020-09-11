@@ -8,25 +8,25 @@ public class PickupSymbol : MonoBehaviour
     public ItemObject item;
     public GameObject pickupSymbolPrefab;
 
-    private static EventManagerItem emItemPickup;
+    private static EventManager em;
     private GameObject ins;
 
     private void Awake()
     {
-        emItemPickup = FindObjectOfType<EventManagerItem>();
+        em = FindObjectOfType<EventManager>();
     }
 
     //Subscriptions
     private void OnEnable()
     {
-        emItemPickup.OnItemTouchEvent += ShowPickupSymbol;
-        emItemPickup.OnItemUntouchEvent += DestroyPickupSymbol;
+        em.OnItemTouchEvent += ShowPickupSymbol;
+        em.OnItemUntouchEvent += DestroyPickupSymbol;
     }
     //Unsubscribe from events
     private void OnDisable()
     {
-        emItemPickup.OnItemTouchEvent -= ShowPickupSymbol;
-        emItemPickup.OnItemUntouchEvent -= DestroyPickupSymbol;
+        em.OnItemTouchEvent -= ShowPickupSymbol;
+        em.OnItemUntouchEvent -= DestroyPickupSymbol;
     }
     //Show pickup symbol. This method is subscribed to OnItemTouch event
     private void ShowPickupSymbol(ItemObject _item)
