@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour //Big brain time
 {
-    //Item Pickup Events
+    //Item Events
 
     public delegate void ItemPickup(ItemObject item);
 
@@ -25,25 +25,30 @@ public class EventManager : MonoBehaviour //Big brain time
     {
         OnItemPickupEvent?.Invoke(_item);
     }
+    //--------------------------------------------------------//
+    public delegate void ItemEquipped(PlayerInventory playerInv);
 
-    //-------------------------------------------------------------------------------------------------------------------//
+    public event ItemEquipped OnItemDropEvent;
+    public event ItemEquipped OnItemSwitchEvent;
+    public void OnItemSwitchEventMethod(PlayerInventory _playerInv)
+    {
+        OnItemSwitchEvent?.Invoke(_playerInv);
+    }
+    public void OnItemDropEventMethod(PlayerInventory _playerInv)
+    {
+        OnItemDropEvent?.Invoke(_playerInv);
+    }
+    //--------------------------------------------------------//
+    public delegate void ItemUse();
 
-    //Item Shot Event(s)
-
-    public delegate void ItemShot();
-
-    public event ItemShot OnItemShot;
-
+    public event ItemUse OnItemShotEvent;
     public void OnItemShotEventMethod()
     {
-        OnItemShot?.Invoke();
+        OnItemShotEvent?.Invoke();
     }
+    
+    //-------------------------------------------------------------------------------------------------------------------//
 
-
-
-    //public event ItemEquipped OnItemEquipEvent; //Rencanane lek event iki fired ngko player njupuk item scriptable object-
-                                           //senjata kanggo menentukan senjata opo iki. Terus instantiate prefab-
-                                           //senjata seng enek script e attack (Duduk seng world item).
     //-------------------------------------------------------------------------------------------------------------------//
     //TODO:
     //Item Switch Events

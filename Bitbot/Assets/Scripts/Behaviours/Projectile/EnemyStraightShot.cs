@@ -19,7 +19,7 @@ public class EnemyStraightShot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Hitbox") || other.CompareTag("Solid"))
+        if (other.CompareTag("Player Hitbox") || other.CompareTag("Solid"))
         {
             DestroyBullet();
         }

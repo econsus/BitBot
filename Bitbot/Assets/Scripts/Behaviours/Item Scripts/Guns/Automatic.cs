@@ -5,10 +5,15 @@ using UnityEngine;
 public class Automatic : MonoBehaviour, ICanShoot
 {
     public RangedWeapon gun;
-    private bool canShoot = true;
+    private bool canShoot;
+
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
     public void Shoot(float angle, GameObject gunEndpoint)
     {
-        if(!canShoot)
+        if (!canShoot)
         {
             return;
         }
@@ -19,11 +24,9 @@ public class Automatic : MonoBehaviour, ICanShoot
     {
         canShoot = false;
         Vector3 insPos = _gunEndpoint.transform.position;
-        GameObject muzzleIns = Instantiate(gun.muzzlePrefab, insPos, Quaternion.Euler(0, 0, _angle));
+        Instantiate(gun.muzzlePrefab, insPos, Quaternion.Euler(0, 0, _angle));
         Instantiate(gun.bulletPrefab, insPos, Quaternion.Euler(0, 0, _angle));
-        yield return new WaitForSeconds(0.1f * Time.deltaTime);
-        Destroy(muzzleIns);
-        yield return new WaitForSeconds(t - 0.1f * Time.deltaTime);
+        yield return new WaitForSeconds(t);
         canShoot = true;
     }
 }

@@ -16,14 +16,9 @@ public class InventoryObject : ScriptableObject
     {
         itemList.Insert(_index, _item);
     }
-    public void RemoveItemFromInv()
-    {
-        itemList.RemoveAt(0);
-    }
-    public void ReplaceItemInInv(ItemObject _item, int _index)
+    public void RemoveItemFromInv(int _index)
     {
         itemList.RemoveAt(_index);
-        InsertItemToInv(_item, _index);
     }
     public void ClearInventory()
     {

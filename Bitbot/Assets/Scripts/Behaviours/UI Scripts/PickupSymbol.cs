@@ -31,12 +31,13 @@ public class PickupSymbol : MonoBehaviour
     //Show pickup symbol. This method is subscribed to OnItemTouch event
     private void ShowPickupSymbol(ItemObject _item)
     {
-        if(_item == this.item) //if event's item is the same as this item
+        if(_item == this.item && !PlayerInventory.instance.touching) //if event's item is the same as this item & no other pickup symbol is displayed
         {
             Vector3 pos = transform.position;
             pos += Vector3.up * symbolOffset;
 
             ins = Instantiate(pickupSymbolPrefab, pos, Quaternion.Euler(0, 0, 0)); //Instantiate pickup symbol prefab at an offset.
+            PlayerInventory.instance.touching = true;
         }
     }
     //Destroy instantiated pickup symbol object.
@@ -45,6 +46,7 @@ public class PickupSymbol : MonoBehaviour
         if (_item == this.item) //if event's item is the same as this item
         {
             Destroy(ins);
+            PlayerInventory.instance.touching = false;
         }
     }
 }

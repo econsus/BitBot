@@ -6,69 +6,42 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public InventoryObject inventory;
+    public static PlayerInventory instance;
+    public bool touching = false;
     public ItemObject touchedItem;
+    private PlayerMovement move;
     private EventManager em;
     private List<GameObject> instantiatedItems;
 
     private void Awake()
     {
         em = FindObjectOfType<EventManager>();
+        instance = this;
         instantiatedItems = new List<GameObject>();
+        move = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
     //Subscription(s)
     private void OnEnable()
     {
         em.OnItemPickupEvent += AddItemToPlayerInv;
         em.OnItemPickupEvent += InstantiateEquippedPrefab;
+        //em.OnItemSwitchEvent += SwitchWeapon;
+        em.OnItemDropEvent += DropItem;
     }
     //Unsubscribe from event(s)
     private void OnDisable()
     {
         em.OnItemPickupEvent -= AddItemToPlayerInv;
         em.OnItemPickupEvent -= InstantiateEquippedPrefab;
+        //em.OnItemSwitchEvent -= SwitchWeapon;
+        em.OnItemDropEvent -= DropItem;
     }
     private void Update()
     {
+        SwitchCheck();
+        DropCheck();
         SetInstantiatedActiveStates();
     }
-    /*private void Update()
-    {
-        if (canPickup)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                item.DestroySelf();
-                if (inventory.itemList.Count < inventory.defaultCapacity)
-                {
-                    //AddItem(touchedItem);
-                }
-                else
-                {
-                    //ReplaceItem(touchedItem, inventory.itemList[0]);
-                }
-            }
-        }
-        if (inventory.itemList.Count > 1)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                SwitchEquipped();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.G) && inventory.itemList.Count > 0)
-        {
-            DropItem(inventory.itemList[0]);
-        }
-    }
-    public void SwitchEquipped()
-    {
-        inventory.ReverseInv();
-    }
-    public void DropItem(ItemObject _item)
-    {
-        inventory.RemoveItemFromInv();
-    }*/
-
     //Add/Replace item to player inventory. This method is subscribed to OnItemPickupEvent
     public void AddItemToPlayerInv(ItemObject _item) 
     {
@@ -80,18 +53,44 @@ public class PlayerInventory : MonoBehaviour
         else //If player inventory is full
         {
             //"Drop" replaced item to the ground by instantiating its prefab
-            Instantiate(inventory.GetItem(0).worldPrefab, transform.position, Quaternion.Euler(0, 0, 0));
+            DropItem(this);
             //Replace currently equipped item with picked item.
-            Destroy(instantiatedItems[0]);
-            instantiatedItems.RemoveAt(0);
-            inventory.ReplaceItemInInv(_item, 0);
+            inventory.InsertItemToInv(_item, 0);
         }
+    }
+    private void SwitchWeapon()
+    {
+        inventory.itemList.Reverse();
+        instantiatedItems.Reverse();
     }
     public void InstantiateEquippedPrefab(ItemObject _item)
     {
         GameObject ins = Instantiate(_item.equippedPrefab, transform);
         ins.SetActive(false);
         instantiatedItems.Insert(0, ins);
+    }
+    private void SwitchCheck()
+    {
+        if (inventory.itemList.Count > 0 && Input.GetKeyDown(KeyCode.Q))
+        {
+            SwitchWeapon();
+        }
+    }
+    private void DropCheck()
+    {
+        if(inventory.itemList.Count > 0 && Input.GetKeyDown(KeyCode.G))
+        {
+            em.OnItemDropEventMethod(this);
+        }
+    }
+    private void DropItem(PlayerInventory p)
+    {
+        Vector3 offset = p.move.facingLeft ? Vector3.left * 2f : Vector3.right * 2f;
+        GameObject ins = Instantiate(p.inventory.GetItem(0).worldPrefab, p.transform.position + offset, Quaternion.Euler(0, 0, 0));
+        ins.GetComponentInChildren<SpriteRenderer>().flipX = p.move.facingLeft;
+        Destroy(p.instantiatedItems[0]);
+        p.instantiatedItems.RemoveAt(0);
+        p.inventory.RemoveItemFromInv(0);
     }
     private void SetInstantiatedActiveStates()
     {

@@ -13,6 +13,10 @@ public class Burst : MonoBehaviour, ICanShoot
     {
         currentBurst = maxBurst;
     }
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
     public void Shoot(float angle, GameObject gunEndpoint)
     {
         if (!canShoot)
@@ -27,18 +31,16 @@ public class Burst : MonoBehaviour, ICanShoot
         canShoot = false;
         currentBurst--;
         Vector3 insPos = _gunEndpoint.transform.position;
-        GameObject muzzleIns = Instantiate(gun.muzzlePrefab, insPos, Quaternion.Euler(0, 0, _angle));
+        Instantiate(gun.muzzlePrefab, insPos, Quaternion.Euler(0, 0, _angle));
         Instantiate(gun.bulletPrefab, insPos, Quaternion.Euler(0, 0, _angle));
-        yield return new WaitForSeconds(0.1f * Time.unscaledDeltaTime);
-        Destroy(muzzleIns);
         if(currentBurst > 0)
         {
-            yield return new WaitForSeconds(t - 0.1f * Time.unscaledDeltaTime);
+            yield return new WaitForSeconds(t);
             canShoot = true;
         }
         else
         {
-            yield return new WaitForSeconds(t + 0.25f - 0.1f * Time.unscaledDeltaTime);
+            yield return new WaitForSeconds(t + 0.25f);
             canShoot = true;
             currentBurst = maxBurst;
         }
