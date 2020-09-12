@@ -10,6 +10,7 @@ TagManager:
   - Enemy Projectile
   - Player Projectile
   - Item
+  - Player Hitbox
   layers:
   - Default
   - TransparentFX

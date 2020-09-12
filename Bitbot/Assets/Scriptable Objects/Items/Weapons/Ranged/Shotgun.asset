@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
-  m_Name: Revolver
+  m_Name: Shotgun
   m_EditorClassIdentifier: 
-  worldPrefab: {fileID: 8968769030063574559, guid: 531fb5e58a3277a4a8e052ab1d10b081,
+  worldPrefab: {fileID: 8840447599258781509, guid: 0d8879d9caff7fa478be7317b8a49b85,
     type: 3}
-  equippedPrefab: {fileID: 6036550776336034569, guid: ebd824e32e0ca3047945e7e8e9fc6eea,
+  equippedPrefab: {fileID: 6036550776336034569, guid: 5907ad1bedc43974e8704360e6d4f38d,
     type: 3}
-  hudSprite: {fileID: 21300000, guid: 6c10a794f1fea964ca05ac2ca95d1921, type: 3}
+  hudSprite: {fileID: 21300000, guid: 3ece64651662f6447b9cb51517e6aa7b, type: 3}
   type: 0
-  description: revolver
+  description: Shotgun
   weaponType: 0
-  magazineSize: 6
+  magazineSize: 5
   projectileVelocity: 0
   reloadTime: 2
-  rateOfFire: 1
+  rateOfFire: 0.75
   muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
     type: 3}
-  bulletPrefab: {fileID: 8973469668349137906, guid: 4e5d37f2c386fc4459b6b2c38cea25f2,
+  bulletPrefab: {fileID: 8973469668349137906, guid: c97ad20c17579824790c9b3cb95f1c92,
     type: 3}

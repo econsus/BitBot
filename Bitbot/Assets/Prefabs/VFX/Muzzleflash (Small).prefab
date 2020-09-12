@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4713674993328684270}
   - component: {fileID: 4713674993328684264}
   - component: {fileID: 4713674993328684265}
+  - component: {fileID: 6531539749870273753}
   m_Layer: 0
   m_Name: Muzzleflash (Small)
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1578541493
   m_SortingLayer: 8
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1570554605610548344, guid: cdfff0b019395fc4e8602c6bf5255a4d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,3 +103,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6531539749870273753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713674993328684271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bad32b87e09a944a27c0a5cdf5ac0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.1
