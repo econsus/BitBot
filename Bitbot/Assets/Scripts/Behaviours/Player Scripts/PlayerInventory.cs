@@ -36,7 +36,7 @@ public class PlayerInventory : MonoBehaviour
         //em.OnItemSwitchEvent -= SwitchWeapon;
         em.OnItemDropEvent -= DropItem;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         SwitchCheck();
         DropCheck();

@@ -32,9 +32,13 @@ public class ItemScript : MonoBehaviour
     //Fire OnItemPickup event
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E) && collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            em.OnItemPickupEventMethod(item);
+            em.OnItemTouchEventMethod(item);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                em.OnItemPickupEventMethod(item);
+            }
         }
     }
     //Fire OnItemUntouch event
