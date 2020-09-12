@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1266048512}
   m_Layer: 12
   m_Name: Hitbox
-  m_TagString: Hitbox
+  m_TagString: Player Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -398,4 +398,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 17c9bdcfc79aac940ab66515016c5b7c, type: 2}
+  touching: 0
   touchedItem: {fileID: 0}
