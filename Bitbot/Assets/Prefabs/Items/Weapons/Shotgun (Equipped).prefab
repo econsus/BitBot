@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036550776336034572}
   - component: {fileID: 1647546467553277856}
+  - component: {fileID: -1610629514421221055}
   - component: {fileID: 2514024916135471711}
   m_Layer: 8
   m_Name: Shotgun (Equipped)
@@ -48,6 +49,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunEndpoint: {fileID: 6036550776709550235}
   offset: 2.5
+--- !u!114 &-1610629514421221055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036550776336034569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc622dac3db340540859e327f6549159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2514024916135471711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: 7740e6e51f7a0684da3b828194dc99d0, type: 2}
+  currentBulletCount: 0
 --- !u!1 &6036550776709550235
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036550777266481401}
   - component: {fileID: 6036550777266481403}
+  - component: {fileID: 1578125437664388013}
   m_Layer: 10
   m_Name: Visual
   m_TagString: Untagged
@@ -161,14 +176,34 @@ SpriteRenderer:
   m_SortingLayerID: -1578541493
   m_SortingLayer: 8
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5aa0f8452d93d0d409348c406f60cd8b, type: 3}
+  m_Sprite: {fileID: 1275589539659018210, guid: 5aa0f8452d93d0d409348c406f60cd8b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 2.5, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1578125437664388013
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036550777266481382}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2911bac51e4411b4e83eccf7762e388f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

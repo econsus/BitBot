@@ -41,12 +41,22 @@ public class EventManager : MonoBehaviour //Big brain time
     //--------------------------------------------------------//
     public delegate void ItemUse();
 
-    public event ItemUse OnItemShotEvent;
-    public void OnItemShotEventMethod()
+    public event ItemUse OnGunShotEvent;
+    public event ItemUse OnGunEmptyEvent;
+    public event ItemUse OnGunReloadEvent;
+    public void OnGunShotEventMethod()
     {
-        OnItemShotEvent?.Invoke();
+        OnGunShotEvent?.Invoke();
     }
-    
+    public void OnGunEmptyEventEventMethod()
+    {
+        OnGunEmptyEvent?.Invoke();
+    }
+    public void OnGunReloadEventEventMethod()
+    {
+        OnGunReloadEvent?.Invoke();
+    }
+
     //-------------------------------------------------------------------------------------------------------------------//
 
     //-------------------------------------------------------------------------------------------------------------------//

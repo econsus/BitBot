@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 8499490055473098487}
   - component: {fileID: 7286100979874373550}
   - component: {fileID: 8180978458224101111}
-  - component: {fileID: 622438215399217271}
   - component: {fileID: 4530635424599618045}
+  - component: {fileID: 622438215399217271}
   - component: {fileID: 5062989306692107311}
-  - component: {fileID: 2250287103306081072}
   m_Layer: 11
   m_Name: Player .357 Magnum
   m_TagString: Player Projectile
@@ -106,6 +105,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &4530635424599618045
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973469668349137906}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &622438215399217271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,27 +152,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.5}
   m_EdgeRadius: 0
---- !u!50 &4530635424599618045
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973469668349137906}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!114 &5062989306692107311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,16 +166,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   lifetime: 0.75
---- !u!114 &2250287103306081072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973469668349137906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd5d80f8bd57d24d941253fa791e941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundName: Gunshot Big

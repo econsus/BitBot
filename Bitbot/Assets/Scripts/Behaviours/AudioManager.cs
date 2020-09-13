@@ -31,4 +31,18 @@ public class AudioManager : MonoBehaviour
             s.source.Play();
         }
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+        Sound s = Array.Find(sounds, sound => sound.clip == clip);
+
+        if (s == null)
+        {
+            Debug.Log(clip.name + " clip not found");
+        }
+        else
+        {
+            s.source.Play();
+        }
+    }
 }
