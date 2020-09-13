@@ -12,11 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
   m_Name: SMG
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  worldPrefab: {fileID: 6889928514584780588, guid: 519da313ef8d00c439c778e692b5b951,
+    type: 3}
+  equippedPrefab: {fileID: 6036550776336034569, guid: 32f40b89dd6a3994db94b1dc2b06c4d1,
+    type: 3}
+  hudSprite: {fileID: 21300000, guid: 74af09b5b955ded4695d19761a8ec77d, type: 3}
   type: 0
   description: MP5
+  pickupSound: {fileID: 8300000, guid: 523e37610ec0c994c81ac4a07291456c, type: 3}
   weaponType: 0
   magazineSize: 15
-  reloadTime: 1
-  firingMode: 1
-  rateOfFire: 0.25
+  projectileVelocity: 0
+  reloadTime: 0.75
+  rateOfFire: 0.05
+  muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
+    type: 3}
+  bulletPrefab: {fileID: 8973469668349137906, guid: cdfd514cfe806304fb27b9cee32aa73c,
+    type: 3}
+  gunShotSound: {fileID: 8300000, guid: fcc80df1c88e49f48a97a5eda125871d, type: 3}
+  reloadSound: {fileID: 8300000, guid: d5d1cfe2a63d27f479dbe96ffadb76f0, type: 3}

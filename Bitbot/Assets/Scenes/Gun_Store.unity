@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48392b8365805c647802319405320bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: ecb0a8a4462b4d04d8c0f9ad1baeb0fb, type: 2}
+  dialog: {fileID: 11400000, guid: ecb0a8a4462b4d04d8c0f9ad1baeb0fb, type: 2}
   conversation: {fileID: 790774775}
   waitTime: 0.3
   typingWaitTime: 0.02

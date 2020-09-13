@@ -12,11 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c385af1e4d37b7547a26d92b5a138703, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6036550776336034569, guid: b6081a27cfc295543a7c7ac4420a803d, type: 3}
+  worldPrefab: {fileID: 8840447599258781509, guid: c76c55123c6509e4985800070f094cfb,
+    type: 3}
+  equippedPrefab: {fileID: 6036550776336034569, guid: b6081a27cfc295543a7c7ac4420a803d,
+    type: 3}
+  hudSprite: {fileID: 21300000, guid: c4a7922613c5f8b43b0fd85c80031f47, type: 3}
   type: 0
   description: Civillian Semi-Automatic Pistol modeled after the "Walther PP"
+  pickupSound: {fileID: 8300000, guid: 523e37610ec0c994c81ac4a07291456c, type: 3}
   weaponType: 0
   magazineSize: 7
-  reloadTime: 1
-  firingMode: 0
-  rateOfFire: 0.25
+  projectileVelocity: 0
+  reloadTime: 0.75
+  rateOfFire: 0.35
+  recoilAmount: 0
+  muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
+    type: 3}
+  bulletPrefab: {fileID: 8973469668349137906, guid: cdfd514cfe806304fb27b9cee32aa73c,
+    type: 3}
+  gunShotSound: {fileID: 8300000, guid: fcc80df1c88e49f48a97a5eda125871d, type: 3}
+  reloadSound: {fileID: 8300000, guid: d5d1cfe2a63d27f479dbe96ffadb76f0, type: 3}

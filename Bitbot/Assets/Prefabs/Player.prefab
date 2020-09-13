@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1266048512}
   m_Layer: 12
   m_Name: Hitbox
-  m_TagString: Hitbox
+  m_TagString: Player Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 359571415823656171}
   - component: {fileID: 122152924}
   - component: {fileID: 114576027}
+  - component: {fileID: 459691256}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -337,7 +338,7 @@ MonoBehaviour:
   onWall: 0
   onLeftWall: 0
   onRightWall: 0
-  colliderSize: {x: 1.25, y: 0.25}
+  colliderSize: {x: 1.225, y: 0.25}
   colliderRadius: 0.25
   bottomOffset: {x: 0.125, y: -0.9}
   leftOffset: {x: -0.75, y: 0}
@@ -384,3 +385,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
   currentHealth: 0
+--- !u!114 &459691256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359571415823656178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b7f324f2f2ba649aeac86a7684f7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 17c9bdcfc79aac940ab66515016c5b7c, type: 2}
+  touching: 0
+  touchedItem: {fileID: 0}

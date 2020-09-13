@@ -2,13 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum FiringMode
-{
-    Semi,
-    Automatic,
-    Mixed
-}
-[CreateAssetMenu(fileName = "New Ranged Weapon", menuName = "Inventory System/Items/Weapon/Ranged")]
+[CreateAssetMenu(fileName = "New Ranged Weapon", menuName = "Scriptable Objects/Items/Weapon/Ranged")]
 public class RangedWeapon : WeaponObject
 {
     public void Awake()
@@ -18,7 +12,10 @@ public class RangedWeapon : WeaponObject
     }
 
     public int magazineSize;
+    public float projectileVelocity;
     public float reloadTime;
-    public FiringMode firingMode;
     public float rateOfFire;
+    public float recoilAmount;
+    public GameObject muzzlePrefab, bulletPrefab;
+    public AudioClip gunShotSound, reloadSound;
 }
