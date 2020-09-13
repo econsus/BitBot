@@ -19,12 +19,16 @@ MonoBehaviour:
   hudSprite: {fileID: 21300000, guid: 3ece64651662f6447b9cb51517e6aa7b, type: 3}
   type: 0
   description: Shotgun
+  pickupSound: {fileID: 8300000, guid: 523e37610ec0c994c81ac4a07291456c, type: 3}
   weaponType: 0
   magazineSize: 5
   projectileVelocity: 0
-  reloadTime: 2
-  rateOfFire: 0.75
+  reloadTime: 1.25
+  rateOfFire: 0.9
+  recoilAmount: 2
   muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
     type: 3}
   bulletPrefab: {fileID: 8973469668349137906, guid: c97ad20c17579824790c9b3cb95f1c92,
     type: 3}
+  gunShotSound: {fileID: 8300000, guid: 23f6ea83b8ce2f645ba5cdae449278fa, type: 3}
+  reloadSound: {fileID: 8300000, guid: d5d1cfe2a63d27f479dbe96ffadb76f0, type: 3}

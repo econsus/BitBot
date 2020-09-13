@@ -24,18 +24,18 @@ public class HandleShooting : MonoBehaviour
 
     private void OnEnable()
     {
-        em.OnItemShotEvent += ShootGun;
+        em.OnGunShotEvent += ShootGun;
     }
     private void OnDisable()
     {
-        em.OnItemShotEvent -= ShootGun;
+        em.OnGunShotEvent -= ShootGun;
     }
     void Update()
     {
         HandleAiming();
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
-            em.OnItemShotEventMethod();
+            em.OnGunShotEventMethod();
         }
     }
 
@@ -43,7 +43,6 @@ public class HandleShooting : MonoBehaviour
     {
         ICanShoot shootable = GetComponent<ICanShoot>();
         shootable?.Shoot(angle, gunEndpoint);
-        
     }
     private void HandleAiming()
     {

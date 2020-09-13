@@ -11,11 +11,13 @@ public class PlayerInventory : MonoBehaviour
     public ItemObject touchedItem;
     private PlayerMovement move;
     private EventManager em;
+    private AudioManager am;
     private List<GameObject> instantiatedItems;
 
     private void Awake()
     {
         em = FindObjectOfType<EventManager>();
+        am = FindObjectOfType<AudioManager>();
         instance = this;
         instantiatedItems = new List<GameObject>();
         move = GameObject.Find("Player").GetComponent<PlayerMovement>();
@@ -45,6 +47,7 @@ public class PlayerInventory : MonoBehaviour
     //Add/Replace item to player inventory. This method is subscribed to OnItemPickupEvent
     public void AddItemToPlayerInv(ItemObject _item) 
     {
+        am.PlaySound(_item.pickupSound);
         if (inventory.itemList.Count < inventory.defaultCapacity) //If player inventory is not full
         {
             //insert picked item to player inventory on the first index

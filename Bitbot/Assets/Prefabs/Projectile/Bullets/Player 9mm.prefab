@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4530635424599618045}
   - component: {fileID: 622438215399217271}
   - component: {fileID: 5062989306692107311}
-  - component: {fileID: 2250287103306081072}
   m_Layer: 11
   m_Name: Player 9mm
   m_TagString: Player Projectile
@@ -167,16 +166,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 75
   lifetime: 0.5
---- !u!114 &2250287103306081072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8973469668349137906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd5d80f8bd57d24d941253fa791e941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundName: Gunshot Small
