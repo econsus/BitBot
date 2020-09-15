@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float wallSlideSpeed;
+    private float x, y, xRaw, yRaw;
+    private Vector2 inputDir;
 
     [HideInInspector]
     public bool canMove = true;
@@ -26,10 +31,15 @@ public class PlayerMovement : MonoBehaviour
     private AnimationScript anim;
     private SpriteRenderer sr;
 
+    private EventManager em;
+    public bool isKnockedback = false;
+
     private void Awake()
     {
         speed = player.moveSpeed;
         jumpForce = player.jumpForce;
+        wallSlideSpeed = player.wallSlideSpeed;
+        em = FindObjectOfType<EventManager>();
     }
     void Start()
     {
@@ -37,44 +47,66 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<PlayerCollision>();
         anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        
+    }
+    private void OnEnable()
+    {
+        em.OnKnockedBackEvent += ApplyKnockback;
     }
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal");
+        y = Input.GetAxis("Vertical");
+        xRaw = Input.GetAxisRaw("Horizontal");
+        yRaw = Input.GetAxisRaw("Vertical");
         anim.SetHorizontal(x);
 
-        Vector2 dir = new Vector2(x, y);
-        Run(dir);
+        inputDir = new Vector2(x, y);
 
-        Flip(dir);
-
-        if (Input.GetButtonDown("Jump") && coll.onGround)
+        if (Input.GetButtonDown("Jump"))
         {
             jumpRequest = true;
         }
-
-        WallSlide(x);
     }
     private void FixedUpdate()
     {
-        if(jumpRequest)
+        Run(inputDir);
+        Flip(inputDir);
+        WallSlide(xRaw);
+        LimitJump();
+
+        if (jumpRequest)
         {
             Jump(Vector2.up);
             jumpRequest = false;
         }
     }
+
+    private void LimitJump()
+    {
+        if(rb.velocity.y > jumpForce && Input.GetButton("Jump"))
+        {
+            //rb.velocity = new Vector2(rb.velocity.x, Physics2D.gravity.y);
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(rb.velocity.x, jumpForce), 10f * Time.deltaTime);
+        }
+    }
+
     private void Run(Vector2 dir)
     {
         if(!canMove)
         {
             return;
         }
-        else
+        if(!isKnockedback)
         {
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
         }
+        else
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(dir.x * speed, rb.velocity.y), 5f * Time.deltaTime);
+        }
+        
     }
 
     private void Flip(Vector2 dir)
@@ -122,16 +154,14 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        else
-        {
-            anim.TriggerAnim("Jump");
 
-            rb.velocity = Vector2.zero;
-            rb.velocity += dir * jumpForce;
-        }
+        anim.TriggerAnim("Jump");
+
+        rb.velocity = Vector2.zero;
+        rb.velocity += dir * jumpForce;
     }
 
-    private void WallSlide(float _x)
+    private void WallSlide(float xRaw)
     {
         if(!canMove)
         {
@@ -141,7 +171,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if (coll.onLeftWall && _x < 0 || coll.onRightWall && _x > 0)
+        if (coll.onLeftWall && xRaw < 0 || coll.onRightWall && xRaw > 0)
         {
             SlideDown();
         }
@@ -155,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(rb.velocity.y < 0)
         {
-            rb.velocity = Vector2.down * 2f;
+            rb.velocity = Vector2.down * wallSlideSpeed;
             isWallSliding = true;
         }
     }
@@ -164,6 +194,22 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         anim.SetHorizontal(0);
+    }
+    private void ApplyKnockback(Vector3 dir, float multiplier)
+    {
+        if(coll.onGround)
+        {
+            //return;
+        }
+        StartCoroutine(KnockbackCycle(dir, multiplier));
+    }
+
+    private IEnumerator KnockbackCycle(Vector3 dir, float multiplier)
+    {
+        isKnockedback = true;
+        rb.velocity += new Vector2(dir.x * multiplier, dir.y * multiplier);
+        yield return new WaitForSeconds(0.4f);
+        isKnockedback = false;
     }
 
     public void Knockback(float x, float y)

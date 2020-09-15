@@ -58,7 +58,14 @@ public class EventManager : MonoBehaviour //Big brain time
     }
 
     //-------------------------------------------------------------------------------------------------------------------//
+    public delegate void PlayerTransform(Vector3 dir, float multiplier);
 
+    public event PlayerTransform OnKnockedBackEvent;
+
+    public void OnKnockedBackEventMethod(Vector3 _dir, float _multiplier)
+    {
+        OnKnockedBackEvent?.Invoke(_dir, _multiplier);
+    }
     //-------------------------------------------------------------------------------------------------------------------//
     //TODO:
     //Item Switch Events

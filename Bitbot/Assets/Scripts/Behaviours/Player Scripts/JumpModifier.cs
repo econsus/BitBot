@@ -9,6 +9,7 @@ public class JumpModifier : MonoBehaviour
 
     private PlayerMovement move;
     private Rigidbody2D rb;
+
     void Start()
     {
         move = GetComponent<PlayerMovement>();
@@ -19,18 +20,19 @@ public class JumpModifier : MonoBehaviour
     {
         if (rb.velocity.y < maxHeight && rb.velocity.y != 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            ApplyHigh();
         }
-        else if (rb.velocity.y > 1 && move.canMove)
+        else if (rb.velocity.y > 1 && move.canMove && !Input.GetButton("Jump") || move.isKnockedback && Input.GetButton("Jump"))
         {
-            if(!Input.GetButton("Jump"))
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-            }
+            ApplyLow();
         }
-        if(rb.velocity.y > 1 && !move.canMove)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+    }
+    private void ApplyHigh()
+    {
+        rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+    }
+    private void ApplyLow()
+    {
+        rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
     }
 }

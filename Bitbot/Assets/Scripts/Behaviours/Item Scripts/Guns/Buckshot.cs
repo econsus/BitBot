@@ -41,11 +41,15 @@ public class Buckshot : MonoBehaviour, ICanShoot, IReloadable
     }
     public void Reload()
     {
-        StartCoroutine(ReloadGun(gun.reloadTime));
+        if (currentBulletCount != gun.magazineSize && !isReloading)
+        {
+            StartCoroutine(ReloadGun(gun.reloadTime));
+        }
     }
 
     private IEnumerator ShootGun(float t, float _angle, GameObject _gunEndpoint)
     {
+        em.OnGunShotEventMethod();
         canShoot = false;
         Vector3 insPos = _gunEndpoint.transform.position;
         if (anim != null)

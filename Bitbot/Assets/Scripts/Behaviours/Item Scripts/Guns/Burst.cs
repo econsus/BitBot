@@ -49,6 +49,7 @@ public class Burst : MonoBehaviour, ICanShoot, IReloadable
 
     private IEnumerator ShootGun(float t, float _angle, GameObject _gunEndpoint)
     {
+        em.OnGunShotEventMethod();
         canShoot = false;
         currentBurst--;
         Vector3 insPos = _gunEndpoint.transform.position;

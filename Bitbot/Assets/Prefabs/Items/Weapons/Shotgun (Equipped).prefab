@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6036550776336034572}
   - component: {fileID: 1647546467553277856}
   - component: {fileID: -1610629514421221055}
+  - component: {fileID: 4377206606399415572}
   - component: {fileID: 2514024916135471711}
   m_Layer: 8
   m_Name: Shotgun (Equipped)
@@ -61,6 +62,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc622dac3db340540859e327f6549159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4377206606399415572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036550776336034569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09095942c94ec9c4db3567395a662e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 11400000, guid: 7740e6e51f7a0684da3b828194dc99d0, type: 2}
 --- !u!114 &2514024916135471711
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,6 +49,7 @@ public class Automatic : MonoBehaviour, ICanShoot, IReloadable
 
     private IEnumerator ShootGun(float t, float _angle, GameObject _gunEndpoint)
     {
+        em.OnGunShotEventMethod();
         canShoot = false;
         if(anim != null)
         {
