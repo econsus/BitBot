@@ -2935,13 +2935,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 359571415823656183, guid: dfa30c89bae54614e94f00e693f30c88,
         type: 3}
-      propertyPath: jumpHeight
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 359571415823656183, guid: dfa30c89bae54614e94f00e693f30c88,
-        type: 3}
-      propertyPath: apexTime
-      value: 5
+      propertyPath: hangTime
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfa30c89bae54614e94f00e693f30c88, type: 3}
@@ -3244,6 +3239,18 @@ CompositeCollider2D:
       - X: 1070000000
         Y: -10000000
       - X: 1070000000
+        Y: -50000000
+      - X: 330000100
+        Y: -50000000
+      - X: 330000100
+        Y: -49999959
+      - X: 330000041
+        Y: -49999900
+      - X: 269999959
+        Y: -49999900
+      - X: 269999900
+        Y: -49999959
+      - X: 269999900
         Y: -50000000
       - X: 170000000
         Y: -50000000
@@ -6295,36 +6302,36 @@ Tilemap:
   - first: {x: 27, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 49
-      m_TileSpriteIndex: 49
-      m_TileMatrixIndex: 3
+      m_TileIndex: 48
+      m_TileSpriteIndex: 48
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 28, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 48
-      m_TileSpriteIndex: 48
-      m_TileMatrixIndex: 3
+      m_TileIndex: 49
+      m_TileSpriteIndex: 49
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 29, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 49
-      m_TileSpriteIndex: 49
-      m_TileMatrixIndex: 3
+      m_TileIndex: 48
+      m_TileSpriteIndex: 48
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 30, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 48
-      m_TileSpriteIndex: 48
-      m_TileMatrixIndex: 3
+      m_TileIndex: 49
+      m_TileSpriteIndex: 49
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
@@ -7159,36 +7166,36 @@ Tilemap:
   - first: {x: 27, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 47
-      m_TileSpriteIndex: 47
-      m_TileMatrixIndex: 3
+      m_TileIndex: 46
+      m_TileSpriteIndex: 46
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 28, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 46
-      m_TileSpriteIndex: 46
-      m_TileMatrixIndex: 3
+      m_TileIndex: 47
+      m_TileSpriteIndex: 47
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 29, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 47
-      m_TileSpriteIndex: 47
-      m_TileMatrixIndex: 3
+      m_TileIndex: 46
+      m_TileSpriteIndex: 46
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
   - first: {x: 30, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 46
-      m_TileSpriteIndex: 46
-      m_TileMatrixIndex: 3
+      m_TileIndex: 47
+      m_TileSpriteIndex: 47
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
@@ -21506,7 +21513,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 260
+  - m_RefCount: 268
     m_Data:
       e00: -1
       e01: 0
@@ -21524,7 +21531,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 966
+  - m_RefCount: 958
     m_Data:
       e00: 1
       e01: 0
@@ -21730,12 +21737,12 @@ PrefabInstance:
     - target: {fileID: 8840447599258781514, guid: 0d8879d9caff7fa478be7317b8a49b85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.5
+      value: 30.6
       objectReference: {fileID: 0}
     - target: {fileID: 8840447599258781514, guid: 0d8879d9caff7fa478be7317b8a49b85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 8840447599258781514, guid: 0d8879d9caff7fa478be7317b8a49b85,
         type: 3}

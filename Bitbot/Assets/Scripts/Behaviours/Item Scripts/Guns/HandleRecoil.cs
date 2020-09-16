@@ -16,7 +16,6 @@ public class HandleRecoil : MonoBehaviour
     }
     private void OnEnable()
     {
-        Debug.Log(em);
         em.OnGunShotEvent += InvokeKnockbackEvent;
     }
     private void OnDisable()

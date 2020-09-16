@@ -12,21 +12,25 @@ public class DynamicCollider : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        flipColliderX(move.facingLeft);
+        flipColliderX();
     }
 
-    void flipColliderX(bool _facingLeft)
+    void flipColliderX()
     {
-        if(!_facingLeft)
+        if(move.isWallSliding)
+        {
+            return;
+        }
+        if(!move.facingLeft)
         {
             if (bc.offset.x < 0)
             {
                 bc.offset = new Vector2(-bc.offset.x, bc.offset.y);
             }
         }
-        if(_facingLeft)
+        if(move.facingLeft)
         {
             if (bc.offset.x > 0)
             {

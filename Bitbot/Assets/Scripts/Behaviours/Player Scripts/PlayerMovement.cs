@@ -7,24 +7,25 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Scriptable Object")]
     public Player player;
 
-    [Space]
+    [Space(2)]
 
     [Header("Stats")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float wallSlideSpeed;
+    [SerializeField] private float hangTime = 0.15f;
+    private float hangCounter;
     private float x, y, xRaw, yRaw;
     private Vector2 inputDir;
 
-    [HideInInspector]
-    public bool canMove = true;
 
-    [Space]
+    [Space(2)]
 
     [Header("Booleans")]
+    public bool canMove = true;
     public bool facingLeft = true;
     public bool isWallSliding = false;
-    private bool jumpRequest = false;
+    public bool jumpRequest = false;
 
     private Rigidbody2D rb;
     private PlayerCollision coll;
@@ -71,9 +72,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        GroundCheck();
         Run(inputDir);
-        Flip(inputDir);
         WallSlide(xRaw);
+        Flip(inputDir);
         LimitJump();
 
         if (jumpRequest)
@@ -82,7 +84,17 @@ public class PlayerMovement : MonoBehaviour
             jumpRequest = false;
         }
     }
-
+    private void GroundCheck()
+    {
+        if(coll.onGround)
+        {
+            hangCounter = hangTime;
+        }
+        else
+        {
+            hangCounter -= Time.deltaTime;
+        }
+    }
     private void LimitJump()
     {
         if(rb.velocity.y > jumpForce && Input.GetButton("Jump"))
@@ -111,6 +123,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip(Vector2 dir)
     {
+        if(isWallSliding)
+        {
+            return;
+        }
         if (!facingLeft)
         {
             if(dir.x < 0)
@@ -121,13 +137,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetSpeed("playbackSpeed", 1f);
             }
-            if(coll.bottomOffset.x < 0)
-            {
-                coll.FlipBottomOffsetX();
-            }
             sr.flipX = false;
         }
-        if (facingLeft)
+        else
         {
             if (dir.x > 0)
             {
@@ -137,28 +149,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetSpeed("playbackSpeed", 1f);
             }
-            if (coll.bottomOffset.x > 0)
-            {
-                coll.FlipBottomOffsetX();
-            }
             sr.flipX = true;
         }
     }
     private void Jump(Vector2 dir)
     {
-        if(!coll.onGround)
-        {
-            return;
-        }
         if(!canMove)
         {
             return;
         }
 
-        anim.TriggerAnim("Jump");
+        if(hangCounter > 0)
+        {
+            anim.TriggerAnim("Jump");
 
-        rb.velocity = Vector2.zero;
-        rb.velocity += dir * jumpForce;
+            rb.velocity = Vector2.zero;
+            rb.velocity += dir * jumpForce;
+        }
     }
 
     private void WallSlide(float xRaw)
@@ -167,26 +174,21 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if(!coll.onWall)
-        {
-            return;
-        }
         if (coll.onLeftWall && xRaw < 0 || coll.onRightWall && xRaw > 0)
         {
-            SlideDown();
+            if (rb.velocity.y < 0 || rb.velocity.y < -wallSlideSpeed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+                isWallSliding = true;
+            }
+            else
+            {
+                isWallSliding = false;
+            }
         }
         else
         {
             isWallSliding = false;
-        }
-    }
-
-    private void SlideDown()
-    {
-        if(rb.velocity.y < 0)
-        {
-            rb.velocity = Vector2.down * wallSlideSpeed;
-            isWallSliding = true;
         }
     }
 

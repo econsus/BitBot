@@ -304,9 +304,11 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
   speed: 0
   jumpForce: 0
+  wallSlideSpeed: 0
   canMove: 1
   facingLeft: 1
   isWallSliding: 0
+  isKnockedback: 0
 --- !u!114 &359571415823656180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,8 +343,10 @@ MonoBehaviour:
   colliderSize: {x: 1.225, y: 0.25}
   colliderRadius: 0.25
   bottomOffset: {x: 0.125, y: -0.9}
-  leftOffset: {x: -0.75, y: 0}
-  rightOffset: {x: 0.85, y: 0}
+  leftOffset: {x: -0.5, y: 0}
+  leftOffset_flipped: {x: -0.75, y: 0}
+  rightOffset: {x: 0.75, y: 0}
+  rightOffset_flipped: {x: 0.5, y: 0}
   colliderColor: {r: 0, g: 0, b: 1, a: 1}
   groundLayer:
     serializedVersion: 2

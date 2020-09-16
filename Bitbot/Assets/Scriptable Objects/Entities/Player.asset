@@ -16,4 +16,4 @@ MonoBehaviour:
   maxHealth: 5
   moveSpeed: 14
   jumpForce: 16.5
-  wallSlideSpeed: 4
+  wallSlideSpeed: 6
