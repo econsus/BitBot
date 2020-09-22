@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DynamicCollider : MonoBehaviour
 {
-    private PlayerMovement move;
+    private PlayerStates ps;
     private BoxCollider2D bc;
     void Start()
     {
-        move = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        ps = GameObject.Find("Player").GetComponent<PlayerStates>();
         bc = GetComponent<BoxCollider2D>();
     }
 
@@ -19,18 +19,18 @@ public class DynamicCollider : MonoBehaviour
 
     void flipColliderX()
     {
-        if(move.isWallSliding)
-        {
-            return;
-        }
-        if(!move.facingLeft)
+        //if(ps.isWallSliding)
+        //{
+        //    return;
+        //}
+        if(!ps.facingLeft)
         {
             if (bc.offset.x < 0)
             {
                 bc.offset = new Vector2(-bc.offset.x, bc.offset.y);
             }
         }
-        if(move.facingLeft)
+        if(ps.facingLeft)
         {
             if (bc.offset.x > 0)
             {

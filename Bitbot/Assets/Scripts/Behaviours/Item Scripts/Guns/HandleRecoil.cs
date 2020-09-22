@@ -25,13 +25,16 @@ public class HandleRecoil : MonoBehaviour
 
     private void InvokeKnockbackEvent()
     {
-        Vector3 knockbackDir = CalcDir();
+        Vector2 knockbackDir = CalcDir();
         em.OnKnockedBackEventMethod(knockbackDir, gun.recoilAmount);
     }
-    private Vector3 CalcDir()
+    private Vector2 CalcDir()
     {
         Vector3 mPos = MousePosition.GetMouseWorldPos(0f, cam);
-        Vector3 dir = (mPos - player.position).normalized;
-        return -dir;
+        Vector3 tmp = (mPos - player.position).normalized;
+
+        //Vector2 dir = new Vector2(-Mathf.Round(tmp.x), -Mathf.Round(tmp.y));
+        Vector2 dir = new Vector2(-tmp.x, -tmp.y);
+        return dir;
     }
 }

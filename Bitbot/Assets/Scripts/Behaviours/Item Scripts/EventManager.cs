@@ -58,11 +58,11 @@ public class EventManager : MonoBehaviour //Big brain time
     }
 
     //-------------------------------------------------------------------------------------------------------------------//
-    public delegate void PlayerTransform(Vector3 dir, float multiplier);
+    public delegate void PlayerPosition(Vector2 dir, float multiplier);
 
-    public event PlayerTransform OnKnockedBackEvent;
+    public event PlayerPosition OnKnockedBackEvent;
 
-    public void OnKnockedBackEventMethod(Vector3 _dir, float _multiplier)
+    public void OnKnockedBackEventMethod(Vector2 _dir, float _multiplier)
     {
         OnKnockedBackEvent?.Invoke(_dir, _multiplier);
     }

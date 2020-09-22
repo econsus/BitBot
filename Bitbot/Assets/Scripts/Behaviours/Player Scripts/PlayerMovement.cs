@@ -13,9 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float wallSlideSpeed;
-    [SerializeField] private float hangTime = 0.15f;
-    private float hangCounter;
-    private float x, y, xRaw, yRaw;
+    [SerializeField] private float coyoteTime = 0.15f;
+    private float coyoteTimeCounter;
+    private float x, y, xRaw;
     private Vector2 inputDir;
 
 
@@ -23,17 +23,14 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Booleans")]
     public bool canMove = true;
-    public bool facingLeft = true;
     public bool isWallSliding = false;
-    public bool jumpRequest = false;
 
     private Rigidbody2D rb;
-    private PlayerCollision coll;
+    private PlayerStates ps;
     private AnimationScript anim;
     private SpriteRenderer sr;
 
     private EventManager em;
-    public bool isKnockedback = false;
 
     private void Awake()
     {
@@ -45,10 +42,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<PlayerCollision>();
+        ps = GetComponent<PlayerStates>();
         anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
-        
     }
     private void OnEnable()
     {
@@ -60,14 +56,14 @@ public class PlayerMovement : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
         xRaw = Input.GetAxisRaw("Horizontal");
-        yRaw = Input.GetAxisRaw("Vertical");
+        //yRaw = Input.GetAxisRaw("Vertical");
         anim.SetHorizontal(x);
 
         inputDir = new Vector2(x, y);
 
         if (Input.GetButtonDown("Jump"))
         {
-            jumpRequest = true;
+            ps.jumping = true;
         }
     }
     private void FixedUpdate()
@@ -76,31 +72,29 @@ public class PlayerMovement : MonoBehaviour
         Run(inputDir);
         WallSlide(xRaw);
         Flip(inputDir);
-        LimitJump();
-
-        if (jumpRequest)
+        if(ps.jumping)
         {
-            Jump(Vector2.up);
-            jumpRequest = false;
+            Jump();
+            ps.jumping = false;
         }
     }
     private void GroundCheck()
     {
-        if(coll.onGround)
+        if(ps.onGround)
         {
-            hangCounter = hangTime;
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {
-            hangCounter -= Time.deltaTime;
+            coyoteTimeCounter -= Time.deltaTime;
         }
     }
     private void LimitJump()
     {
-        if(rb.velocity.y > jumpForce && Input.GetButton("Jump"))
+        if(rb.velocity.y > jumpForce)
         {
-            //rb.velocity = new Vector2(rb.velocity.x, Physics2D.gravity.y);
-            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(rb.velocity.x, jumpForce), 10f * Time.deltaTime);
+            //rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, Mathf.Abs(jumpThreshold), 20f * Time.deltaTime));
+            //rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -Mathf.Abs(jumpThreshold), Mathf.Abs(jumpThreshold)));
         }
     }
 
@@ -110,15 +104,14 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if(!isKnockedback)
+        if(!ps.isKnockedback)
         {
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
         }
         else
         {
-            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(dir.x * speed, rb.velocity.y), 5f * Time.deltaTime);
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(dir.x * speed, rb.velocity.y), 2f * Time.deltaTime);
         }
-        
     }
 
     private void Flip(Vector2 dir)
@@ -127,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if (!facingLeft)
+        if (!ps.facingLeft)
         {
             if(dir.x < 0)
             {
@@ -152,19 +145,28 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = true;
         }
     }
-    private void Jump(Vector2 dir)
+    private void Jump()
     {
         if(!canMove)
         {
             return;
         }
 
-        if(hangCounter > 0)
+        if(coyoteTimeCounter > 0)
         {
             anim.TriggerAnim("Jump");
 
-            rb.velocity = Vector2.zero;
-            rb.velocity += dir * jumpForce;
+            //rb.velocity = Vector2.zero;
+            //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            if(!ps.isKnockedback)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0f);
+                rb.velocity += Vector2.up * jumpForce;
+            }
         }
     }
 
@@ -174,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if (coll.onLeftWall && xRaw < 0 || coll.onRightWall && xRaw > 0)
+        if (ps.onLeftWall && xRaw < 0 || ps.onRightWall && xRaw > 0)
         {
             if (rb.velocity.y < 0 || rb.velocity.y < -wallSlideSpeed)
             {
@@ -197,28 +199,34 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.zero;
         anim.SetHorizontal(0);
     }
-    private void ApplyKnockback(Vector3 dir, float multiplier)
+    private void ApplyKnockback(Vector2 dir, float multiplier)
     {
-        if(coll.onGround)
+        if (ps.onGround)
         {
-            //return;
+            ps.wasOnGround = true;
+        }
+        else
+        {
+            ps.wasOnGround = false;
         }
         StartCoroutine(KnockbackCycle(dir, multiplier));
     }
 
-    private IEnumerator KnockbackCycle(Vector3 dir, float multiplier)
+    private IEnumerator KnockbackCycle(Vector2 dir, float multiplier)
     {
-        isKnockedback = true;
-        rb.velocity += new Vector2(dir.x * multiplier, dir.y * multiplier);
-        yield return new WaitForSeconds(0.4f);
-        isKnockedback = false;
+        ps.isKnockedback = true;
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        //rb.velocity += dir.normalized * multiplier;
+        rb.AddForce(dir * multiplier, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.5f);
+        ps.isKnockedback = false;
     }
 
     public void Knockback(float x, float y)
     {
         Vector2 dir;
 
-        if(!facingLeft)
+        if(!ps.facingLeft)
         {
             dir = Vector2.left * x + Vector2.up * y;
         }

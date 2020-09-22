@@ -134,6 +134,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -217,8 +218,9 @@ GameObject:
   - component: {fileID: 359571415823656181}
   - component: {fileID: 359571415823656171}
   - component: {fileID: 122152924}
-  - component: {fileID: 114576027}
   - component: {fileID: 459691256}
+  - component: {fileID: 7439046932552867125}
+  - component: {fileID: 1286580777}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -305,10 +307,9 @@ MonoBehaviour:
   speed: 0
   jumpForce: 0
   wallSlideSpeed: 0
+  coyoteTime: 0.15
   canMove: 1
-  facingLeft: 1
   isWallSliding: 0
-  isKnockedback: 0
 --- !u!114 &359571415823656180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 6
   lowJumpMultiplier: 5.5
-  maxHeight: 10
+  jumpThreshold: 8.5
 --- !u!114 &359571415823656181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,11 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ffe35ac259a68479cf0162d326c11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onGround: 0
-  onWall: 0
-  onLeftWall: 0
-  onRightWall: 0
-  colliderSize: {x: 1.225, y: 0.25}
   colliderRadius: 0.25
   bottomOffset: {x: 0.125, y: -0.9}
   leftOffset: {x: -0.5, y: 0}
@@ -375,20 +371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676248908b3f3da4aa2dcaf527ddc7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114576027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359571415823656178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60eb962b0998b2e49aa6a18db82d084d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
-  currentHealth: 0
 --- !u!114 &459691256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,3 +386,53 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 17c9bdcfc79aac940ab66515016c5b7c, type: 2}
   touching: 0
   touchedItem: {fileID: 0}
+--- !u!114 &7439046932552867125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359571415823656178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1076559b95a3504aa0047c5b0ec6cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
+  walking: 0
+  facingLeft: 0
+  jumping: 0
+  onGround: 0
+  onLeftWall: 0
+  onRightWall: 0
+  onWall: 0
+  isKnockedback: 0
+  wasOnGround: 0
+  recoilingX: 0
+  recoilingY: 0
+  currentHealth: 0
+--- !u!114 &1286580777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359571415823656178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1076559b95a3504aa0047c5b0ec6cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
+  walking: 0
+  facingLeft: 0
+  jumping: 0
+  onGround: 0
+  onLeftWall: 0
+  onRightWall: 0
+  onWall: 0
+  isKnockedback: 0
+  wasOnGround: 0
+  recoilingX: 0
+  recoilingY: 0
+  currentHealth: 0

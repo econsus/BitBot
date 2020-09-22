@@ -2,21 +2,9 @@
 
 public class PlayerCollision : MonoBehaviour
 {
-    [Header ("Booleans")]
-    public bool onGround;
-    public bool onWall;
-    public bool onLeftWall;
-    public bool onRightWall;
-
     [Space]
 
-    [Header("Box Collider")]
-    public Vector2 colliderSize;
-    private static float colliderAngle = 0f;
-
-    [Space]
-
-    [Header("Circle Collider")]
+    [Header("Radius")]
     public float colliderRadius;
 
     [Header("Offsets")]
@@ -33,41 +21,41 @@ public class PlayerCollision : MonoBehaviour
     public Color colliderColor = Color.blue;
     public LayerMask groundLayer;
 
-    private PlayerMovement move;
+    private PlayerStates ps;
     private Vector2 appliedLeftOffset, appliedRightOffset;
 
     private void Awake()
     {
-        move = GetComponent<PlayerMovement>();
+        ps = GetComponent<PlayerStates>();
     }
 
     void FixedUpdate()
     {
         ApplyFlip();
 
-        onGround = Physics2D.OverlapBox((Vector2)transform.position + bottomOffset, colliderSize, colliderAngle, groundLayer);
+        ps.onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, colliderRadius, groundLayer);
 
-        onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + appliedLeftOffset, colliderRadius, groundLayer);
-        onRightWall = Physics2D.OverlapCircle((Vector2)transform.position + appliedRightOffset, colliderRadius, groundLayer);
+        ps.onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + appliedLeftOffset, colliderRadius, groundLayer);
+        ps.onRightWall = Physics2D.OverlapCircle((Vector2)transform.position + appliedRightOffset, colliderRadius, groundLayer);
 
-        onWall =  onLeftWall || onRightWall;
+        ps.onWall = ps.onLeftWall || ps.onRightWall;
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = colliderColor;
 
-        Gizmos.DrawWireCube((Vector2)transform.position + bottomOffset, colliderSize);
+        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, colliderRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + appliedLeftOffset, colliderRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + appliedRightOffset, colliderRadius);
     }
 
     private void ApplyFlip()
     {
-        if(move.isWallSliding)
-        {
-            return;
-        }
-        if(!move.facingLeft)
+        //if(ps.isWallSliding)
+        //{
+        //    return;
+        //}
+        if(!ps.facingLeft)
         {
             if (bottomOffset.x < 0)
             {
