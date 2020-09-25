@@ -32,17 +32,14 @@ public class JumpModifier : MonoBehaviour
     {
         if (rb.velocity.y < jumpThreshold && rb.velocity.y != 0 || ps.isKnockedback && rb.velocity.y > 0 && !ps.wasOnGround && heldJump)
         {
-            Debug.Log("SS");
             rb.gravityScale = fallMultiplier;
         }
         else if (rb.velocity.y > 0 && !heldJump)
         {
-            Debug.Log("FF");
             rb.gravityScale = lowJumpMultiplier;
         }
         else
         {
-            Debug.Log("JJ");
             rb.gravityScale = 1.5f;
         }    
     }
