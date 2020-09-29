@@ -5,8 +5,6 @@ using Cinemachine;
 
 public class CameraShake : MonoBehaviour
 {
-    [SerializeField] private float intensity;
-    [SerializeField] private float time;
     private float shakeTimer;
 
     private CinemachineVirtualCamera vcam;
@@ -19,11 +17,11 @@ public class CameraShake : MonoBehaviour
     }
     private void OnEnable()
     {
-        em.OnGunShotEvent += ShakeCamera;
+        em.OnShakeCameraEvent += ShakeCamera;
     }
     private void OnDisable()
     {
-        em.OnGunShotEvent -= ShakeCamera;
+        em.OnShakeCameraEvent -= ShakeCamera;
     }
 
     private void Update()
@@ -40,7 +38,7 @@ public class CameraShake : MonoBehaviour
             basicPerlin.m_AmplitudeGain = 0f;
         }
     }
-    private void ShakeCamera()
+    private void ShakeCamera(float intensity, float time)
     {
         Debug.Log("Shake");
         CinemachineBasicMultiChannelPerlin basicPerlin = 

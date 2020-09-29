@@ -38,6 +38,7 @@ public class Buckshot : MonoBehaviour, ICanShoot, IReloadable
             return;
         }
         StartCoroutine(ShootGun(gun.rateOfFire, angle, gunEndpoint));
+        em.OnShakeCameraEventMethod(gun.shakeIntensity, gun.shakeTime);
     }
     public void Reload()
     {

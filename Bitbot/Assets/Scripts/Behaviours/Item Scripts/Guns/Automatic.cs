@@ -38,6 +38,7 @@ public class Automatic : MonoBehaviour, ICanShoot, IReloadable
             return;
         }
         StartCoroutine(ShootGun(gun.rateOfFire, angle, gunEndpoint));
+        em.OnShakeCameraEventMethod(gun.shakeIntensity, gun.shakeTime);
     }
     public void Reload()
     {
@@ -49,7 +50,6 @@ public class Automatic : MonoBehaviour, ICanShoot, IReloadable
 
     private IEnumerator ShootGun(float t, float _angle, GameObject _gunEndpoint)
     {
-        em.OnGunShotEventMethod();
         canShoot = false;
         if(anim != null)
         {

@@ -16,6 +16,8 @@ public class RangedWeapon : WeaponObject
     public float reloadTime;
     public float rateOfFire;
     public float recoilAmount;
+    public float shakeIntensity;
+    public float shakeTime;
     public GameObject muzzlePrefab, bulletPrefab;
     public AudioClip gunShotSound, reloadSound;
 }
