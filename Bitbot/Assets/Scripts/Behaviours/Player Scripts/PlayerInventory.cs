@@ -9,7 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public static PlayerInventory instance;
     public bool touching = false;
     public ItemObject touchedItem;
-    private PlayerMovement move;
+    private PlayerStates ps;
     private EventManager em;
     private AudioManager am;
     private List<GameObject> instantiatedItems;
@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
         am = FindObjectOfType<AudioManager>();
         instance = this;
         instantiatedItems = new List<GameObject>();
-        move = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        ps = GameObject.Find("Player").GetComponent<PlayerStates>();
     }
     //Subscription(s)
     private void OnEnable()
@@ -88,9 +88,9 @@ public class PlayerInventory : MonoBehaviour
     }
     private void DropItem(PlayerInventory p)
     {
-        Vector3 offset = p.move.facingLeft ? Vector3.left * 2f : Vector3.right * 2f;
+        Vector3 offset = p.ps.facingLeft ? Vector3.left * 2f : Vector3.right * 2f;
         GameObject ins = Instantiate(p.inventory.GetItem(0).worldPrefab, p.transform.position + offset, Quaternion.Euler(0, 0, 0));
-        ins.GetComponentInChildren<SpriteRenderer>().flipX = p.move.facingLeft;
+        ins.GetComponentInChildren<SpriteRenderer>().flipX = p.ps.facingLeft;
         Destroy(p.instantiatedItems[0]);
         p.instantiatedItems.RemoveAt(0);
         p.inventory.RemoveItemFromInv(0);

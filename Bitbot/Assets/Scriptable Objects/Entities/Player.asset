@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Player
   maxHealth: 5
-  moveSpeed: 12
+  moveSpeed: 14
   jumpForce: 16.5
+  wallSlideSpeed: 6

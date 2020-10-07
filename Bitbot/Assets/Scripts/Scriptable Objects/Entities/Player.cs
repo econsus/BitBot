@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : Entity
 {
     public float jumpForce;
+    public float wallSlideSpeed;
     //Stamina
     //Etc
 }

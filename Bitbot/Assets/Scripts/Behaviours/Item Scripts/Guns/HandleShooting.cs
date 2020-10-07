@@ -9,33 +9,22 @@ public class HandleShooting : MonoBehaviour
 
     private float angle;
 
-    private EventManager em;
     private SpriteRenderer sr;
     private Transform player;
     private Camera cam;
 
     private void Awake()
     {
-        em = FindObjectOfType<EventManager>();
         player = GameObject.Find("Player").transform;
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         sr = GetComponentInChildren<SpriteRenderer>();
-    }
-
-    private void OnEnable()
-    {
-        em.OnGunShotEvent += ShootGun;
-    }
-    private void OnDisable()
-    {
-        em.OnGunShotEvent -= ShootGun;
     }
     void Update()
     {
         HandleAiming();
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
-            em.OnGunShotEventMethod();
+            ShootGun();
         }
     }
 

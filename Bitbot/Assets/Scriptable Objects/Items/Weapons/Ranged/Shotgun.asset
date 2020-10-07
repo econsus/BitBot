@@ -25,7 +25,7 @@ MonoBehaviour:
   projectileVelocity: 0
   reloadTime: 1.25
   rateOfFire: 0.9
-  recoilAmount: 2
+  recoilAmount: 25
   muzzlePrefab: {fileID: 4713674993328684271, guid: 70dd8edf080826f4ca04ab88e116112a,
     type: 3}
   bulletPrefab: {fileID: 8973469668349137906, guid: c97ad20c17579824790c9b3cb95f1c92,
