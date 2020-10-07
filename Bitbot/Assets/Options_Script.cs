@@ -7,6 +7,11 @@ using UnityEngine.UI;
 public class Options_Script : MonoBehaviour
 {
     public AudioMixer audiomixer;
+
+    public TMPro.TMP_Dropdown resolutionDropdown;
+
+    Resolution[] resolutions;
+
     public void setVolume(float volume)
     {
         audiomixer.SetFloat("MasterVolume", volume);
@@ -16,77 +21,38 @@ public class Options_Script : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
-
-    #region Resolutions Setting
-
-    #region Attributes
-
-    #region Player Pref Key Constants
-
-    private const string RESOLUTION_PREF_KEY = "resolution";
     
-    #endregion
-
-    #region Resolution
-
-    [SerializeField]
-    private Text resolutionText;
-
-    private Resolution[] resolutions;
-
-    private int currentResolutionIndex = 0;
-    #endregion
-
-    #endregion
-
-    #endregion
-
     void Start()
     {
         resolutions = Screen.resolutions;
 
-        currentResolutionIndex = PlayerPrefs.GetInt(RESOLUTION_PREF_KEY, 0);
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        int currentResolutionIndex = 0;
+
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height + " " + resolutions[i].refreshRate.ToString() + " Hz";
+            options.Add(option);
+            
+
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        
+        resolutionDropdown.AddOptions(options);
     }
 
-    #region Resolution Cycling
-
-    private void SetResolutionText(Resolution resolution)
+    public void SetResolution( int resolutionIndex)
     {
-        resolutionText.text = resolution.width + "x" + resolution.height;
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-
-    public void SetNextResolution()
-    {
-        currentResolutionIndex = GetNextWrappedIndex(resolutions, currentResolutionIndex);
-        SetResolutionText(resolutions[currentResolutionIndex]);
-    }
-
-    public void SetPreviousResolution()
-    {
-        currentResolutionIndex = GetPreviousWrappedIndex(resolutions, currentResolutionIndex);
-        SetResolutionText(resolutions[currentResolutionIndex]);
-    }
-
-    #endregion
-
-    #region Misc Helpers
-
-    #region Index Wrap Helpers
-    private int GetNextWrappedIndex<T>(IList<T> collection, int currentIndex)
-    {
-        if(collection.Count < 1) return 0;
-        return (currentIndex + 1) % collection.Count;
-    }
-
-    private int GetPreviousWrappedIndex<T>(IList<T> collection, int currentIndex)
-    {
-        if (collection.Count < 1) return 0;
-        if ((currentIndex - 1) < 0) return collection.Count - 1;
-        return (currentIndex - 1) % collection.Count;
-    }
-
-    #endregion
-
-    #endregion
 
 }
