@@ -13,30 +13,30 @@ public class EventManager : MonoBehaviour //Big brain time
     public event ItemPickup OnItemUntouchEvent;
     public event ItemPickup OnItemPickupEvent;
 
-    public void OnItemTouchEventMethod(ItemObject _item)
+    public void OnItemTouchEventMethod(ItemObject item)
     {
-        OnItemTouchEvent?.Invoke(_item);
+        OnItemTouchEvent?.Invoke(item);
     }
-    public void OnItemUntouchEventMethod(ItemObject _item)
+    public void OnItemUntouchEventMethod(ItemObject item)
     {
-        OnItemUntouchEvent?.Invoke(_item);
+        OnItemUntouchEvent?.Invoke(item);
     }
-    public void OnItemPickupEventMethod(ItemObject _item)
+    public void OnItemPickupEventMethod(ItemObject item)
     {
-        OnItemPickupEvent?.Invoke(_item);
+        OnItemPickupEvent?.Invoke(item);
     }
     //--------------------------------------------------------//
     public delegate void ItemEquipped(PlayerInventory playerInv);
 
     public event ItemEquipped OnItemDropEvent;
     public event ItemEquipped OnItemSwitchEvent;
-    public void OnItemSwitchEventMethod(PlayerInventory _playerInv)
+    public void OnItemSwitchEventMethod(PlayerInventory playerInv)
     {
-        OnItemSwitchEvent?.Invoke(_playerInv);
+        OnItemSwitchEvent?.Invoke(playerInv);
     }
-    public void OnItemDropEventMethod(PlayerInventory _playerInv)
+    public void OnItemDropEventMethod(PlayerInventory playerInv)
     {
-        OnItemDropEvent?.Invoke(_playerInv);
+        OnItemDropEvent?.Invoke(playerInv);
     }
     //--------------------------------------------------------//
     public delegate void ItemUse();
@@ -58,9 +58,21 @@ public class EventManager : MonoBehaviour //Big brain time
     }
 
     //-------------------------------------------------------------------------------------------------------------------//
+    public delegate void PlayerPosition(Vector2 dir, float multiplier);
 
+    public event PlayerPosition OnKnockedBackEvent;
+
+    public void OnKnockedBackEventMethod(Vector2 dir, float multiplier)
+    {
+        OnKnockedBackEvent?.Invoke(dir, multiplier);
+    }
     //-------------------------------------------------------------------------------------------------------------------//
-    //TODO:
-    //Item Switch Events
-    //Item Drop Events
+    public delegate void CameraShake(float intensity, float time);
+
+    public event CameraShake OnShakeCameraEvent;
+
+    public void OnShakeCameraEventMethod(float intensity, float time)
+    {
+        OnShakeCameraEvent?.Invoke(intensity, time);
+    }
 }

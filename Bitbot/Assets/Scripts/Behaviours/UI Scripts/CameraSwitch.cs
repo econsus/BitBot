@@ -38,13 +38,11 @@ public class CameraSwitch : MonoBehaviour
     }
     IEnumerator DisableMovement()
     {
-        Debug.Log("Fuck");
         startTransition = false;
         move.canMove = false;
         yield return new WaitForSecondsRealtime(.05f);
         move.Halt();
         yield return new WaitForSecondsRealtime(.4f);
         move.canMove = true;
-        Debug.Log("Fuck 2");
     }
 }

@@ -1,85 +1,126 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Scriptable Object")]
     public Player player;
 
-    [Space]
+    [Space(2)]
 
     [Header("Stats")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float wallSlideSpeed;
+    [SerializeField] private float coyoteTime = 0.15f;
+    private float coyoteTimeCounter;
+    private float x, y, xRaw;
+    private Vector2 inputDir;
 
-    [HideInInspector]
-    public bool canMove = true;
 
-    [Space]
+    [Space(2)]
 
     [Header("Booleans")]
-    public bool facingLeft = true;
+    public bool canMove = true;
     public bool isWallSliding = false;
-    private bool jumpRequest = false;
 
     private Rigidbody2D rb;
-    private PlayerCollision coll;
+    private PlayerStates ps;
     private AnimationScript anim;
     private SpriteRenderer sr;
+
+    private EventManager em;
 
     private void Awake()
     {
         speed = player.moveSpeed;
         jumpForce = player.jumpForce;
+        wallSlideSpeed = player.wallSlideSpeed;
+        em = FindObjectOfType<EventManager>();
     }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<PlayerCollision>();
+        ps = GetComponent<PlayerStates>();
         anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
+    }
+    private void OnEnable()
+    {
+        em.OnKnockedBackEvent += ApplyKnockback;
     }
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal");
+        y = Input.GetAxis("Vertical");
+        xRaw = Input.GetAxisRaw("Horizontal");
+        //yRaw = Input.GetAxisRaw("Vertical");
         anim.SetHorizontal(x);
 
-        Vector2 dir = new Vector2(x, y);
-        Run(dir);
+        inputDir = new Vector2(x, y);
 
-        Flip(dir);
-
-        if (Input.GetButtonDown("Jump") && coll.onGround)
+        if (Input.GetButtonDown("Jump"))
         {
-            jumpRequest = true;
+            ps.jumping = true;
         }
-
-        WallSlide(x);
     }
     private void FixedUpdate()
     {
-        if(jumpRequest)
+        GroundCheck();
+        Run(inputDir);
+        WallSlide(xRaw);
+        Flip(inputDir);
+        if(ps.jumping)
         {
-            Jump(Vector2.up);
-            jumpRequest = false;
+            Jump();
+            ps.jumping = false;
         }
     }
+    private void GroundCheck()
+    {
+        if(ps.onGround)
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+    }
+    private void LimitJump()
+    {
+        if(rb.velocity.y > jumpForce)
+        {
+            //rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, Mathf.Abs(jumpThreshold), 20f * Time.deltaTime));
+            //rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -Mathf.Abs(jumpThreshold), Mathf.Abs(jumpThreshold)));
+        }
+    }
+
     private void Run(Vector2 dir)
     {
         if(!canMove)
         {
             return;
         }
-        else
+        if(!ps.isKnockedback)
         {
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(dir.x * speed, rb.velocity.y), 2f * Time.deltaTime);
         }
     }
 
     private void Flip(Vector2 dir)
     {
-        if (!facingLeft)
+        if(isWallSliding)
+        {
+            return;
+        }
+        if (!ps.facingLeft)
         {
             if(dir.x < 0)
             {
@@ -89,13 +130,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetSpeed("playbackSpeed", 1f);
             }
-            if(coll.bottomOffset.x < 0)
-            {
-                coll.FlipBottomOffsetX();
-            }
             sr.flipX = false;
         }
-        if (facingLeft)
+        else
         {
             if (dir.x > 0)
             {
@@ -105,58 +142,55 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetSpeed("playbackSpeed", 1f);
             }
-            if (coll.bottomOffset.x > 0)
-            {
-                coll.FlipBottomOffsetX();
-            }
             sr.flipX = true;
         }
     }
-    private void Jump(Vector2 dir)
+    private void Jump()
     {
-        if(!coll.onGround)
-        {
-            return;
-        }
         if(!canMove)
         {
             return;
         }
-        else
+
+        if(coyoteTimeCounter > 0)
         {
             anim.TriggerAnim("Jump");
 
-            rb.velocity = Vector2.zero;
-            rb.velocity += dir * jumpForce;
+            //rb.velocity = Vector2.zero;
+            //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            if(!ps.isKnockedback)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0f);
+                rb.velocity += Vector2.up * jumpForce;
+            }
         }
     }
 
-    private void WallSlide(float _x)
+    private void WallSlide(float xRaw)
     {
         if(!canMove)
         {
             return;
         }
-        if(!coll.onWall)
+        if (ps.onLeftWall && xRaw < 0 || ps.onRightWall && xRaw > 0)
         {
-            return;
-        }
-        if (coll.onLeftWall && _x < 0 || coll.onRightWall && _x > 0)
-        {
-            SlideDown();
+            if (rb.velocity.y < 0 || rb.velocity.y < -wallSlideSpeed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+                isWallSliding = true;
+            }
+            else
+            {
+                isWallSliding = false;
+            }
         }
         else
         {
             isWallSliding = false;
-        }
-    }
-
-    private void SlideDown()
-    {
-        if(rb.velocity.y < 0)
-        {
-            rb.velocity = Vector2.down * 2f;
-            isWallSliding = true;
         }
     }
 
@@ -165,12 +199,34 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.zero;
         anim.SetHorizontal(0);
     }
+    private void ApplyKnockback(Vector2 dir, float multiplier)
+    {
+        if (ps.onGround)
+        {
+            ps.wasOnGround = true;
+        }
+        else
+        {
+            ps.wasOnGround = false;
+        }
+        StartCoroutine(KnockbackCycle(dir, multiplier));
+    }
+
+    private IEnumerator KnockbackCycle(Vector2 dir, float multiplier)
+    {
+        ps.isKnockedback = true;
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        //rb.velocity += dir.normalized * multiplier;
+        rb.AddForce(dir * multiplier, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(0.5f);
+        ps.isKnockedback = false;
+    }
 
     public void Knockback(float x, float y)
     {
         Vector2 dir;
 
-        if(!facingLeft)
+        if(!ps.facingLeft)
         {
             dir = Vector2.left * x + Vector2.up * y;
         }
