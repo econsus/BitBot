@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -89,14 +88,14 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
     }
-    private void LimitJump()
-    {
-        if(rb.velocity.y > jumpForce)
-        {
-            //rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, Mathf.Abs(jumpThreshold), 20f * Time.deltaTime));
-            //rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -Mathf.Abs(jumpThreshold), Mathf.Abs(jumpThreshold)));
-        }
-    }
+    //private void LimitJump()
+    //{
+    //    if(rb.velocity.y > jumpForce)
+    //    {
+    //        //rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, Mathf.Abs(jumpThreshold), 20f * Time.deltaTime));
+    //        //rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -Mathf.Abs(jumpThreshold), Mathf.Abs(jumpThreshold)));
+    //    }
+    //}
 
     private void Run(Vector2 dir)
     {

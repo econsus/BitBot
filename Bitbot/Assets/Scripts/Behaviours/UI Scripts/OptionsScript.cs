@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
-public class Options_Script : MonoBehaviour
+public class OptionsScript : MonoBehaviour
 {
     public AudioMixer audiomixer;
 
@@ -12,12 +10,12 @@ public class Options_Script : MonoBehaviour
 
     Resolution[] resolutions;
 
-    public void setVolume(float volume)
+    public void SetVolume(float volume)
     {
         audiomixer.SetFloat("MasterVolume", volume);
     }
 
-    public void setFullScreen(bool isFullscreen)
+    public void SetFullScreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }
@@ -36,16 +34,12 @@ public class Options_Script : MonoBehaviour
         {
             string option = resolutions[i].width + " x " + resolutions[i].height + " " + resolutions[i].refreshRate.ToString() + " Hz";
             options.Add(option);
-            
-
 
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolutionIndex = i;
             }
         }
-
-        
         resolutionDropdown.AddOptions(options);
     }
 
