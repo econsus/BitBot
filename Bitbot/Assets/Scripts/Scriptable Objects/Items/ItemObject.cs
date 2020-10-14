@@ -9,9 +9,10 @@ public enum ItemType
 }
 public abstract class ItemObject : ScriptableObject
 {
-    public GameObject prefab;
+    public GameObject worldPrefab, equippedPrefab;
     public Sprite hudSprite;
     public ItemType type;
     [TextArea(15, 10)]
     public string description;
+    public AudioClip pickupSound;
 }

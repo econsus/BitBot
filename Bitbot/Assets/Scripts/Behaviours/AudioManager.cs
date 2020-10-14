@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-
     void Awake()
     {
         foreach(Sound s in sounds)
@@ -26,6 +25,20 @@ public class AudioManager : MonoBehaviour
         if(s == null)
         {
             Debug.Log(soundName + " clip not found");
+        }
+        else
+        {
+            s.source.Play();
+        }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        Sound s = Array.Find(sounds, sound => sound.clip == clip);
+
+        if (s == null)
+        {
+            Debug.Log(clip.name + " clip not found");
         }
         else
         {

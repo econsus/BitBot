@@ -14,16 +14,16 @@ public class EquipmentUI : MonoBehaviour
 
     void Update()
     {
-        if(playerInv.itemList.Count != 0)
+        if(playerInv.itemList.Count != 0) //If player inventory is not empty
         {
-            DisplayEquipped(playerInv.GetItem(0));
+            DisplayEquipped(playerInv.GetItem(0)); //Display first item in player inventory
         }
-        else
+        else 
         {
             displayImage.enabled = false;
         }
     }
-
+    //Display item's hud sprite from the scriptable object
     private void DisplayEquipped(ItemObject equipped)
     {
         displayImage.enabled = true;

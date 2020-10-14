@@ -69,3 +69,8 @@ MonoBehaviour:
     volume: 0.57
     pitch: 1
     source: {fileID: 0}
+  - clipName: Gunshot Big
+    clip: {fileID: 8300000, guid: 23f6ea83b8ce2f645ba5cdae449278fa, type: 3}
+    volume: 0.57
+    pitch: 1
+    source: {fileID: 0}

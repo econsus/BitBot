@@ -5,36 +5,48 @@ using UnityEngine;
 public class PickupSymbol : MonoBehaviour
 {
     public float symbolOffset;
+    public ItemObject item;
     public GameObject pickupSymbolPrefab;
 
-    private EventManagerPickup eventManagerPickup;
+    private static EventManager em;
     private GameObject ins;
 
     private void Awake()
     {
-        eventManagerPickup = FindObjectOfType<EventManagerPickup>();
+        em = FindObjectOfType<EventManager>();
     }
 
+    //Subscriptions
     private void OnEnable()
     {
-        eventManagerPickup.OnItemTouchEvent += ShowPickupSymbol;
-        eventManagerPickup.OnItemUntouchEvent += DestroyPickupSymbol;
+        em.OnItemTouchEvent += ShowPickupSymbol;
+        em.OnItemUntouchEvent += DestroyPickupSymbol;
     }
+    //Unsubscribe from events
     private void OnDisable()
     {
-        eventManagerPickup.OnItemTouchEvent -= ShowPickupSymbol;
-        eventManagerPickup.OnItemUntouchEvent -= DestroyPickupSymbol;
+        em.OnItemTouchEvent -= ShowPickupSymbol;
+        em.OnItemUntouchEvent -= DestroyPickupSymbol;
     }
-    private void ShowPickupSymbol()
+    //Show pickup symbol. This method is subscribed to OnItemTouch event
+    private void ShowPickupSymbol(ItemObject _item)
     {
-        Vector3 pos = transform.position;
-        pos += Vector3.up * symbolOffset;
+        if(_item == this.item && !PlayerInventory.instance.touching) //if event's item is the same as this item & no other pickup symbol is displayed
+        {
+            Vector3 pos = transform.position;
+            pos += Vector3.up * symbolOffset;
 
-        ins = Instantiate(pickupSymbolPrefab, pos, Quaternion.Euler(0, 0, 0));
+            ins = Instantiate(pickupSymbolPrefab, pos, Quaternion.Euler(0, 0, 0)); //Instantiate pickup symbol prefab at an offset.
+            PlayerInventory.instance.touching = true;
+        }
     }
-
-    private void DestroyPickupSymbol()
+    //Destroy instantiated pickup symbol object.
+    private void DestroyPickupSymbol(ItemObject _item)
     {
-        Destroy(ins);
+        if (_item == this.item) //if event's item is the same as this item
+        {
+            Destroy(ins);
+            PlayerInventory.instance.touching = false;
+        }
     }
 }

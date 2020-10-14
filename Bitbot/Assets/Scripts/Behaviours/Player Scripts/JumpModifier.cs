@@ -5,32 +5,51 @@ public class JumpModifier : MonoBehaviour
     [Header("Multiplers")]
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
-    public float maxHeight = 5.5f;
+    public float jumpThreshold = 8.5f;
 
-    private PlayerMovement move;
+    private bool heldJump = false;
+    private PlayerStates ps;
     private Rigidbody2D rb;
+
     void Start()
     {
-        move = GetComponent<PlayerMovement>();
+        ps = GetComponent<PlayerStates>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        if (rb.velocity.y < maxHeight && rb.velocity.y != 0)
+        if(!Input.GetButton("Jump"))
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            heldJump = false;
         }
-        else if (rb.velocity.y > 1 && move.canMove)
+        else
         {
-            if(!Input.GetButton("Jump"))
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-            }
-        }
-        if(rb.velocity.y > 1 && !move.canMove)
-        {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            heldJump = true;
         }
     }
+    void FixedUpdate()
+    {
+        if (rb.velocity.y < jumpThreshold && rb.velocity.y != 0 || ps.isKnockedback && rb.velocity.y > 0 && !ps.wasOnGround && heldJump)
+        {
+            rb.gravityScale = fallMultiplier;
+        }
+        else if (rb.velocity.y > 0 && !heldJump)
+        {
+            rb.gravityScale = lowJumpMultiplier;
+        }
+        else
+        {
+            rb.gravityScale = 1.5f;
+        }    
+    }
+    //private void ApplyHigh()
+    //{
+    //    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        
+    //}
+    //private void ApplyLow()
+    //{
+    //    rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+    //}
 }
