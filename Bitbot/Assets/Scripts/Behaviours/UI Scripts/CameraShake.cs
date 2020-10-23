@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 
 public class CameraShake : MonoBehaviour
@@ -40,7 +38,6 @@ public class CameraShake : MonoBehaviour
     }
     private void ShakeCamera(float intensity, float time)
     {
-        Debug.Log("Shake");
         CinemachineBasicMultiChannelPerlin basicPerlin = 
             vcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 

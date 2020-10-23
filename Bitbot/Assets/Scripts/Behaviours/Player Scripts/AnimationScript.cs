@@ -4,14 +4,12 @@ public class AnimationScript : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
-    private PlayerMovement move;
     private PlayerStates ps;
     private Transform camTarget;
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
-        move = GetComponentInParent<PlayerMovement>();
         ps = GetComponentInParent<PlayerStates>();
         camTarget = GameObject.Find("Cam Target").transform;
     }
