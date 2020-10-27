@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
     private PlayerMovement move;
-    private PlayerState ps;
+    private PlayerStates ps;
     private AudioManager am;
     private AnimationScript anim;
     public bool contact = false;
@@ -14,7 +14,7 @@ public class PlayerHurt : MonoBehaviour
     void Start()
     {
         move = GetComponentInParent<PlayerMovement>();
-        ps = GetComponentInParent<PlayerState>();
+        ps = GetComponentInParent<PlayerStates>();
         anim = FindObjectOfType<AnimationScript>();
         am = FindObjectOfType<AudioManager>();
     }

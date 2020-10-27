@@ -4,21 +4,19 @@ public class AnimationScript : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
-    private PlayerMovement move;
-    private PlayerCollision coll;
+    private PlayerStates ps;
     private Transform camTarget;
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
-        move = GetComponentInParent<PlayerMovement>();
-        coll = GetComponentInParent<PlayerCollision>();
+        ps = GetComponentInParent<PlayerStates>();
         camTarget = GameObject.Find("Cam Target").transform;
     }
 
     void Update()
     {
-        GroundCheck(coll.onGround);
+        GroundCheck(ps.onGround);
         SetYVelocity(rb.velocity.y);
         SetLookingUp();
     }

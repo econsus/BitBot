@@ -2,11 +2,11 @@
 
 public class PlayerLook : MonoBehaviour
 {
-    private PlayerMovement move;
+    private PlayerStates ps;
     private Camera cam;
     void Start()
     {
-        move = GetComponent<PlayerMovement>();
+        ps = GetComponent<PlayerStates>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
@@ -22,6 +22,6 @@ public class PlayerLook : MonoBehaviour
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        move.facingLeft = angle > 90 || angle < -90;
+        ps.facingLeft = angle > 90 || angle < -90;
     }
 }
