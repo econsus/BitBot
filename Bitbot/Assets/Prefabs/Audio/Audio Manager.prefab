@@ -48,29 +48,41 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fcc80df1c88e49f48a97a5eda125871d, type: 3}
     volume: 0.55
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - clipName: Player Hit
     clip: {fileID: 8300000, guid: 1fd97b8411128cc489b2099f884fc4e4, type: 3}
     volume: 0.57
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - clipName: Laser 1
     clip: {fileID: 8300000, guid: f561e34d9b9472d44b5090c9b4ccdfa5, type: 3}
     volume: 0.57
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - clipName: Equip 1
     clip: {fileID: 8300000, guid: 523e37610ec0c994c81ac4a07291456c, type: 3}
     volume: 0.57
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - clipName: Reload 1
     clip: {fileID: 8300000, guid: d5d1cfe2a63d27f479dbe96ffadb76f0, type: 3}
     volume: 0.57
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - clipName: Gunshot Big
     clip: {fileID: 8300000, guid: 23f6ea83b8ce2f645ba5cdae449278fa, type: 3}
     volume: 0.57
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clipName: Shop Theme 1
+    clip: {fileID: 8300000, guid: 6b1957923ca508345b73ef13076b7759, type: 3}
+    volume: 0.46
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
