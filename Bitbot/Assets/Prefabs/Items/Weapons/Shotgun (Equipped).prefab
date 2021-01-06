@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunEndpoint: {fileID: 6036550776709550235}
-  offset: 2.5
+  offset: 1.8
 --- !u!114 &-1610629514421221055
 MonoBehaviour:
   m_ObjectHideFlags: 0

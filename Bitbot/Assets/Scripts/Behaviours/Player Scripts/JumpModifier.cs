@@ -30,11 +30,13 @@ public class JumpModifier : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (rb.velocity.y < jumpThreshold && rb.velocity.y != 0 || ps.isKnockedback && rb.velocity.y > 0 && !ps.wasOnGround && heldJump)
+        if (rb.velocity.y < jumpThreshold && rb.velocity.y != 0 ||
+            ps.isKnockedback && rb.velocity.y > 0 && !ps.wasOnGround && heldJump)
         {
             rb.gravityScale = fallMultiplier;
         }
-        else if (rb.velocity.y > 0 && !heldJump)
+        else if (rb.velocity.y > 0 && !heldJump ||
+            ps.isKnockedback && rb.velocity.y > 0 && ps.wasOnGround && heldJump)
         {
             rb.gravityScale = lowJumpMultiplier;
         }
