@@ -15,5 +15,5 @@ MonoBehaviour:
   entityName: Player
   maxHealth: 5
   moveSpeed: 14
-  jumpForce: 16.5
+  jumpForce: 20
   wallSlideSpeed: 6
