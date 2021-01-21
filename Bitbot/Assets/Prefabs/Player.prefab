@@ -322,8 +322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 15
-  lowJumpMultiplier: 15
-  jumpThreshold: 15
+  lowJumpMultiplier: 7.5
+  jumpThreshold: 15.5
 --- !u!114 &359571415823656181
 MonoBehaviour:
   m_ObjectHideFlags: 0

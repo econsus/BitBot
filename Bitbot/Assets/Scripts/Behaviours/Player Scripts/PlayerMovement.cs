@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(dir.x * speed, rb.velocity.y), 2f * Time.deltaTime);
+            rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(dir.x * speed, rb.velocity.y), 4f * Time.deltaTime);
         }
     }
 
@@ -159,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
             //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             if(!ps.isKnockedback)
             {
+                rb.gravityScale = 1.5f;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else

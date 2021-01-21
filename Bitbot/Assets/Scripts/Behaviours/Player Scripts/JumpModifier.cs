@@ -30,13 +30,12 @@ public class JumpModifier : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (rb.velocity.y < jumpThreshold && rb.velocity.y != 0 ||
-            ps.isKnockedback && rb.velocity.y > 0 && !ps.wasOnGround && heldJump)
+        if (rb.velocity.y < jumpThreshold && Mathf.RoundToInt(rb.velocity.y) != 0)
         {
             rb.gravityScale = fallMultiplier;
         }
-        else if (rb.velocity.y > 0 && !heldJump ||
-            ps.isKnockedback && rb.velocity.y > 0 && ps.wasOnGround && heldJump)
+        else if (rb.velocity.y > 0 && !heldJump && Mathf.RoundToInt(rb.velocity.y) != 0 ||
+            ps.isKnockedback && rb.velocity.y > 0)
         {
             rb.gravityScale = lowJumpMultiplier;
         }
@@ -45,13 +44,4 @@ public class JumpModifier : MonoBehaviour
             rb.gravityScale = 1.5f;
         }    
     }
-    //private void ApplyHigh()
-    //{
-    //    rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        
-    //}
-    //private void ApplyLow()
-    //{
-    //    rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-    //}
 }
