@@ -8,21 +8,26 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(2)]
 
-    [Header("Stats")]
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private float wallSlideSpeed;
-    [SerializeField] private float coyoteTime = 0.15f;
-    private float coyoteTimeCounter;
-    private float x, y, xRaw;
-    private Vector2 inputDir;
+    [Header("Constants")]
+    private const float DoubleInputTime = 0.2f;
 
+    [Space(2)]
+
+    [Header("Stats")]
+    [SerializeField] private float speed; //Multiplier x velocity saat lari
+    [SerializeField] private float jumpForce; //Multiplier y velocity saat lompat
+    [SerializeField] private float wallSlideSpeed; //Velocity y saat wall sliding
+    [SerializeField] private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
+    private float coyoteTimeCounter; //Counter waktu input sejak meninggalkan ground
+    private float lastInputTime = 0; //Waktu input terakhir
+    private float x, y, xRaw; //Axes
+    private Vector2 inputDir; //Vektor berisi input axes
 
     [Space(2)]
 
     [Header("Booleans")]
-    public bool canMove = true;
-    public bool isWallSliding = false;
+    public bool canMove = true; //Izin untuk bergerak
+    public bool isWallSliding = false; //Keadaan wall sliding
 
     private Rigidbody2D rb;
     private PlayerStates ps;
@@ -64,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             ps.jumping = true;
         }
+        DetectDoubleInput();
     }
     private void FixedUpdate()
     {
@@ -88,14 +94,6 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
     }
-    //private void LimitJump()
-    //{
-    //    if(rb.velocity.y > jumpForce)
-    //    {
-    //        //rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, Mathf.Abs(jumpThreshold), 20f * Time.deltaTime));
-    //        //rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -Mathf.Abs(jumpThreshold), Mathf.Abs(jumpThreshold)));
-    //    }
-    //}
 
     private void Run(Vector2 dir)
     {
@@ -155,8 +153,6 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.TriggerAnim("Jump");
 
-            //rb.velocity = Vector2.zero;
-            //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             if(!ps.isKnockedback)
             {
                 rb.gravityScale = 1.5f;
@@ -194,6 +190,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void DetectDoubleInput()
+    {
+        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        {
+            float deltaInputTime = Time.time - lastInputTime; //Waktu sejak input terakhir
+            if(deltaInputTime < DoubleInputTime)
+            {
+                Debug.Log("Dash!");
+            }
+            lastInputTime = Time.time;
+        }
+    }
     public void Halt()
     {
         rb.velocity = Vector2.zero;
