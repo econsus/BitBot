@@ -17,7 +17,7 @@ public class DoorEnter : MonoBehaviour
     {
         ShowSymbol();
 
-        if(Input.GetKey(KeyCode.E) && inFrontofDoor)
+        if(Input.GetKey(KeyCode.W) && inFrontofDoor)
         {
             StartCoroutine(sceneTransition(1f));
         }
