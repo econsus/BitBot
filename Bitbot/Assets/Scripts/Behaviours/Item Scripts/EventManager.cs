@@ -67,6 +67,17 @@ public class EventManager : MonoBehaviour //Big brain time
         OnKnockedBackEvent?.Invoke(dir, multiplier);
     }
     //-------------------------------------------------------------------------------------------------------------------//
+    public delegate void PlayerInput(KeyCode kcode);
+
+    public event PlayerInput OnDoubleTapEvent;
+
+    public void OnDoubleTapEventMethod(KeyCode kcode)
+    {
+        OnDoubleTapEvent?.Invoke(kcode);
+    }
+
+
+    //-------------------------------------------------------------------------------------------------------------------//
     public delegate void CameraShake(float intensity, float time);
 
     public event CameraShake OnShakeCameraEvent;

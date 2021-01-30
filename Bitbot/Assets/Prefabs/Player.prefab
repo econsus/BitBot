@@ -305,6 +305,7 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
   speed: 0
   jumpForce: 0
+  dashSpeed: 0
   wallSlideSpeed: 0
   coyoteTime: 0.15
   canMove: 1
@@ -322,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 15
-  lowJumpMultiplier: 7.5
+  lowJumpMultiplier: 5.5
   jumpThreshold: 15.5
 --- !u!114 &359571415823656181
 MonoBehaviour:
@@ -405,6 +406,7 @@ MonoBehaviour:
   onLeftWall: 0
   onRightWall: 0
   onWall: 0
+  dashing: 0
   isKnockedback: 0
   wasOnGround: 0
   recoilingX: 0

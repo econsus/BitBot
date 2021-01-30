@@ -16,10 +16,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float speed; //Multiplier x velocity saat lari
     [SerializeField] private float jumpForce; //Multiplier y velocity saat lompat
+    [SerializeField] private float dashSpeed = 100f; //Multiplier x velocity saat dashing
     [SerializeField] private float wallSlideSpeed; //Velocity y saat wall sliding
     [SerializeField] private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
+    private Vector2 dashDirection = new Vector2();
     private float coyoteTimeCounter; //Counter waktu input sejak meninggalkan ground
-    private float lastInputTime = 0; //Waktu input terakhir
     private float x, y, xRaw; //Axes
     private Vector2 inputDir; //Vektor berisi input axes
 
@@ -27,12 +28,15 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Booleans")]
     public bool canMove = true; //Izin untuk bergerak
+    private bool canDash = true; //Izin untuk ngedash
+    private bool wantToDash = false; //Permintaan ngedash
     public bool isWallSliding = false; //Keadaan wall sliding
 
     private Rigidbody2D rb;
     private PlayerStates ps;
     private AnimationScript anim;
     private SpriteRenderer sr;
+    private DoubleInput dbl;
 
     private EventManager em;
 
@@ -53,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         em.OnKnockedBackEvent += ApplyKnockback;
+        em.OnDoubleTapEvent += DashInput;
     }
 
     void Update()
@@ -69,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
         {
             ps.jumping = true;
         }
-        DetectDoubleInput();
     }
     private void FixedUpdate()
     {
@@ -81,6 +85,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
             ps.jumping = false;
+        }
+        if(wantToDash)
+        {
+            Dash(dashDirection);
+            wantToDash = false;
         }
     }
     private void GroundCheck()
@@ -98,6 +107,10 @@ public class PlayerMovement : MonoBehaviour
     private void Run(Vector2 dir)
     {
         if(!canMove)
+        {
+            return;
+        }
+        if(ps.dashing)
         {
             return;
         }
@@ -190,17 +203,51 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void DetectDoubleInput()
+    private void DashInput(KeyCode kcode)
     {
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        if(!canDash)
         {
-            float deltaInputTime = Time.time - lastInputTime; //Waktu sejak input terakhir
-            if(deltaInputTime < DoubleInputTime)
-            {
-                Debug.Log("Dash!");
-            }
-            lastInputTime = Time.time;
+            return;
         }
+        if (kcode == KeyCode.D)
+        {
+            dashDirection = Vector2.right;
+            wantToDash = true;
+        }
+        else if (kcode == KeyCode.A)
+        {
+            dashDirection = Vector2.left;
+            wantToDash = true;
+        }
+    }
+
+    private void Dash(Vector2 dir)
+    {
+        //TODO: Play dash sound
+        //TODO: Play dash animation
+        StartCoroutine(DashWait(dir));
+    }
+
+    private IEnumerator DashWait(Vector2 dir)
+    {
+        ps.dashing = true;
+        canDash = false;
+        rb.velocity = Vector2.zero;
+        rb.velocity = dir.normalized * dashSpeed;
+        rb.gravityScale = 0;
+        GetComponent<JumpModifier>().enabled = false;
+
+        yield return new WaitForSeconds(.05f);
+
+        GetComponent<JumpModifier>().enabled = true;
+        ps.dashing = false;
+
+        StartCoroutine(DashRecovery());
+    }
+    private IEnumerator DashRecovery()
+    {
+        yield return new WaitForSeconds(1f);
+        canDash = true;
     }
     public void Halt()
     {
@@ -209,6 +256,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ApplyKnockback(Vector2 dir, float multiplier)
     {
+        if(ps.dashing)
+        {
+            return;
+        }
         if (ps.onGround)
         {
             ps.wasOnGround = true;

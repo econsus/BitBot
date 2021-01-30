@@ -14,6 +14,7 @@ public class PlayerStates : MonoBehaviour
     public bool onLeftWall;
     public bool onRightWall;
     public bool onWall;
+    public bool dashing;
     public bool isKnockedback;
     public bool wasOnGround = false;
     public bool recoilingX;
