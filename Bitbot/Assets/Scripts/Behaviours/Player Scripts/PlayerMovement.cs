@@ -175,6 +175,8 @@ public class PlayerMovement : MonoBehaviour
             GameObject temp = Instantiate(dustParticle, dustTransform);
             temp.transform.parent = null;
 
+            am.PlaySound("Jump");
+
             if(!ps.isKnockedback)
             {
                 rb.gravityScale = 1.5f;
@@ -233,6 +235,7 @@ public class PlayerMovement : MonoBehaviour
     private void Dash(Vector2 dir)
     {
         am.PlaySound("Dash");
+        em.OnShakeCameraEventMethod(10, 0.2f);
         StartCoroutine(DashWait(dir));
     }
 
