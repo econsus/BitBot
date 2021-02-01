@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 122152924}
   - component: {fileID: 459691256}
   - component: {fileID: 7439046932552867125}
+  - component: {fileID: 855789965}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -305,7 +306,8 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
   speed: 0
   jumpForce: 0
-  dashSpeed: 0
+  dashSpeed: 100
+  dashCooldown: 0.75
   wallSlideSpeed: 0
   coyoteTime: 0.15
   canMove: 1
@@ -412,3 +414,15 @@ MonoBehaviour:
   recoilingX: 0
   recoilingY: 0
   currentHealth: 0
+--- !u!114 &855789965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359571415823656178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba6f95146e00b640a203038d41adb13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

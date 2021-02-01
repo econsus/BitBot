@@ -19,6 +19,7 @@ public class AnimationScript : MonoBehaviour
         GroundCheck(ps.onGround);
         SetYVelocity(rb.velocity.y);
         SetLookingUp();
+        SetDash();
     }
 
     private void SetYVelocity(float y)
@@ -36,6 +37,10 @@ public class AnimationScript : MonoBehaviour
     public void TriggerAnim(string str)
     {
         anim.SetTrigger(str);
+    }
+    public void SetDash()
+    {
+        anim.SetBool("isDashing", ps.dashing);
     }
     public void SetSpeed(string name, float speed)
     {

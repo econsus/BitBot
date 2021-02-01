@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed; //Multiplier x velocity saat lari
     [SerializeField] private float jumpForce; //Multiplier y velocity saat lompat
     [SerializeField] private float dashSpeed = 100f; //Multiplier x velocity saat dashing
+    [SerializeField] private float dashCooldown; //Cooldown dash
     [SerializeField] private float wallSlideSpeed; //Velocity y saat wall sliding
     [SerializeField] private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
     private Vector2 dashDirection = new Vector2();
@@ -32,12 +33,17 @@ public class PlayerMovement : MonoBehaviour
     private bool wantToDash = false; //Permintaan ngedash
     public bool isWallSliding = false; //Keadaan wall sliding
 
+    [Space(2)]
+
+    [Header("Objects")]
+    public GameObject dustParticle;
+    public Transform dustTransform;
+
     private Rigidbody2D rb;
     private PlayerStates ps;
     private AnimationScript anim;
     private SpriteRenderer sr;
-    private DoubleInput dbl;
-
+    private AudioManager am;
     private EventManager em;
 
     private void Awake()
@@ -45,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         speed = player.moveSpeed;
         jumpForce = player.jumpForce;
         wallSlideSpeed = player.wallSlideSpeed;
+        am = FindObjectOfType<AudioManager>();
         em = FindObjectOfType<EventManager>();
     }
     void Start()
@@ -165,6 +172,8 @@ public class PlayerMovement : MonoBehaviour
         if(coyoteTimeCounter > 0)
         {
             anim.TriggerAnim("Jump");
+            GameObject temp = Instantiate(dustParticle, dustTransform);
+            temp.transform.parent = null;
 
             if(!ps.isKnockedback)
             {
@@ -223,8 +232,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash(Vector2 dir)
     {
-        //TODO: Play dash sound
-        //TODO: Play dash animation
+        am.PlaySound("Dash");
         StartCoroutine(DashWait(dir));
     }
 
@@ -232,21 +240,29 @@ public class PlayerMovement : MonoBehaviour
     {
         ps.dashing = true;
         canDash = false;
+
         rb.velocity = Vector2.zero;
         rb.velocity = dir.normalized * dashSpeed;
-        rb.gravityScale = 0;
+
+        rb.gravityScale = 0.5f;
         GetComponent<JumpModifier>().enabled = false;
 
-        yield return new WaitForSeconds(.05f);
-
-        GetComponent<JumpModifier>().enabled = true;
-        ps.dashing = false;
-
+        if (ps.isKnockedback)
+        {
+            GetComponent<JumpModifier>().enabled = true;
+            ps.dashing = false;
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.05f);
+            GetComponent<JumpModifier>().enabled = true;
+            ps.dashing = false;
+        }
         StartCoroutine(DashRecovery());
     }
     private IEnumerator DashRecovery()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
     public void Halt()
