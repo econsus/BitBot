@@ -2,15 +2,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitRoom : MonoBehaviour
+public class SceneTransitionOnEnter : MonoBehaviour
 {
     public Animator transition;
+
+    public Vector2 playerPosition;
+    public VectorValue playerPositionStorage;
     [SerializeField] private string sceneToLoad = "Scene";
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)
         {
+            playerPositionStorage.initialValue = playerPosition;
             StartCoroutine(SceneTransition(1f));
         }
     }

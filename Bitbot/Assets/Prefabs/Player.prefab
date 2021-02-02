@@ -346,6 +346,8 @@ MonoBehaviour:
   dustParticle: {fileID: 2388805289800595122, guid: d60e819fdf8f32c4ea57d6b718a9d992,
     type: 3}
   dustTransform: {fileID: 613524575}
+  playerPositionStorage: {fileID: 11400000, guid: 1ca55657c8d7f974f952a55a00dfa35d,
+    type: 2}
 --- !u!114 &359571415823656180
 MonoBehaviour:
   m_ObjectHideFlags: 0

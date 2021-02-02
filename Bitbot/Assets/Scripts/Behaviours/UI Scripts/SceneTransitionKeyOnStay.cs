@@ -2,12 +2,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorEnter : MonoBehaviour
+public class SceneTransitionKeyOnStay : MonoBehaviour
 {
     private bool inFrontofDoor = false;
     public GameObject symbol;
     public Animator transition;
 
+    public Vector2 playerPosition;
+    public VectorValue playerPositionStorage;
     [SerializeField] private string sceneToLoad = "Scene";
     void Start()
     {
@@ -19,6 +21,7 @@ public class DoorEnter : MonoBehaviour
 
         if(Input.GetKey(KeyCode.W) && inFrontofDoor)
         {
+            playerPositionStorage.initialValue = playerPosition;
             StartCoroutine(sceneTransition(1f));
         }
     }

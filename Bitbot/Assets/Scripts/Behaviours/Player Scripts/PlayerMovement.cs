@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Objects")]
     public GameObject dustParticle;
     public Transform dustTransform;
+    public VectorValue playerPositionStorage;
 
     private Rigidbody2D rb;
     private PlayerStates ps;
@@ -52,12 +53,14 @@ public class PlayerMovement : MonoBehaviour
         am = FindObjectOfType<AudioManager>();
         em = FindObjectOfType<EventManager>();
     }
-    void Start()
+    private void Start()
     {
+        //DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
         ps = GetComponent<PlayerStates>();
         anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        transform.position = playerPositionStorage.initialValue;
     }
     private void OnEnable()
     {
