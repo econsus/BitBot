@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        transform.position = playerPositionStorage.initialValue;
         speed = player.moveSpeed;
         jumpForce = player.jumpForce;
         dashSpeed = player.dashSpeed;
@@ -55,12 +56,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
-        //DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
         ps = GetComponent<PlayerStates>();
         anim = GetComponentInChildren<AnimationScript>();
         sr = GetComponentInChildren<SpriteRenderer>();
-        transform.position = playerPositionStorage.initialValue;
     }
     private void OnEnable()
     {
