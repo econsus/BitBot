@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365163494}
   m_Layer: 0
-  m_Name: ---Instantiated Objects---
+  m_Name: ----Instantiated Objects----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 539885636}
   m_Layer: 0
-  m_Name: --------Rooms------------
+  m_Name: --------Confiners---------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

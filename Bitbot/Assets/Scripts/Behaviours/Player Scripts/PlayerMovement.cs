@@ -8,15 +8,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(2)]
 
-    [Header("Constants")]
-    private const float DoubleInputTime = 0.2f;
-
-    [Space(2)]
-
     [Header("Stats")]
     [SerializeField] private float speed; //Multiplier x velocity saat lari
     [SerializeField] private float jumpForce; //Multiplier y velocity saat lompat
-    [SerializeField] private float dashSpeed = 100f; //Multiplier x velocity saat dashing
+    [SerializeField] private float dashSpeed; //Multiplier x velocity saat dashing
     [SerializeField] private float dashCooldown; //Cooldown dash
     [SerializeField] private float wallSlideSpeed; //Velocity y saat wall sliding
     [SerializeField] private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
@@ -31,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove = true; //Izin untuk bergerak
     private bool canDash = true; //Izin untuk ngedash
     private bool wantToDash = false; //Permintaan ngedash
+    private bool hasJumped = false;
     public bool isWallSliding = false; //Keadaan wall sliding
 
     [Space(2)]
@@ -50,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = player.moveSpeed;
         jumpForce = player.jumpForce;
+        dashSpeed = player.dashSpeed;
+        dashCooldown = player.dashCooldown;
         wallSlideSpeed = player.wallSlideSpeed;
         am = FindObjectOfType<AudioManager>();
         em = FindObjectOfType<EventManager>();
@@ -103,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(ps.onGround)
         {
+            hasJumped = false;
             coyoteTimeCounter = coyoteTime;
         }
         else
@@ -168,14 +167,16 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-
+        if(hasJumped)
+        {
+            return;
+        }    
         if(coyoteTimeCounter > 0)
         {
             anim.TriggerAnim("Jump");
-            GameObject temp = Instantiate(dustParticle, dustTransform);
-            temp.transform.parent = null;
-
+            InstantiateDust();
             am.PlaySound("Jump");
+            hasJumped = true;
 
             if(!ps.isKnockedback)
             {
@@ -235,6 +236,10 @@ public class PlayerMovement : MonoBehaviour
     private void Dash(Vector2 dir)
     {
         am.PlaySound("Dash");
+        if(ps.onGround)
+        {
+            InstantiateDust();
+        }
         em.OnShakeCameraEventMethod(10, 0.2f);
         StartCoroutine(DashWait(dir));
     }
@@ -314,5 +319,11 @@ public class PlayerMovement : MonoBehaviour
         }
         rb.velocity = Vector2.zero;
         rb.AddForce(dir, ForceMode2D.Impulse);
+    }
+
+    private void InstantiateDust()
+    {
+        GameObject temp = Instantiate(dustParticle, dustTransform);
+        temp.transform.parent = null;
     }
 }
