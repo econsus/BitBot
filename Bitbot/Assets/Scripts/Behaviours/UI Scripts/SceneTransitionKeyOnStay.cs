@@ -19,7 +19,7 @@ public class SceneTransitionKeyOnStay : MonoBehaviour
     {
         ShowSymbol();
 
-        if(Input.GetKey(KeyCode.W) && inFrontofDoor)
+        if (Input.GetKey(KeyCode.W) && inFrontofDoor)
         {
             playerPositionStorage.initialValue = playerPosition;
             StartCoroutine(sceneTransition(1f));
@@ -27,7 +27,7 @@ public class SceneTransitionKeyOnStay : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && !collision.isTrigger)
+        if (collision.CompareTag("Player") && !collision.isTrigger)
         {
             inFrontofDoor = true;
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4515726061523218350}
   - component: {fileID: 4515726061523218348}
   m_Layer: 0
-  m_Name: SceneTransitionKeyOnStay
+  m_Name: Scene Transition Key On Stay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,5 +73,6 @@ MonoBehaviour:
   symbol: {fileID: 0}
   transition: {fileID: 0}
   playerPosition: {x: 0, y: 0}
-  playerPositionStorage: {fileID: 0}
+  playerPositionStorage: {fileID: 11400000, guid: 1ca55657c8d7f974f952a55a00dfa35d,
+    type: 2}
   sceneToLoad: SceneToLoad

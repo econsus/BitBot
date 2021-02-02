@@ -72,5 +72,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 0}
   playerPosition: {x: 0, y: 0}
-  playerPositionStorage: {fileID: 0}
+  playerPositionStorage: {fileID: 11400000, guid: 1ca55657c8d7f974f952a55a00dfa35d,
+    type: 2}
   sceneToLoad: SceneToLoad
