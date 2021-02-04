@@ -7,14 +7,14 @@ public class SceneTransitionOnEnter : MonoBehaviour
     public Animator transition;
 
     public Vector2 playerPosition;
-    public VectorValue playerPositionStorage;
+    public Vector2Reference playerSpawn;
     [SerializeField] private string sceneToLoad = "Scene";
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)
         {
-            playerPositionStorage.initialValue = playerPosition;
+            playerSpawn.Value = playerPosition;
             StartCoroutine(SceneTransition(1f));
         }
     }

@@ -9,7 +9,7 @@ public class SceneTransitionKeyOnStay : MonoBehaviour
     public Animator transition;
 
     public Vector2 playerPosition;
-    public VectorValue playerPositionStorage;
+    public Vector2Reference playerSpawn;
     [SerializeField] private string sceneToLoad = "Scene";
     void Start()
     {
@@ -21,7 +21,7 @@ public class SceneTransitionKeyOnStay : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && inFrontofDoor)
         {
-            playerPositionStorage.initialValue = playerPosition;
+            playerSpawn.Value = playerPosition;
             StartCoroutine(sceneTransition(1f));
         }
     }

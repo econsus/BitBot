@@ -5619,11 +5619,6 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 4515726061523218348, guid: 709da0f90a832944fa4729f8fe6d5e07,
         type: 3}
-      propertyPath: sceneToLoad
-      value: Underground_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4515726061523218348, guid: 709da0f90a832944fa4729f8fe6d5e07,
-        type: 3}
       propertyPath: playerPosition.x
       value: -0.18
       objectReference: {fileID: 0}
@@ -6289,6 +6284,12 @@ PrefabInstance:
       propertyPath: playerPosition.y
       value: -8
       objectReference: {fileID: 0}
+    - target: {fileID: 4515726061523218348, guid: 709da0f90a832944fa4729f8fe6d5e07,
+        type: 3}
+      propertyPath: playerSpawn
+      value: 
+      objectReference: {fileID: 11400000, guid: 0887f27c0130d5442a9e009919e7893d,
+        type: 2}
     - target: {fileID: 4515726061523218349, guid: 709da0f90a832944fa4729f8fe6d5e07,
         type: 3}
       propertyPath: m_LocalPosition.x

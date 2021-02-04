@@ -32,9 +32,9 @@ public class PlayerMovement : MonoBehaviour
     [Space(2)]
 
     [Header("Objects")]
+    public Vector2Reference playerSpawn;
     public GameObject dustParticle;
     public Transform dustTransform;
-    public VectorValue playerPositionStorage;
 
     private Rigidbody2D rb;
     private PlayerStates ps;
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = playerPositionStorage.initialValue;
+        transform.position = playerSpawn.Value;
         speed = player.moveSpeed;
         jumpForce = player.jumpForce;
         dashSpeed = player.dashSpeed;

@@ -4998,19 +4998,20 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 7089115920706136167, guid: 2bb2be0c629fbec408ce8ff3d4ba11c9,
         type: 3}
-      propertyPath: sceneToLoad
-      value: Sanctuary
-      objectReference: {fileID: 0}
-    - target: {fileID: 7089115920706136167, guid: 2bb2be0c629fbec408ce8ff3d4ba11c9,
-        type: 3}
       propertyPath: playerPosition.x
-      value: 30.25
+      value: 30.5
       objectReference: {fileID: 0}
     - target: {fileID: 7089115920706136167, guid: 2bb2be0c629fbec408ce8ff3d4ba11c9,
         type: 3}
       propertyPath: playerPosition.y
       value: -8
       objectReference: {fileID: 0}
+    - target: {fileID: 7089115920706136167, guid: 2bb2be0c629fbec408ce8ff3d4ba11c9,
+        type: 3}
+      propertyPath: playerSpawn.variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 0887f27c0130d5442a9e009919e7893d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb2be0c629fbec408ce8ff3d4ba11c9, type: 3}
 --- !u!1 &1731341058
