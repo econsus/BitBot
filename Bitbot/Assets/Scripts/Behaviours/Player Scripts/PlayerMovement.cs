@@ -5,20 +5,35 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Scriptable Object")]
     public Player player;
-
+    
     [Space(2)]
 
-    [Header("Stats")]
-    [SerializeField] private float speed; //Multiplier x velocity saat lari
-    [SerializeField] private float jumpForce; //Multiplier y velocity saat lompat
-    [SerializeField] private float dashSpeed; //Multiplier x velocity saat dashing
-    [SerializeField] private float dashCooldown; //Cooldown dash
-    [SerializeField] private float wallSlideSpeed; //Velocity y saat wall sliding
-    [SerializeField] private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
-    private Vector2 dashDirection = new Vector2();
+    [Header("Variables")]
+
+    [Tooltip("Player 'spawn' position on scene load")]
+    public Vector2Reference playerSpawn;
+
+    [Tooltip("Horizontal velocity multiplier when dashing")]
+    public FloatReference speed;
+
+    [Tooltip("Vertical velocity multiplier when jumping")]
+    public FloatReference jumpForce;
+
+    [Tooltip("Horizontal velocity multiplier when dashing")]
+    public FloatReference dashSpeed;
+
+    [Tooltip("Wait time after dashing to be able to dash again")]
+    public FloatReference dashCooldown;
+
+    [Tooltip("Vertical velocity when wall sliding")]
+    public FloatReference wallSlideSpeed;
+
+    // Local variables
+    private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
     private float coyoteTimeCounter; //Counter waktu input sejak meninggalkan ground
-    private float x, y, xRaw; //Axes
-    private Vector2 inputDir; //Vektor berisi input axes
+    private float x, y, xRaw;
+    private Vector2 dashDirection = new Vector2(); //Untuk menyimpan arah dash agar persistent
+    private Vector2 inputDir;
 
     [Space(2)]
 
@@ -31,8 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(2)]
 
-    [Header("Objects")]
-    public Vector2Reference playerSpawn;
+    [Header("Miscellaneous")]
     public GameObject dustParticle;
     public Transform dustTransform;
 
@@ -45,12 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = playerSpawn.Value;
-        speed = player.moveSpeed;
-        jumpForce = player.jumpForce;
-        dashSpeed = player.dashSpeed;
-        dashCooldown = player.dashCooldown;
-        wallSlideSpeed = player.wallSlideSpeed;
+        transform.position = playerSpawn;
         am = FindObjectOfType<AudioManager>();
         em = FindObjectOfType<EventManager>();
     }

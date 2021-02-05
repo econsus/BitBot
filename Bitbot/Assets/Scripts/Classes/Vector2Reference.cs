@@ -17,9 +17,8 @@ public class Vector2Reference
         get { return variable.currentValue; }
         set { variable.SetValue(value); }
     }
-    //Conversion operator dari Vector2Reference ke Vector2
-    //public static implicit operator Vector2(Vector2Reference reference)
-    //{
-    //    return reference.Value;
-    //}
+    public static implicit operator Vector3(Vector2Reference reference)
+    {
+        return reference.Value;
+    }
 }

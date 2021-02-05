@@ -335,16 +335,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: a17ad08649a291d43b3f4daa89f10bf3, type: 2}
-  speed: 0
-  jumpForce: 0
-  dashSpeed: 100
-  dashCooldown: 0.75
-  wallSlideSpeed: 0
-  coyoteTime: 0.15
-  canMove: 1
-  isWallSliding: 0
   playerSpawn:
     variable: {fileID: 11400000, guid: 0887f27c0130d5442a9e009919e7893d, type: 2}
+  speed:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: f51a0d152a1592d4998ed419121f261e, type: 2}
+  jumpForce:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 21ad87a3e87398046b9d9e6fe9eaeda8, type: 2}
+  dashSpeed:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 963f05cdbef4fc34488f9383fb5041b9, type: 2}
+  dashCooldown:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 63d0e0de47fc0704dbd20a5fd86df590, type: 2}
+  wallSlideSpeed:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 0323171e06e11524ab8a8415850a11dd, type: 2}
+  canMove: 1
+  isWallSliding: 0
   dustParticle: {fileID: 2388805289800595122, guid: d60e819fdf8f32c4ea57d6b718a9d992,
     type: 3}
   dustTransform: {fileID: 613524575}
