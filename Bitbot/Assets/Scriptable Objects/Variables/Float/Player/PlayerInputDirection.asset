@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4346b0c9d3a5e4e960c531dc239ef1, type: 3}
-  m_Name: PlayerDashCooldown
+  m_Script: {fileID: 11500000, guid: f8849486c2588674fab3c63a4c5e61ed, type: 3}
+  m_Name: PlayerInputDirection
   m_EditorClassIdentifier: 
-  description: 'Seconds until the player can dash again after
-
-    dashing the first
-    time'
-  value: 0.75
+  description: 
+  currentValue: {x: 0, y: 0}
+  defaultValue: {x: 0, y: 0}
+  resetOnDeserialize: 0

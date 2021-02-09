@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4346b0c9d3a5e4e960c531dc239ef1, type: 3}
-  m_Name: PlayerWallSlideSpeed
+  m_Script: {fileID: 11500000, guid: bc4d77d5bfca8804092e6c2e16d4b70b, type: 3}
+  m_Name: PlayerPosition
   m_EditorClassIdentifier: 
-  description: 'Rate at which the player slides down when
-
-    wall sliding'
-  value: 2
+  description: 
+  currentValue: {x: 0, y: 0, z: 0}
+  defaultValue: {x: 0, y: 0, z: 0}
+  resetOnDeserialize: 0

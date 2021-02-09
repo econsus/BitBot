@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EventManager : MonoBehaviour //Big brain time
+public class EventManager : MonoBehaviour
 {
     //Item Events
 
@@ -75,8 +72,6 @@ public class EventManager : MonoBehaviour //Big brain time
     {
         OnDoubleTapEvent?.Invoke(kcode);
     }
-
-
     //-------------------------------------------------------------------------------------------------------------------//
     public delegate void CameraShake(float intensity, float time);
 
@@ -85,5 +80,14 @@ public class EventManager : MonoBehaviour //Big brain time
     public void OnShakeCameraEventMethod(float intensity, float time)
     {
         OnShakeCameraEvent?.Invoke(intensity, time);
+    }
+    //-------------------------------------------------------------------------------------------------------------------//
+    public delegate void PlayerHurt(float amount);
+
+    public event PlayerHurt OnPlayerHurtEvent;
+
+    public void OnPlayerHurtEventMethod(float amount)
+    {
+        OnPlayerHurtEvent?.Invoke(amount);
     }
 }

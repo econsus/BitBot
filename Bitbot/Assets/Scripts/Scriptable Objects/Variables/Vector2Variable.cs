@@ -7,8 +7,8 @@ public class Vector2Variable : ScriptableObject, ISerializationCallbackReceiver
     [Multiline]
     public string description;
 
-    public Vector2 currentValue; //Nilai Vector2 yang berubah-ubah (variabel)
-    public Vector2 defaultValue; //Nilai default Vector2
+    public Vector2 currentValue;
+    public Vector2 defaultValue;
     public bool resetOnDeserialize; //Reset variabel ke nilai default setelah deserialize?
     public void SetValue(Vector2 value)
     {

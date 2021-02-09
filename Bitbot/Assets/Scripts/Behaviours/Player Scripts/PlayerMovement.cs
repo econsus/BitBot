@@ -3,11 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Player Scriptable Object")]
-    public Player player;
-    
-    [Space(2)]
-
     [Header("Variables")]
 
     [Tooltip("Player 'spawn' position on scene load")]
@@ -32,17 +27,17 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
     private float coyoteTimeCounter; //Counter waktu input sejak meninggalkan ground
     private float x, y, xRaw;
-    private Vector2 dashDirection = new Vector2(); //Untuk menyimpan arah dash agar persistent
+    private Vector2 dashDirection = new Vector2();
     private Vector2 inputDir;
 
     [Space(2)]
 
     [Header("Booleans")]
-    public bool canMove = true; //Izin untuk bergerak
-    private bool canDash = true; //Izin untuk ngedash
-    private bool wantToDash = false; //Permintaan ngedash
+    public bool canMove = true;
+    private bool canDash = true;
+    private bool wantToDash = false;
     private bool hasJumped = false;
-    public bool isWallSliding = false; //Keadaan wall sliding
+    public bool isWallSliding = false;
 
     [Space(2)]
 
@@ -318,16 +313,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Knockback(float x, float y)
     {
-        Vector2 dir;
+        Vector2 dir = ps.facingLeft? Vector2.right * x + Vector2.up * y : Vector2.left * x + Vector2.up * y;
 
-        if(!ps.facingLeft)
-        {
-            dir = Vector2.left * x + Vector2.up * y;
-        }
-        else
-        {
-            dir = Vector2.right * x + Vector2.up * y;
-        }
         rb.velocity = Vector2.zero;
         rb.AddForce(dir, ForceMode2D.Impulse);
     }
