@@ -32,9 +32,9 @@ public class HandleRecoil : MonoBehaviour
     {
         Vector3 mPos = MousePosition.GetMouseWorldPos(0f, cam);
         Vector3 tmp = (mPos - player.position).normalized;
-
-        //Vector2 dir = new Vector2(-Mathf.Round(tmp.x), -Mathf.Round(tmp.y));
-        Vector2 dir = new Vector2(-tmp.x, -tmp.y);
+        Vector2 dir = new Vector2(-Mathf.Round(tmp.x), -Mathf.Round(tmp.y));
+        //Vector2 dir = new Vector2(-tmp.x, -tmp.y);
+        Debug.Log("DIR: " + dir);
         return dir;
     }
 }

@@ -2,12 +2,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorEnter : MonoBehaviour
+public class SceneTransitionKeyOnStay : MonoBehaviour
 {
     private bool inFrontofDoor = false;
     public GameObject symbol;
     public Animator transition;
 
+    public Vector2 playerPosition;
+    public Vector2Reference playerSpawn;
     [SerializeField] private string sceneToLoad = "Scene";
     void Start()
     {
@@ -17,14 +19,15 @@ public class DoorEnter : MonoBehaviour
     {
         ShowSymbol();
 
-        if(Input.GetKey(KeyCode.E) && inFrontofDoor)
+        if (Input.GetKey(KeyCode.W) && inFrontofDoor)
         {
+            playerSpawn.Value = playerPosition;
             StartCoroutine(sceneTransition(1f));
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && !collision.isTrigger)
+        if (collision.CompareTag("Player") && !collision.isTrigger)
         {
             inFrontofDoor = true;
         }

@@ -1,53 +1,45 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHurt : MonoBehaviour
 {
-    private PlayerMovement move;
-    private PlayerStates ps;
+    public FloatReference startingHP;
+    public FloatVariable currentHP;
+    private EventManager em;
     private AudioManager am;
     private AnimationScript anim;
-    public bool contact = false;
-    public float x = 3;
-    public float y = 1;
-    void Start()
+
+    private void Awake()
     {
-        move = GetComponentInParent<PlayerMovement>();
-        ps = GetComponentInParent<PlayerStates>();
         anim = FindObjectOfType<AnimationScript>();
         am = FindObjectOfType<AudioManager>();
+        em = FindObjectOfType<EventManager>();
+        currentHP.SetValue(startingHP);
     }
 
-    void FixedUpdate()
+    private void OnEnable()
     {
-        if(contact)
-        {
-            move.canMove = false;
-            StartCoroutine(Pause());
-            ps.DecreaseCurrentHealth(1);
-        }
+        em.OnPlayerHurtEvent += DecreaseHealth;
+    }
+    private void OnDisable()
+    {
+        em.OnPlayerHurtEvent -= DecreaseHealth;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void DecreaseHealth(float amount)
     {
-        if(collision.CompareTag("Enemy Projectile"))
-        {
-            contact = true;
-        }
+        currentHP.ApplyChange(-amount);
+        StartCoroutine(Pause());
     }
 
     IEnumerator Pause()
     {
-        contact = false;
         am.PlaySound("Player Hit");
         anim.TriggerAnim("Hurt");
         
-        move.Knockback(x, y);
         Time.timeScale = 0.01f;
         yield return new WaitForSecondsRealtime(0.15f);
         Time.timeScale = 1f;
         yield return new WaitForSeconds(0.35f);
-        move.canMove = true;
     }
 }

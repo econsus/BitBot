@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff029fb7573cf24ba051f2768ea3c25, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: f8849486c2588674fab3c63a4c5e61ed, type: 3}
+  m_Name: Player Spawn
   m_EditorClassIdentifier: 
-  entityName: Player
-  maxHealth: 5
-  moveSpeed: 14
-  jumpForce: 16.5
-  wallSlideSpeed: 6
+  description: 'Vector2 position that the player
+
+    gets teleported to on scene
+    load'
+  currentValue: {x: -19.25, y: -8}
+  defaultValue: {x: -19.25, y: -8}
+  resetOnDeserialize: 1

@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main_Menu.unity
-    guid: 41ccde477bb8ae948acc3a602be986c8
-  - enabled: 1
     path: Assets/Scenes/Sanctuary.unity
     guid: 2598b725b35d5cf4daa8f3306c1f925f
   - enabled: 1
     path: Assets/Scenes/Gun_Store.unity
     guid: 17c7f5ef2e3560b449a56b3566468605
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Underground_1.unity
     guid: 865e0a0e4fee8b6478de2b867dc349a0
+  - enabled: 0
+    path: Assets/Scenes/Main_Menu.unity
+    guid: 41ccde477bb8ae948acc3a602be986c8
   - enabled: 0
     path: Assets/Scenes/Devroom_Ucok.unity
     guid: 12d22ef260bfb2d469e61bf74bb3102f

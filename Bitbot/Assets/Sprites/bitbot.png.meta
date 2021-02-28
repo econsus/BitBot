@@ -218,6 +218,9 @@ TextureImporter:
   - first:
       213: -1989354811613572666
     second: bitbot_71
+  - first:
+      213: 4186727457073191416
+    second: dash_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -239,6 +242,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -273,6 +277,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -886,6 +891,27 @@ TextureImporter:
       bones: []
       spriteID: 2f5947a243cc59540800000000000000
       internalID: 5014138284569564658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dash_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.25, y: 0.25}
+      border: {x: 0, y: 0, z: 15, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9d832a07e3a1a30800000000000000
+      internalID: 4186727457073191416
       vertices: []
       indices: 
       edges: []
