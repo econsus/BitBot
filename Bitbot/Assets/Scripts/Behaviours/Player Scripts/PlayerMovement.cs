@@ -3,47 +3,62 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Player Scriptable Object")]
-    public Player player;
+    [Header("Variables")]
 
-    [Space(2)]
+    [Tooltip("Player 'spawn' position on scene load")]
+    public Vector2Reference playerSpawn;
 
-    [Header("Constants")]
-    private const float DoubleInputTime = 0.2f;
+    [Tooltip("Horizontal velocity multiplier when dashing")]
+    public FloatReference speed;
 
-    [Space(2)]
+    [Tooltip("Vertical velocity multiplier when jumping")]
+    public FloatReference jumpForce;
 
-    [Header("Stats")]
-    [SerializeField] private float speed; //Multiplier x velocity saat lari
-    [SerializeField] private float jumpForce; //Multiplier y velocity saat lompat
-    [SerializeField] private float wallSlideSpeed; //Velocity y saat wall sliding
-    [SerializeField] private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
+    [Tooltip("Horizontal velocity multiplier when dashing")]
+    public FloatReference dashSpeed;
+
+    [Tooltip("Wait time after dashing to be able to dash again")]
+    public FloatReference dashCooldown;
+
+    [Tooltip("Vertical velocity when wall sliding")]
+    public FloatReference wallSlideSpeed;
+
+    // Local variables
+    private float coyoteTime = 0.15f; //Toleransi waktu input setelah meninggalkan ground
     private float coyoteTimeCounter; //Counter waktu input sejak meninggalkan ground
-    private float lastInputTime = 0; //Waktu input terakhir
-    private float x, y, xRaw; //Axes
-    private Vector2 inputDir; //Vektor berisi input axes
+    private float x, y, xRaw;
+    private Vector2 dashDirection = new Vector2();
+    private Vector2 inputDir;
 
     [Space(2)]
 
     [Header("Booleans")]
-    public bool canMove = true; //Izin untuk bergerak
-    public bool isWallSliding = false; //Keadaan wall sliding
+    public bool canMove = true;
+    private bool canDash = true;
+    private bool wantToDash = false;
+    private bool hasJumped = false;
+    public bool isWallSliding = false;
+
+    [Space(2)]
+
+    [Header("Miscellaneous")]
+    public GameObject dustParticle;
+    public Transform dustTransform;
 
     private Rigidbody2D rb;
     private PlayerStates ps;
     private AnimationScript anim;
     private SpriteRenderer sr;
-
+    private AudioManager am;
     private EventManager em;
 
     private void Awake()
     {
-        speed = player.moveSpeed;
-        jumpForce = player.jumpForce;
-        wallSlideSpeed = player.wallSlideSpeed;
+        transform.position = playerSpawn;
+        am = FindObjectOfType<AudioManager>();
         em = FindObjectOfType<EventManager>();
     }
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ps = GetComponent<PlayerStates>();
@@ -53,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         em.OnKnockedBackEvent += ApplyKnockback;
+        em.OnDoubleTapEvent += DashInput;
     }
 
     void Update()
@@ -69,7 +85,6 @@ public class PlayerMovement : MonoBehaviour
         {
             ps.jumping = true;
         }
-        DetectDoubleInput();
     }
     private void FixedUpdate()
     {
@@ -82,11 +97,17 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             ps.jumping = false;
         }
+        if(wantToDash)
+        {
+            Dash(dashDirection);
+            wantToDash = false;
+        }
     }
     private void GroundCheck()
     {
         if(ps.onGround)
         {
+            hasJumped = false;
             coyoteTimeCounter = coyoteTime;
         }
         else
@@ -98,6 +119,10 @@ public class PlayerMovement : MonoBehaviour
     private void Run(Vector2 dir)
     {
         if(!canMove)
+        {
+            return;
+        }
+        if(ps.dashing)
         {
             return;
         }
@@ -148,10 +173,16 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-
+        if(hasJumped)
+        {
+            return;
+        }    
         if(coyoteTimeCounter > 0)
         {
             anim.TriggerAnim("Jump");
+            InstantiateDust();
+            am.PlaySound("Jump");
+            hasJumped = true;
 
             if(!ps.isKnockedback)
             {
@@ -190,17 +221,63 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void DetectDoubleInput()
+    private void DashInput(KeyCode kcode)
     {
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        if(!canDash)
         {
-            float deltaInputTime = Time.time - lastInputTime; //Waktu sejak input terakhir
-            if(deltaInputTime < DoubleInputTime)
-            {
-                Debug.Log("Dash!");
-            }
-            lastInputTime = Time.time;
+            return;
         }
+        if (kcode == KeyCode.D)
+        {
+            dashDirection = Vector2.right;
+            wantToDash = true;
+        }
+        else if (kcode == KeyCode.A)
+        {
+            dashDirection = Vector2.left;
+            wantToDash = true;
+        }
+    }
+
+    private void Dash(Vector2 dir)
+    {
+        am.PlaySound("Dash");
+        if(ps.onGround)
+        {
+            InstantiateDust();
+        }
+        em.OnShakeCameraEventMethod(10, 0.2f);
+        StartCoroutine(DashWait(dir));
+    }
+
+    private IEnumerator DashWait(Vector2 dir)
+    {
+        ps.dashing = true;
+        canDash = false;
+
+        rb.velocity = Vector2.zero;
+        rb.velocity = dir.normalized * dashSpeed;
+
+        rb.gravityScale = 0.5f;
+        GetComponent<JumpModifier>().enabled = false;
+
+        if (ps.isKnockedback)
+        {
+            GetComponent<JumpModifier>().enabled = true;
+            ps.dashing = false;
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.05f);
+            GetComponent<JumpModifier>().enabled = true;
+            ps.dashing = false;
+        }
+        StartCoroutine(DashRecovery());
+    }
+    private IEnumerator DashRecovery()
+    {
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
     public void Halt()
     {
@@ -209,6 +286,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void ApplyKnockback(Vector2 dir, float multiplier)
     {
+        if(ps.dashing)
+        {
+            return;
+        }
         if (ps.onGround)
         {
             ps.wasOnGround = true;
@@ -232,17 +313,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Knockback(float x, float y)
     {
-        Vector2 dir;
+        Vector2 dir = ps.facingLeft? Vector2.right * x + Vector2.up * y : Vector2.left * x + Vector2.up * y;
 
-        if(!ps.facingLeft)
-        {
-            dir = Vector2.left * x + Vector2.up * y;
-        }
-        else
-        {
-            dir = Vector2.right * x + Vector2.up * y;
-        }
         rb.velocity = Vector2.zero;
         rb.AddForce(dir, ForceMode2D.Impulse);
+    }
+
+    private void InstantiateDust()
+    {
+        GameObject temp = Instantiate(dustParticle, dustTransform);
+        temp.transform.parent = null;
     }
 }

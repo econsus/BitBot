@@ -8,9 +8,20 @@ public class ItemScript : MonoBehaviour
     public ItemObject item;
 
     private EventManager em;
+    private bool inTrigger = false;
     private void Awake()
     {
         em = FindObjectOfType<EventManager>();
+    }
+    private void Update()
+    {
+        if(inTrigger)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                em.OnItemPickupEventMethod(item);
+            }
+        }
     }
     private void OnEnable()
     {
@@ -35,10 +46,7 @@ public class ItemScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             em.OnItemTouchEventMethod(item);
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                em.OnItemPickupEventMethod(item);
-            }
+            inTrigger = true;
         }
     }
     //Fire OnItemUntouch event
@@ -47,6 +55,7 @@ public class ItemScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             em.OnItemUntouchEventMethod(item);
+            inTrigger = false;
         }
     }
     //Destroy item's world object;

@@ -6,7 +6,8 @@ using UnityEngine;
 public class Player : Entity
 {
     public float jumpForce;
+    public float dashSpeed;
+    public float dashCooldown;
     public float wallSlideSpeed;
-    //Stamina
     //Etc
 }

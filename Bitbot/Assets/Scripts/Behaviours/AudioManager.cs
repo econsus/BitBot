@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            //Debug.Log("Played " + soundName + "Sound");
             s.source.Play();
         }
     }
@@ -43,6 +44,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            //Debug.Log("Played " + clip.name + "Sound");
             s.source.Play();
         }
     }
